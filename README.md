@@ -7,3 +7,5 @@
 - Antoine Piguet
 - Charles-Henri Moser
 - Yosef Nademo
+
+## Bertrand Sahli
