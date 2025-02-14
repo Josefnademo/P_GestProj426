@@ -1,8 +1,8 @@
 import express from "express";
-const lieuRouter = express();
+const siteRouter = express();
 
 app.get("/site/:id", (req, res) => {
   res.render("site/:id", { id: req.params.id });
 });
 
-export { lieuRouter };
+export { siteRouter };
