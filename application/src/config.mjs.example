@@ -1,0 +1,9 @@
+const db_name = "";
+const db_user = "";
+const db_password = "";
+const db_host = "";
+const db_port = ;
+const db_dialect = "mysql";
+const sequelize_log = false;
+
+export {db_name, db_user, db_password, db_host, db_port, db_dialect, sequelize_log}
