@@ -1,24 +1,17 @@
 import { Sequelize, DataTypes } from "sequelize";
 import { CompteModel } from "../models/compte.mjs";
-
-console.log("Dialect " + process.env.DBDIALECT);
-console.log("Name " + process.env.DBNAME);
-console.log("User " + process.env.DBUSER);
-console.log("PWD " + process.env.DBPASSWORD);
-console.log("Host " + process.env.DBHOST);
-console.log("Port " + process.env.DBPORT);
-console.log("Logs " + process.env.SEQUELIZELOG);
+import {db_name, db_user, db_password, db_host, db_port, db_dialect, sequelize_log} from "../config.mjs"
 
 // Configuration de la connexion Sequelize
 const sequelize = new Sequelize(
-  process.env.DBNAME, // Nom de la DB
-  process.env.DBUSER, // Nom d'utilisateur
-  process.env.DBPASSWORD, // Mot de passe
+  db_name,
+  db_user,
+  db_password,
   {
-    host: process.env.DBHOST,
-    port: process.env.DBPORT,
-    dialect: process.env.DBDIALECT,
-    logging: process.env.SEQUELIZELOG, // Désactiver les logs Sequelize pour une console plus propre
+    host: db_host,
+    port: db_port,
+    dialect: db_dialect,
+    logging: sequelize_log,
   }
 );
 

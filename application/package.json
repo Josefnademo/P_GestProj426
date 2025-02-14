@@ -10,7 +10,6 @@
   "license": "ISC",
   "dependencies": {
     "sequelize": "^6.37.5",
-    "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "bcrypt": "^5.1.1",
