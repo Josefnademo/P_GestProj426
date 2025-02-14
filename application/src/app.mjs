@@ -1,8 +1,6 @@
 import { sequelize, Compte } from "./db/sequelize.mjs";
-
-dotenv.config();
-console.log(process.env);
-
+import express from "express";
+const port = 3000;
 const app = express();
 
 app.get("/", function (req, res) {
@@ -15,32 +13,6 @@ app.get("/", function (req, res) {
     .catch((error) => console.error("Impossible de se connecter à la DB"));
   res.send(`Hello ${process.env.DBNAME}`);
 });
-
-app.listen(3000, () => {
-  console.log(`Example app listening at http://localhost:3000`);
-import express from "express";
-
-const app = express();
-const port = 3000;
-app.use(express.json());
-app.set("view engine", "ejs");
-import { avisRouter } from "./routes/avis.mjs";
-app.use("/avis/", avisRouter);
-
-import { compteRouter } from "./routes/compte.mjs";
-app.use("/compte/", compteRouter);
-
-import { lieuRouter } from "./routes/lieu.mjs";
-app.use("/lieu/", lieuRouter);
-
-app.get("/", (req, res) => {
-  res.render("accueil", { name: "antoine" });
-});
-/*
-app.get("/", (req, res) => {
-  res.redirect(`http://localhost:${port}/accueil/`);
-});*/
-
 app.get("/accueil/", (req, res) => {
   res.render("accueil", { name: "utilisateur" });
 });
