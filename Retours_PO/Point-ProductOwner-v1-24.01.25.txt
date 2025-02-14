@@ -1,0 +1,20 @@
+5 pages :
+
+-Accueil
+page d'acceuil classique, image de fond, barre de recherche, onglet compte dans le header
+map interactive
+
+-login/sign in
+Log in : Pseudo + pwd, 
+Sign in : E-mail, pseudo, password
+
+-Profil
+Contient Image, Pseudo, E-mail + pwd pour le user, avis postés et maybe une description
+
+-Détail
+Doit contenir les détails d'un lieu (nom, adresse, pays, type, images etc...) => voir mcd
+Doit aussi contenir les avis du lieu avec option "Afficher plus" -Les avis contiennent (auteur, note, commentaire, date)
+
+-Résultat/Recherche
+Doit contenir les résultats de la recherche du plus relevant au moins relevant
+Doit contenir un onglet de filtres
