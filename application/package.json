@@ -1,6 +1,7 @@
 {
   "name": "p_gestproj426",
   "version": "1.0.0",
+  "type": "module",
   "description": "Projet pour le module 426 ()\u001b[DProgrammer avec des méthodes agiles)",
   "main": "src/app.mjs",
   "scripts": {
