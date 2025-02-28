@@ -1,21 +1,18 @@
-const VisiterModel = (sequelize, DataTypes) => {
+const ResideModel = (sequelize, DataTypes) => {
   return sequelize.define(
-    "Visiter",
+    "Reside",
     {
       lieu_id_fk: {
         type: DataTypes.INTEGER,
         allowNull: false,
         references: { model: "Lieu", key: "lieu_id" },
       },
-      compte_id_fk: {
+      region_id_fk: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        references: { model: "Compte", key: "compte_id" },
+        references: { model: "Region", key: "region_id" },
       },
-      date_visite: { type: DataTypes.DATE },
     },
     { timestamps: false }
   );
 };
-
-export { VisiterModel };

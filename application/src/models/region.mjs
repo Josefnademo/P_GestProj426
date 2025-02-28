@@ -2,13 +2,13 @@ const RegionModel = (sequelize, DataTypes) => {
   return sequelize.define("Region", {
     region_id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
       autoIncrement: true,
+      primaryKey: true,
     },
     nom: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
-      unique: { msg: "ce nom de region est déjà pris" },
+      unique: { msg: "Ce nom est déjà pris." },
     },
   });
 };

@@ -2,31 +2,27 @@ const LieuModel = (sequelize, DataTypes) => {
   return sequelize.define("Lieu", {
     lieu_id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
       autoIncrement: true,
+      primaryKey: true,
     },
-    name: {
-      type: DataTypes.STRING,
+    nom: {
+      type: DataTypes.TEXT,
       allowNull: false,
-      unique: { msg: "Ce nom de lieu est déjà pris." },
+      unique: { msg: "Ce nom est déjà pris." },
     },
     longitude: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(25, 18),
       allowNull: false,
     },
     latitude: {
-      type: DataTypes.DECIMAL,
+      type: DataTypes.DECIMAL(25, 18),
       allowNull: false,
     },
     particularite: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-    histoire: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
+    histoire: { type: DataTypes.TEXT },
   });
 };
-
 export { LieuModel };
