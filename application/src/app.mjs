@@ -26,9 +26,9 @@ app.get("/", function (req, res) {
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.126/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 
 </head>
-<style>/* hide cesium elements */
+<style>/* hide cesium elements *//*
 .cesium-viewer-animationContainer, .cesium-viewer-timelineContainer, .cesium-viewer-bottom, .cesium-viewer-fullscreenContainer, .cesium-viewer-toolbar {
-  display: none !important;
+  display: none !important;*/
 }</style>
 <body>
 
@@ -48,7 +48,7 @@ app.get("/", function (req, res) {
 
     // Fly the camera to San Francisco at the given longitude, latitude, and height.
     viewer.camera.flyTo({
-      destination: Cesium.Cartesian3.fromDegrees(-122.4175, 37.655, 400),
+      destination: Cesium.Cartesian3.fromDegrees(7, 45, 1500),
       orientation: {
         heading: Cesium.Math.toRadians(0.0),
         pitch: Cesium.Math.toRadians(-15.0),
