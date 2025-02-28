@@ -1,32 +1,21 @@
 const CompteModel = (sequelize, DataTypes) => {
-  return sequelize.define("User", {
-    id: {
+  return sequelize.define("Compte", {
+    compte_id: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
       autoIncrement: true,
+      primaryKey: true,
     },
     username: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(50),
       allowNull: false,
       unique: { msg: "Ce username est déjà pris." },
     },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     email: {
-      type: DataTypes.STRING,
-      allowNull: false,
+      type: DataTypes.STRING(50),
       unique: { msg: "Ce email est déjà pris." },
     },
-    salt: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    hashedPassword: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
+    salt: { type: DataTypes.STRING, allowNull: false },
+    hashedPassword: { type: DataTypes.STRING, allowNull: false },
   });
 };
 
