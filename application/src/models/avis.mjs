@@ -6,12 +6,12 @@ const AvisModel = (sequelize, DataTypes) => {
     lieu_id_fk: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: { model: "Lieu", key: "lieu_id" },
+      references: { model: "Lieus", key: "lieu_id" },
     },
     compte_id_fk: {
       type: DataTypes.INTEGER,
       allowNull: false,
-      references: { model: "Compte", key: "compte_id" },
+      references: { model: "Comptes", key: "compte_id" },
     },
   });
 };

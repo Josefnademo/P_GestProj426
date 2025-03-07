@@ -21,5 +21,8 @@
   "devDependencies": {
     "nodemon": "^3.1.9",
     "vitest": "^3.0.5"
+  },
+  "scripts": {
+    "seed": "node src/seed.mjs"
   }
 }

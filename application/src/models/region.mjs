@@ -6,7 +6,7 @@ const RegionModel = (sequelize, DataTypes) => {
       primaryKey: true,
     },
     nom: {
-      type: DataTypes.TEXT,
+      type: DataTypes.STRING(255),
       allowNull: false,
       unique: { msg: "Ce nom est déjà pris." },
     },
