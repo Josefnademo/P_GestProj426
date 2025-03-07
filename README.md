@@ -33,4 +33,4 @@
   `const db_host = "";`  
   `const app_port = ;`  
   `const db_port = ;`
-- Le serveur et siteweb sera maintenat 100% opérationnel.
+- Le serveur et siteweb sera maintenant 100% opérationnel.
