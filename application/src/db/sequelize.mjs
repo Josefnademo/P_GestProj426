@@ -19,7 +19,11 @@ const sequelize = new Sequelize(db_name, db_user, db_password, {
 });
 
 // Initialisation du modèle Product
-const Compte = CompteModel(sequelize, DataTypes);
+const compte = CompteModel(sequelize, DataTypes);
 
 // Exporter les ressources nécessaires
+<<<<<<< Updated upstream
 export { sequelize, Compte };
+=======
+export { sequelize, compte };
+>>>>>>> Stashed changes
