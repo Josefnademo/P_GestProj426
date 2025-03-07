@@ -1,4 +1,4 @@
-import { sequelize, Compte } from "./db/sequelize.mjs";
+//import { sequelize, Compte } from "./db/sequelize.mjs";
 import express from "express";
 import port from "./config.mjs";
 import path from "path";
