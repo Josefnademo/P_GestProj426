@@ -11,7 +11,7 @@
 
 title Setup dev environment
 
-set /p name=<inputs/Mateo.txt
+set /p name=<inputs/Romain.txt
 
 cd ..
 
