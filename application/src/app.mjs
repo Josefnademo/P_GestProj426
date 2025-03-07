@@ -28,6 +28,14 @@ app.use(({ res }) => {
   res.status(404).json(message);
 });
 
+//recherche
+const adminRoute = require("./routes/search-user");
+const searchRouter = require("./routes/search-user");
+
+app.use(searchRouter);
+app.use(authRoute);
+//
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
