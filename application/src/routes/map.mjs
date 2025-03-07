@@ -11,11 +11,11 @@ async function fetchAndDisplaySites() {
   try {
     const res = await fetch(pathToJson);
     if (!res.ok) throw new Error(`Erreur HTTP: ${res.status}`);
-    //attende que la requete soit finie
-    const sites = await res.json(); // Pas besoin de JSON.parse(), fetch().json() le fait déjà
+    //attende que la requete soit
+    const sites = await res.json(); // Pas besoin de JSON.se(), fetch().json() le fait déjà
 
     for (const site of sites) {
-      //dans le json:  lon et lat
+      //dans le json:  lon et
       //Mais il faut inverser => [lat, lon];
       L.circle([site.coordinates.lat, site.coordinates.lon], {
         radius: 1,
@@ -27,7 +27,7 @@ async function fetchAndDisplaySites() {
             site.site +
             "</b>" +
             "<br>" +
-            '<p style="text-overflow: ellipsis; max-height: 100px; white-space: nowrap; max-width: 300px; overflow: hidden;">' +
+            '<p style="text-overflow: ellipsis; max-height: 00px; white-space: nowrap; max-width: 300px; overflow: hidden;">' +
             site.short_description +
             "</p>"
         );
