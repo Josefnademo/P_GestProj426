@@ -23,7 +23,7 @@ start "" "C:\Users\%name%\AppData\Local\GitHubDesktop\GitHubDesktop.exe"
 
 start cmd /k "cd Docker && docker compose up -d"
 
-start cmd /k "cd application && code . && npm i && npm start"
+start cmd /k "cd Application && code . && npm i && npm start"
 
 
 title CREATE DATABASE
