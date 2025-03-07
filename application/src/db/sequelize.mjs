@@ -1,4 +1,4 @@
-import { Sequelize, DataTypes } from "sequelize";
+/*import { Sequelize, DataTypes } from "sequelize";
 import { CompteModel } from "../models/compte.mjs";
 import {
   db_name,
@@ -22,4 +22,4 @@ const sequelize = new Sequelize(db_name, db_user, db_password, {
 const Compte = CompteModel(sequelize, DataTypes);
 
 // Exporter les ressources nécessaires
-export { sequelize, Compte };
+export { sequelize, Compte };*/
