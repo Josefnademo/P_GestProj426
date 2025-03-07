@@ -53,7 +53,7 @@
     const buildingTileset = await Cesium.createOsmBuildingsAsync();
     viewer.scene.primitives.add(buildingTileset);   
 
-const places = [{name: "Test1", lat: 40, lon: 40}, {name: "Test2", lat: 20, lon: 40},{name: "Test3", lat: 40, lon: 20},{name: "Test4", lat: -40, lon: 40},{name: "Test5", lat: 40, lon: -40},{name: "Test6", lat: -40, lon: 0},{name: "Test7", lat: 0, lon: 0},]
+const places = [{name: "Test1", lat: 40, lon: 40, desc: "Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula nibh sollicitudin congue est odio? Litora porttitor lectus; metus tempor ante lacus interdum."}, {name: "Test2", lat: 20, lon: 40, desc: "Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula nibh sollicitudin congue est odio? Litora porttitor lectus; metus tempor ante lacus interdum."},{name: "Test3", lat: 40, lon: 20, desc: "Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula nibh sollicitudin congue est odio? Litora porttitor lectus; metus tempor ante lacus interdum."},{name: "Test4", lat: -40, lon: 40, desc: "Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula nibh sollicitudin congue est odio? Litora porttitor lectus; metus tempor ante lacus interdum."},{name: "Test5", lat: 40, lon: -40, desc: "Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula nibh sollicitudin congue est odio? Litora porttitor lectus; metus tempor ante lacus interdum."},{name: "Test6", lat: -40, lon: 0, desc: "Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula nibh sollicitudin congue est odio? Litora porttitor lectus; metus tempor ante lacus interdum."},{name: "Test7", lat: 0, lon: 0, desc: "Lorem ipsum odor amet, consectetuer adipiscing elit. Vehicula nibh sollicitudin congue est odio? Litora porttitor lectus; metus tempor ante lacus interdum."},]
 const point = {
     pixelSize: 10,
     color: Cesium.Color.RED,
@@ -63,6 +63,7 @@ const point = {
 for (let place of places) {
   viewer.entities.add({
     name: place.name,
+    description: place.desc,
     position: Cesium.Cartesian3.fromDegrees(place.lat, place.lon),
     point: point,
     label: {
@@ -72,7 +73,10 @@ for (let place of places) {
     outlineWidth: 2,
     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
     pixelOffset: new Cesium.Cartesian2(0, -9),
+    clampToGround: true,
+    heightReference: Cesium.HeightReference.CLAMP_TO_GROUND
     }
+    //https://groups.google.com/g/cesium-dev/c/PsfINmAvdmA/m/MZc5bLPmDwAJ
   });
 }
 </script>
