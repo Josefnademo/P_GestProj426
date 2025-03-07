@@ -1,16 +1,18 @@
 {
   "name": "p_gestproj426",
   "version": "1.0.0",
+  "type": "module",
   "description": "Projet pour le module 426 ()\u001b[DProgrammer avec des méthodes agiles)",
   "main": "src/app.mjs",
   "scripts": {
-    "start": "nodemon src/app.mjs"
+    "start": "nodemon src/app.mjs",
+    "seed": "node src/seed.mjs",
+    "antoine": "node src/seed.mjs"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
-    "cesium": "^1.126.0",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
