@@ -23,7 +23,7 @@
     // Replace `your_access_token` with your Cesium ion access token.
 
 
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI2MzE1YjcxNS0yZjA5LTQyMjgtYTgxMy1kNTJkYWEyNDczM2QiLCJpZCI6Mjc5OTg2LCJpYXQiOjE3NDA3NDY0MTF9.e8NfSN05dzDMqasqzxwgNE3JI1cPfrcCiSDnmaKLbug';
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNTk0Y2NjNy0zYjUzLTRhYjYtOWQzMy02ZjI5NDVjYjdkMTkiLCJpZCI6Mjc5OTg2LCJpYXQiOjE3NDE1OTk5ODV9.XjXypSIno5Dkg0PCKECD4vRG1EFDnICMIRKldH2A7uc';
 
     // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
     const viewer = new Cesium.Viewer('cesiumContainer', {
@@ -61,19 +61,35 @@ const point = {
     outlineWidth: 2,
   }
 for (let place of places) {
-  viewer.entities.add({
-    name: place.name,
-    position: Cesium.Cartesian3.fromDegrees(place.lat, place.lon),
-    point: point,
-    label: {
-      text: place.name,
-      font: "14pt monospace",
-    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
-    outlineWidth: 2,
-    verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-    pixelOffset: new Cesium.Cartesian2(0, -9),
-    }
-  });
+    const position = Cesium.Cartesian3.fromDegrees(place.lon, place.lat);
+
+    // Interroge l'altitude du terrain à cet endroit
+    Cesium.sampleTerrainMostDetailed(viewer.terrainProvider, [Cesium.Cartographic.fromDegrees(place.lon, place.lat)])
+        .then((updatedPositions) => {
+            const height = updatedPositions[0].height || 0; // Hauteur du terrain
+            const adjustedHeight = height + 100; // On ajoute 100m pour éviter tout enfouissement
+
+            const adjustedPosition = Cesium.Cartesian3.fromDegrees(place.lon, place.lat, adjustedHeight);
+
+            viewer.entities.add({
+                name: place.name,
+                position: adjustedPosition,
+                point: {
+                    pixelSize: 10,
+                    color: Cesium.Color.RED,
+                    heightReference: Cesium.HeightReference.NONE // Désactiver le clamp pour qu'il respecte l'altitude fixée
+                },
+                label: {
+                    text: place.name,
+                    font: "14pt monospace",
+                    style: Cesium.LabelStyle.FILL_AND_OUTLINE,
+                    outlineWidth: 2,
+                    verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
+                    pixelOffset: new Cesium.Cartesian2(0, -9),
+                    heightReference: Cesium.HeightReference.NONE
+                }
+            });
+        });
 }
 </script>
 
