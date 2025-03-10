@@ -67,11 +67,11 @@ for (let place of places) {
     Cesium.sampleTerrainMostDetailed(viewer.terrainProvider, [Cesium.Cartographic.fromDegrees(place.lon, place.lat)])
         .then((updatedPositions) => {
             const height = updatedPositions[0].height || 0; // Hauteur du terrain
-            const adjustedHeight = height + 100; // On ajoute 100m pour éviter tout enfouissement
+            const adjustedHeight = height + 2000; // On ajoute 2000m pour éviter tout enfouissement
 
             const adjustedPosition = Cesium.Cartesian3.fromDegrees(place.lon, place.lat, adjustedHeight);
 
-            viewer.entities.add({
+            const entity = viewer.entities.add({
                 name: place.name,
                 position: adjustedPosition,
                 point: {
@@ -85,13 +85,33 @@ for (let place of places) {
                     style: Cesium.LabelStyle.FILL_AND_OUTLINE,
                     outlineWidth: 2,
                     verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
-                    pixelOffset: new Cesium.Cartesian2(0, -9),
-                    heightReference: Cesium.HeightReference.NONE
+                    pixelOffset: new Cesium.Cartesian2(0, -20),
+                    heightReference: Cesium.HeightReference.NONE,
+                    show: false // Masqué par défaut
                 }
             });
+
+            entity._distanceLabelUpdate = function (mousePosition) {
+                if (!mousePosition) return;
+                const distance = Cesium.Cartesian3.distance(mousePosition, adjustedPosition);
+                entity.label.show = distance < 99998; // Affiche si la distance est < 10 km
+            };
         });
 }
-</script>
+
+// Suivi de la souris et mise à jour des labels
+const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
+handler.setInputAction(function (movement) {
+    const ray = viewer.camera.getPickRay(movement.endPosition);
+    const cartesian = viewer.scene.globe.pick(ray, viewer.scene);
+    if (cartesian) {
+        viewer.entities.values.forEach(entity => {
+            if (entity._distanceLabelUpdate) {
+                entity._distanceLabelUpdate(cartesian);
+            }
+        });
+    }
+}, Cesium.ScreenSpaceEventType.MOUSE_MOVE);</script>
 
  </div>
 
