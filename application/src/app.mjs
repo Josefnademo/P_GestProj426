@@ -26,6 +26,7 @@ app.use((req, res, next) => {
   res.append("Access-Control-Allow-Headers", "Content-Type");
   next();
 });
+
 app.use(express.json());
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`);
@@ -45,8 +46,8 @@ app.use("/lieu/", lieuRouter);
 import { loginRouter } from "./routes/login.mjs";
 app.use("/login/", loginRouter);
 
-import { registerRouter } from "./routes/register.mjs";
-app.use("/register/", registerRouter);
+/*import { registerRouter } from "./routes/register.mjs";
+app.use("/register/", registerRouter);*/
 
 import { adminRouter } from "./routes/admin.mjs";
 app.use("/admin/", adminRouter);
