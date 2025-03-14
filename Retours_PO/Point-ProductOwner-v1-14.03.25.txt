@@ -1,0 +1,30 @@
+Notes fin de sprint
+
+présentation du globe au client.
+client: demande pourquoi c'est petit le message en haut a droite.
+
+curseur trop précis
+client demande le globe en français= FAIRE EN FRANCAIS
+
+demande pourquoi il y a des I qui s'affichent= REGLER LE PROBLEME
+
+map c'est bien.
+
+"C'est quoi ce 1"= CORRIGER LES 1.
+
+Demande si elle recherche Vevey= Faires les recherches= FILTRER LES LIEUX PAR PAYS
+				Recherche avec carte à côté
+				page de recherche inutile.
+				ASSOCIER LES COORDONNEES AVEC DES LIEUX
+				Utiliser la recherche de la carte pour faire tout les site.
+				50km de vevey <- example
+
+				Enlever les planètes moches dans figma XDDDDDDD
+Page d'acceuil avec carte interactive appiyer sur un point = Go to page de site unesco avec image du site
+
+		connection avec les J'ai visité et "a visiter"
+autre carte dans le profile avec options du dessus
+
+RECHERECHE AVEC FILTRES PAR PAYS ET PAR TYPES DE SITE (naturel, humans), REGIONS, ALTITUDE DES SITES s'affiche dans la carte sur page d'acceuil
+Graphisme épuré
+
