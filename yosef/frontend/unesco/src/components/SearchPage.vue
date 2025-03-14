@@ -1,82 +1,92 @@
 <template>
-  <p v-if="count >= 5">5!!!</p>
+  <div class="search-container">
+    <h1>Recherche Lieux</h1>
+    <form @submit.prevent="searchLieu">
+      <label for="nom">Nom du lieu :</label>
+      <input
+        type="text"
+        id="nom"
+        v-model="nom"
+        list="suggestions"
+        placeholder="Entrez un lieu"
+      />
+      <datalist id="suggestions">
+        <option
+          v-for="suggestion in suggestions"
+          :key="suggestion.nom"
+          :value="suggestion.nom"
+        />
+      </datalist>
+      <button type="submit">Rechercher</button>
+    </form>
 
-  <input type="search" placeholder="Search..." v-model="searchbar" />
-  <searchbar />
+    <div v-if="error" class="error">{{ error }}</div>
 
-  <p v-if="filteredUsers.length === 0" class="erreur">
-    Aucun utilisateur trouvé.
-  </p>
-  <p v-if="error">{{ error }}</p>
+    <div v-if="lieux.length > 0" class="results">
+      <h2>Résultats :</h2>
+      <div v-for="lieu in lieux" :key="lieu.lieu_id" class="result-item">
+        <p><strong>ID :</strong> {{ lieu.lieu_id }}</p>
+        <p><strong>Nom :</strong> {{ lieu.nom }}</p>
+        <p><strong>Longitude :</strong> {{ lieu.longitude }}</p>
+        <p><strong>Latitude :</strong> {{ lieu.latitude }}</p>
+        <p><strong>Particularité :</strong> {{ lieu.particularite }}</p>
+        <hr />
+      </div>
+    </div>
 
-  <div>
-    <p v-for="lieu in filteredUsers" :key="lieu.id">
-      {{ lieu.title }} <br />
-      {{ lieu.albumId }}
-    </p>
+    <div v-else-if="!error && lieux.length === 0 && searched">
+      <p>Aucun lieu trouvé.</p>
+    </div>
   </div>
 </template>
 
 <script>
-import searchBar from "./components/searchBar.vue";
-import { ref, onMounted, computed } from "vue";
 import axios from "axios";
 
 export default {
-  components: {
-    searchBar,
-  },
-
-  setup() {
-    const count = ref(0);
-    const searchbar = ref(""); // Input de recherche
-    const lieu = ref([]);
-    const loading = ref(true);
-    const error = ref(null);
-
-    const increment = () => {
-      count.value += 1;
-    };
-
-    const decrement = () => {
-      count.value -= 1;
-    };
-
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/albums/1/photos"
-        );
-        lieu.value = response.data;
-      } catch (err) {
-        error.value = err.message;
-      } finally {
-        loading.value = false;
-      }
-    };
-
-    onMounted(fetchUsers);
-
-    // Utilisation de computed() pour filtrer les utilisateurs
-    const filteredUsers = computed(() => {
-      return lieu.value.filter((user) =>
-        user.title.toLowerCase().includes(searchbar.value.toLowerCase())
-      );
-    });
-
+  name: "SearchPage",
+  data() {
     return {
-      count,
-      increment,
-      decrement,
-      searchbar,
-      filteredUsers,
-      lieu,
-      error,
+      nom: "",
+      lieux: [],
+      suggestions: [],
+      error: "",
+      searched: false,
     };
+  },
+  watch: {
+    nom(newVal) {
+      if (newVal.length > 2) {
+        axios
+          .get(`http://localhost:3000/suggest-lieu?query=${newVal}`)
+          .then((res) => {
+            this.suggestions = res.data;
+          })
+          .catch((err) => {
+            console.error("Erreur suggestions:", err);
+          });
+      }
+    },
+  },
+  methods: {
+    searchLieu() {
+      axios
+        .post("http://localhost:3000/search-user", { nom: this.nom })
+        .then((res) => {
+          this.lieux = res.data.lieux;
+          this.error = res.data.error || "";
+          this.searched = true;
+        })
+        .catch((err) => {
+          console.error("Erreur recherche:", err);
+          this.error = "Erreur lors de la recherche.";
+        });
+    },
   },
 };
 </script>
-<style>
+
+<style scoped>
 /* General body styling for clean and modern look */
 body {
   margin: 0;
