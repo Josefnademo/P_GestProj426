@@ -1,0 +1,219 @@
+*   	 (HEAD -> main, origin/main, origin/HEAD) 🔀 Merge pull request #45 from ASETML/frontend
+|\  
+| *   	 Conflit dans app.mjs
+| |\  
+| |/  
+|/|   
+* | 	 Correction du globe
+* | 	 Affiche les labels SI la souris est assez proche : OK
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * | 	 modification du globe pour qu'il affiche tous les monuments
+* | | 	 globe updated : point 100m au dessus de la surface
+|/ /  
+* | 	 modification du globe
+| *   	 Merge pull request #41 from ASETML/main
+| |\  
+| * | 	 🚧frontend with VueJs searchBar
+| * | 	 Revert ":twisted_rightwards_arrows:Merge pull request #40 from ASETML/main"
+| * |   	 :twisted_rightwards_arrows:Merge pull request #40 from ASETML/main
+| |\ \  
+| * \ \   	 :twisted_rightwards_arrows:Merge pull request #37 from ASETML/main
+| |\ \ \  
+| * \ \ \   	 :twisted_rightwards_arrows: Merge pull request #36 from ASETML/main
+| |\ \ \ \  
+| * | | | | 	 apprentissage de VueJs avec une API externe
+| | | | | | * 	 (origin/piguet) update
+| | | | | | * 	 update
+| | | | | | | * 	 (origin/dev) recherche(recherche.ejs , route), css_global
+| | | | | | | * 	 Create(InitFiles)
+| | | | | | | | *   	 (origin/backend) Merge pull request #42 from ASETML/main
+| | | | | | | | |\  
+| |_|_|_|_|_|_|_|/  
+|/| | | | | | | |   
+* | | | | | | | |   	 Merge branch 'backend'
+|\ \ \ \ \ \ \ \ \  
+| |_|_|_|_|/ / / /  
+|/| | | | | | | /   
+| | |_|_|_|_|_|/    
+| |/| | | | | |     
+| * | | | | | | 	 Start(Register) [WIP]
+* | | | | | | | 	 :white_check_mark:Create test.txt
+| |_|_|_|/ / /  
+|/| | | | | |   
+* | | | | | | 	 Script Alban : OK
+* | | | | | | 	 css_global
+* | | | | | |   	 🔀 Merge pull request #39 from ASETML/globe
+|\ \ \ \ \ \ \  
+| * \ \ \ \ \ \   	 (origin/globe) Merge branch 'main' of https://github.com/ASETML/P_GestProj426 into globe
+| |\ \ \ \ \ \ \  
+| | | |_|_|/ / /  
+| | |/| | | | |   
+| * | | | | | | 	 supression du globe de app.mjs
+| * | | | | | |   	 Merge branch 'globe' of https://github.com/ASETML/P_GestProj426 into globe
+| |\ \ \ \ \ \ \  
+| | * | | | | | | 	 Le globe marche
+| * | | | | | | | 	 Le globe marche
+| |/ / / / / / /  
+| * | | | | | | 	 Fin 28.02
+| * | | | | | | 	 Ajout d'un globe
+| * | | | | | | 	 ajout test map
+* | | | | | | | 	 COMMIT VITE
+* | | | | | | | 	 Add(Scripts)
+* | | | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \ \ \ \ \  
+| * | | | | | | | 	 Ajout du globe
+| * | | | | | | | 	 Create globe.html
+| | |/ / / / / /  
+| |/| | | | | |   
+* / | | | | | | 	 Continue Merge
+|/ / / / / / /  
+* | | | | | |   	 Merge branch 'backend'
+|\ \ \ \ \ \ \  
+| | |/ / / / /  
+| |/| | | | |   
+| * | | | | | 	 Finish(/lieu/ routes)
+* | | | | | | 	 Corriger les scripts package.json
+* | | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \ \ \ \  
+| |_|_|_|_|/ /  
+|/| | | | | |   
+| * | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \ \ \ \ \  
+| | * | | | | | 	 Header/Footer(Views)
+| | | |_|_|/ /  
+| | |/| | | |   
+| * | | | | | 	 script de lancement de l'environnement dev : OK
+| * | | | | | 	 script SQL : retour à la ligne ajouté pour que tout s'exécute
+| |/ / / / /  
+| * | | | | 	 gitignore : exGitHub ajouté
+| * | | | | 	 Fichier temp de Word ajouté au .gitignore
+* | | | | | 	 feature(seeder)
+|/ / / / /  
+* | | / / 	 Update(README.md)
+| |_|/ /  
+|/| | |   
+* | | |   	 Merge pull request #34 from ASETML/model
+|\ \ \ \  
+| * | | | 	 (origin/model) update(modeles)
+| * | | | 	 Update(model) ajout de bcp de models
+| | | | | * 	 (refs/stash) On backend: !!GitHub_Desktop<backend>
+| | | |_|/| 
+| | |/| | | 
+| | | | | * 	 index on backend: 0281f4f Test(DB)
+| | | |_|/  
+| | |/| |   
+| | * | | 	 (backend) Test(DB)
+| |/ / /  
+|/| | |   
+* | | | 	 Create Tableau Routes.url
+* | | | 	 Create(lieucontroller)
+* | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \  
+| * | | | 	 footer
+| * | | | 	 Merge pull request #33 from ASETML/model
+| |\| | | 
+| | * | | 	 update(templage)
+* | | | | 	 Setup(env)
+|/ / / /  
+* | | |   	 Merge pull request #32 from ASETML/config.mjs
+|\ \ \ \  
+| | |/ /  
+| |/| |   
+| * | | 	 Supprimmer .env, ajout config.mjs, connection à la db
+| |/ /  
+* / / 	 Figma
+|/ /  
+* | 	 update(package.json)
+* | 	 update(auth + map)
+* | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| 
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| * | 	 Create Lien Tableau Routes.url
+* | | 	 backup fichier Figma 🗃
+| |/  
+|/|   
+* | 	 Logo Final
+* | 	 Minor change - notes
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * | 	 Update(Readme)
+| * | 	 Reorganize(Repo)
+| * | 	 Move(Figma Link)
+| * | 	 Rename(Folders)
+| * | 	 figma
+* | | 	 NOTES sprint review - cliente 💞☢☣⚠🔆🔱🔱♻
+|/ /  
+* | 	 CDC importé 💥💟
+* | 	 Liens mis dans un dossier 💚
+* | 	 Liens ajoutés 🛐🧺💦
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\| 
+| | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | |\  
+| | * | 	 SCRIPT DB TERMINé !!!!!!!!! 🎉🎊🎁🥂🥳🥳🥳🎀🎁🥳🥳🥳🥳
+| * | | 	 wip(route et views)
+| |/ /  
+* | / 	 Création du modèle Compte et ajout de variable d'environnement 🚑🚑🚑
+| |/  
+|/|   
+* | 	 figma backup 31.01.2025
+|/  
+* 	 backup figma 1 created 👁‍🗨🟩🟢
+* 	 Update MLD FINAL FOR REAL 🛐༼ つ ◕_◕ ༽つ©
+* 	 Finalize(looping) 👼
+* 	 Update db_unesco : WIP ☝👍💅
+* 	 déplacer nouveau logo ⬅🖼🖌
+*   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\  
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| * | 	 add logo 🤔✔💋🎂👽
+| * | 	 Ajouter(logo) 🤳🐱‍👓🐱‍💻
+* | | 	 update(modif logo)
+| |/  
+|/|   
+* | 	 update(post-meeting)
+|/  
+* 	 ajout(logo)🐔🦿🧐
+*   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\  
+| * 	 Lien Fima ajouté
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| * | 	 add *.ini to gitignore
+* | | 	 Update GitIgnore
+| |/  
+|/|   
+* | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| 
+| * 	 update(directives)
+* | 	 Revise(MCD, MLD, DBScript)
+|/  
+*   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\  
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| * | 	 Icon added ➡✅
+* | | 	 Update(MCD)
+| |/  
+|/|   
+* | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| 
+| * 	 Mettre chaque collaborateur du README sur une ligne chacun
+* | 	 Create(ScriptSQL)
+|/  
+* 	 Créer les dossiers pour les controllers et les views
+*   	 Merge pull request #2 from ASETML/dev
+|\  
+| * 	 Création de l'arborescence
+* | 	 Merge pull request #1 from ASETML/dev
+|\| 
+| * 	 Création du projet
+* | 	 Add(MCD)
+* | 	 Create README.md
+|/  
+* 	 Ajouter le docker base de données
