@@ -52,21 +52,21 @@ lieuRouter.post("/:id/visiter", async (req, res) => {
   const compteId = req.body.compte_id;
   console.log(siteId, compteId);
   const connection = await mysql.createConnection(config.dbConfig);
-  try {
-    await connection.execute(
-      "INSERT INTO t_aimeraitVisiter (lieu_id_fk, compte_id_fk) VALUES (?, ?)",
-      [siteId, compteId]
-    );
-    res.json({
-      message: `Site avec l'ID ${siteId} ajouté à la liste "à visiter"`,
-    });
-  } catch (error) {
+  //try {
+  await connection.execute(
+    "INSERT INTO t_aimeraitVisiter (lieu_id_fk, compte_id_fk) VALUES (?, ?)",
+    [siteId, compteId]
+  );
+  res.json({
+    message: `Site avec l'ID ${siteId} ajouté à la liste "à visiter"`,
+  });
+  /* } catch (error) {
     res
       .status(500)
       .json({ message: "Erreur lors de l'ajout à la liste.", error });
   } finally {
     await connection.end();
-  }
+  }*/
 });
 
 // POST /:id/visite - Ajouter un site à la liste "visité"
