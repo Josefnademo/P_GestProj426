@@ -12,6 +12,21 @@
 
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.126/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 
+<style>
+.cesium-sceneModePicker-dropDown-icon[data-bind*="COLUMBUS_VIEW"] {
+        display: none;
+		}
+		.cesium-widget-credits {
+			display: none !important;
+		}
+		#cesium-viewer {
+			width: 100%;
+			height: 150%;
+		}
+        body {
+            background-color: black;
+        }
+</style>
 </head>
 
 <body>
@@ -98,7 +113,6 @@ for (let place of places) {
                 entity.label.show = distance < 99998; // Affiche si la distance est < 10 km
             };
         });
-		console.log("Why");
 }
 
 // Suivi de la souris et mise à jour des labels
@@ -113,7 +127,9 @@ handler.setInputAction(function (movement) {
             }
         });
     }
-}, Cesium.ScreenSpaceEventType.MOUSE_MOVE);</script>
+}, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+
+</script>
 
  </div>
 
