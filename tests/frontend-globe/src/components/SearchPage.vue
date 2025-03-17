@@ -1,7 +1,5 @@
-<!DOCTYPE html>
 
-<html lang="en">
-
+<template>
 <head>
 
   <meta charset="utf-8">
@@ -41,7 +39,7 @@
     // Replace `your_access_token` with your Cesium ion access token.
 
 
-    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYzdjMDI0Yy1lNmRjLTRlNGQtODhlNC03MDk2YTFiOTkwZjIiLCJpZCI6Mjg1MDU5LCJpYXQiOjE3NDIyMTU0NTl9.O5SAKSAFH-6ir1VBpZPCduvvTJGKbNWiR6ivpwMBL-o';
+    Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxNTk0Y2NjNy0zYjUzLTRhYjYtOWQzMy02ZjI5NDVjYjdkMTkiLCJpZCI6Mjc5OTg2LCJpYXQiOjE3NDE1OTk5ODV9.XjXypSIno5Dkg0PCKECD4vRG1EFDnICMIRKldH2A7uc';
 
     // Initialize the Cesium Viewer in the HTML element with the `cesiumContainer` ID.
     const viewer = new Cesium.Viewer('cesiumContainer', {
@@ -136,8 +134,5 @@ handler.setInputAction(function (movement) {
 
 </script>
 
- </div>
-
 </body>
-
-</html>
+</template>
