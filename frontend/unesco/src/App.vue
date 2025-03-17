@@ -1,81 +1,20 @@
 <template>
-  <p v-if="count >= 5">5!!!</p>
-
-  <input type="search" placeholder="Search..." v-model="searchbar" />
-  <searchbar />
-
-  <p v-if="filteredUsers.length === 0" class="erreur">
-    Aucun utilisateur trouvé.
-  </p>
-  <p v-if="error">{{ error }}</p>
-
   <div>
-    <p v-for="lieu in filteredUsers" :key="lieu.id">
-      {{ lieu.title }} <br />
-      {{ lieu.albumId }}
-    </p>
+    <nav>
+      <router-link to="/">Accueil</router-link> |
+      <router-link to="/about">À propos</router-link> |
+      <router-link to="/search">recherche</router-link>
+    </nav>
+    <main>
+      <router-view></router-view>
+    </main>
+    <footer>
+      <p>&copy; 2025 UNESCO - Tous droits réservés</p>
+    </footer>
   </div>
 </template>
 
-<script>
-import searchBar from "./components/searchBar.vue";
-import { ref, onMounted, computed } from "vue";
-import axios from "axios";
-
-export default {
-  components: {
-    searchBar,
-  },
-
-  setup() {
-    const count = ref(0);
-    const searchbar = ref(""); // Input de recherche
-    const lieu = ref([]);
-    const loading = ref(true);
-    const error = ref(null);
-
-    const increment = () => {
-      count.value += 1;
-    };
-
-    const decrement = () => {
-      count.value -= 1;
-    };
-
-    const fetchUsers = async () => {
-      try {
-        const response = await axios.get(
-          "https://jsonplaceholder.typicode.com/albums/1/photos"
-        );
-        lieu.value = response.data;
-      } catch (err) {
-        error.value = err.message;
-      } finally {
-        loading.value = false;
-      }
-    };
-
-    onMounted(fetchUsers);
-
-    // Utilisation de computed() pour filtrer les utilisateurs
-    const filteredUsers = computed(() => {
-      return lieu.value.filter((user) =>
-        user.title.toLowerCase().includes(searchbar.value.toLowerCase())
-      );
-    });
-
-    return {
-      count,
-      increment,
-      decrement,
-      searchbar,
-      filteredUsers,
-      lieu,
-      error,
-    };
-  },
-};
-</script>
+<script></script>
 <style>
 /* General body styling for clean and modern look */
 body {
