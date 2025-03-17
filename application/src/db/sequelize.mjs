@@ -23,7 +23,11 @@ const compte = CompteModel(sequelize, DataTypes);
 
 // Exporter les ressources nécessaires
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 export { sequelize, Compte };
+=======
+export { sequelize, compte };
+>>>>>>> Stashed changes
 =======
 export { sequelize, compte };
 >>>>>>> Stashed changes
