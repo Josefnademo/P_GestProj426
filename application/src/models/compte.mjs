@@ -16,6 +16,11 @@ const CompteModel = (sequelize, DataTypes) => {
     },
     salt: { type: DataTypes.STRING, allowNull: false },
     hashedPassword: { type: DataTypes.STRING, allowNull: false },
+    isAdmin: {
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      default: false,
+    },
   });
 };
 

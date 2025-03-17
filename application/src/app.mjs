@@ -1,6 +1,6 @@
-//import { sequelize, Compte } from "./db/sequelize.mjs";
+import { sequelize, Compte } from "./db/sequelize.mjs";
 import express from "express";
-import port from "./config.mjs";
+import config from "./config.mjs";
 import path from "path";
 const app = express();
 app.set("view engine", "ejs");
@@ -16,8 +16,6 @@ app.set("view engine", "ejs");
     console.log("La connexion à la base de données a bien été établie")
   )
   .catch((error) => console.error("Impossible de se connecter à la DB"));
-
-
 });
 */
 app.use((req, res, next) => {
@@ -26,11 +24,11 @@ app.use((req, res, next) => {
   res.append("Access-Control-Allow-Headers", "Content-Type");
   next();
 });
+app.listen(config.app_port, () => {
+  console.log(`Example app listening at http://localhost:${config.app_port}`);
+});
 
 app.use(express.json());
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
-});
 
 app.set("view engine", "ejs");
 
