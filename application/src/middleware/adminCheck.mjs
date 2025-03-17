@@ -8,5 +8,19 @@ const isAdmin = (req, res, next) => {
     .status(403)
     .json({ message: "Accès refusé, administrateur requis." });
 };
-
-export { isAdmin };
+const verifyAdmin = async (req, res, next) => {
+  const username = req.body.username;
+  if (username) {
+    const isAdmin = sequelize.query(
+      "SELECT isAdmin FROM Comptes WHERE username = ?",
+      [username]
+    );
+    if (isAdmin) {
+      next();
+    }
+  }
+  return res
+    .status(401)
+    .json("Seuls les Administrateurs peuvent accéder à cette ressource");
+};
+export { isAdmin, verifyAdmin };

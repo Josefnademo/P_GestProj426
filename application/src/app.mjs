@@ -1,10 +1,11 @@
 import { sequelize, Compte } from "./db/sequelize.mjs";
 import express from "express";
 import config from "./config.mjs";
+import cookieParser from "cookie-parser";
 import path from "path";
 const app = express();
 app.set("view engine", "ejs");
-
+app.use(cookieParser);
 /*app.get("/", (req, res) => {
   //res.render("accueil", { foo: "FOO" });
 });*/

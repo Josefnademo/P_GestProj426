@@ -18,19 +18,5 @@ const verifyToken = async (req, res, next) => {
   }
   next();
 };
-const verifyAdmin = async (req, res, next) => {
-  const username = req.body.username;
-  if (username) {
-    const isAdmin = sequelize.query(
-      "SELECT isAdmin FROM Comptes WHERE username = ?",
-      [username]
-    );
-    if (isAdmin) {
-      next();
-    }
-  }
-  return res
-    .status(401)
-    .json("Seuls les Administrateurs peuvent accéder à cette ressource");
-};
-export { verifyToken, verifyAdmin };
+
+export { verifyToken };
