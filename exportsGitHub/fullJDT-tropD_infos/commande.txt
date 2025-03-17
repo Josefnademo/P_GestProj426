@@ -1,1 +1,0 @@
-git log --pretty=format:"%h - %an, %ar : %s" --stat > journal_de_travail.txt

@@ -1,0 +1,3 @@
+git log --graph --full-history --all --pretty=format:"%x09%d%x20%s" > "Git Tree.txt"
+
+https://rowannicholls.github.io/git/advanced/exporting_history.html
