@@ -12,6 +12,24 @@
 
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.126/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 
+<style>
+.cesium-sceneModePicker-dropDown-icon[data-bind*="COLUMBUS_VIEW"] {
+        display: none;
+		}
+		.cesium-widget-credits {
+			display: none !important;
+		}
+		#cesium-viewer {
+			width: 100%;
+			height: 150%;
+		}
+        body {
+            background-color: black;
+        }
+        button.cesium-infoBox-camera {
+  display: none;
+}
+</style>
 </head>
 
 <body>
@@ -31,6 +49,8 @@
       animation: false,
       timeline: false,
     }); 
+
+    viewer.scene.screenSpaceCameraController.minimumZoomDistance = 6378137 * 0.05
     
     var imagery = Cesium.createDefaultImageryProviderViewModels();
 
@@ -67,7 +87,7 @@ for (let place of places) {
     Cesium.sampleTerrainMostDetailed(viewer.terrainProvider, [Cesium.Cartographic.fromDegrees(place.coordinates.lon, place.coordinates.lat)])
         .then((updatedPositions) => {
             const height = updatedPositions[0].height || 0; // Hauteur du terrain
-            const adjustedHeight = height + 200; // On ajoute 2000m pour éviter tout enfouissement
+            const adjustedHeight = height + 2000; // On ajoute 2000m pour éviter tout enfouissement
 
             const adjustedPosition = Cesium.Cartesian3.fromDegrees(place.coordinates.lon, place.coordinates.lat, adjustedHeight);
 
@@ -95,10 +115,9 @@ for (let place of places) {
             entity._distanceLabelUpdate = function (mousePosition) {
                 if (!mousePosition) return;
                 const distance = Cesium.Cartesian3.distance(mousePosition, adjustedPosition);
-                entity.label.show = distance < 99998; // Affiche si la distance est < 10 km
+                entity.label.show = distance < 55000; // Affiche si la distance est < 10 km 99998
             };
         });
-		console.log("Why");
 }
 
 // Suivi de la souris et mise à jour des labels
@@ -113,7 +132,9 @@ handler.setInputAction(function (movement) {
             }
         });
     }
-}, Cesium.ScreenSpaceEventType.MOUSE_MOVE);</script>
+}, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+
+</script>
 
  </div>
 
