@@ -1,7 +1,17 @@
 *   	 (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\  
+| * 	 (origin/fusion-vues-Yosef-frontend) Update Header.vue
 | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | |\  
+| | * 	 Package-lock.json created - when "npm i"
+| * | 	 header.vue liens corrects
+* | | 	 JDT du 24.03
+| |/  
+|/|   
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\| 
 | | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | | |\  
 | | * | 	 AccountPage(Ajout de la zone IN DANGER)[]IN PROGRESS;  LoginPage(la structure HTML(formulaire,titres), et une grande partie de CSS sont fait); Routes(Ajout de route Account, correction de route Details)
@@ -11,6 +21,10 @@
 | * | 	 🩹 point sur la carte + description :DONE
 * | | 	 feat(Imports)
 |/ /  
+| | * 	 (origin/auth) Feat(Register)
+| | * 	 Chore(Cleanup)
+| |/  
+|/|   
 * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\ \  
 | * | 	 feat(footer.css)
