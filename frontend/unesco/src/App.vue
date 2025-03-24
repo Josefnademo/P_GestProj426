@@ -6,7 +6,9 @@
       <router-link to="/search">recherche</router-link>
     </nav>
     <main>
-      <router-view></router-view>
+      <suspense>
+        <router-view></router-view>
+      </suspense>
     </main>
     <footer>
       <p>&copy; 2025 UNESCO - Tous droits réservés</p>

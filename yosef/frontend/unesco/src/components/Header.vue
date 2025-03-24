@@ -1,6 +1,5 @@
 <template>
-  <header>
-    <div class="Logo">
+  <header><div class="Logo">
       <a href="HomePage.vue"
         ><img src="./Logos/logo-ACD.png" alt="logo ACD motorsport"
       /></a>
@@ -22,6 +21,5 @@
           </li>
         </ul>
       </nav>
-    </div>
   </header>
 </template>
