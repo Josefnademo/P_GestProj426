@@ -20,8 +20,6 @@
 - Dans la racine du projet à : `\P_GestProj426`, ouvrir une console .bash Puis faires les commandes suivantes:  
   `cd Docker/`  
   `docker compose up -d`  
-  `cd ../a`  
-  `cd ../a`  
   `cd ../application/`  
   `npm install`  
   `npm start`
