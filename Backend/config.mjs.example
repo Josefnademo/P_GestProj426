@@ -6,6 +6,7 @@ const db_port = ;
 const db_dialect = "";
 const sequelize_log = ;
 const port = ;
+const private_key = "";
 
 const dbConfig = {
   host: db_host,
@@ -16,6 +17,7 @@ const dbConfig = {
 };
 
 export default {
+  private_key,
   db_name,
   db_user,
   port,
