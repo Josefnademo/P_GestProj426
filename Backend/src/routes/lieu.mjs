@@ -11,7 +11,7 @@ lieuRouter.get("/", async (req, res) => {
   const connection = await mysql.createConnection(config.dbConfig);
   try {
     const [rows] = await connection.execute(
-      "SELECT nom, latitude, longitude FROM t_lieu"
+      "SELECT nom, latitude, longitude, particularite FROM t_lieu"
     );
     res.json(rows);
   } catch (error) {
