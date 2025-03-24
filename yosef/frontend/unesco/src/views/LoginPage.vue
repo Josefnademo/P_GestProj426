@@ -1,183 +1,293 @@
 <template>
-  <div id="app">
-    <div class="personal-info-container">
-      <h1>Information personnelle</h1>
-      <div class="info-section">
-        <div class="info-item">
-          <span>Email Tony.Smith@gmail.com</span>
-          <button class="change-button">Changer</button>
-        </div>
-        <div class="info-item">
-          <span>Mot de passe ********</span>
-          <button class="change-button">Changer</button>
-        </div>
+  <div class="login-container">
+    <div class="circle circle-green"></div>
+    <div class="circle circle-orange"></div>
+
+    <div class="book" :class="{ flipped: isFlipped }" @click="handleBookClick">
+      <!-- Left page (Welcome) -->
+      <div class="page page-left">
+        <div class="welcome">Content de vous revoir !</div>
+        <div class="login-title">ACD Motorsport</div>
+        <button class="flip-button" @click.stop="flipBook">Login</button>
       </div>
-      <div class="actions">
-        <button class="save-button">Save</button>
-        <button class="logout-button">Déconnexion</button>
+
+      <!-- Right page (Login form) -->
+      <div class="page page-right">
+        <div class="connect-title">Se connecter</div>
+
+        <form @submit.prevent="handleSubmit">
+          <div class="form-group">
+            <label for="username">Nom d'utilisateur</label>
+            <input
+              type="text"
+              id="username"
+              placeholder="Entrez votre nom"
+              v-model="username"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Entrez votre mot de passe"
+              v-model="password"
+            />
+          </div>
+
+          <button type="submit" class="login-button">Se connecter</button>
+        </form>
       </div>
-      <div class="danger-zone">
-        <h2>Zone de danger</h2>
-        <div class="danger-item">
-          <span>Supprimer mon compte</span>
-          <p>
-            Une fois que vous avez supprimé un compte, il n’y a pas de retour en
-            arrière. Soyez-en certain.
-          </p>
-          <button class="delete-button">Supprimer</button>
-        </div>
-      </div>
-      <footer class="footer">
-        <p>Tout droit réservé © 2025 ACD Motorsport</p>
-        <div class="footer-links">
-          <a href="#">Recherche</a>
-          <a href="#">Compte</a>
-        </div>
-      </footer>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "App",
+  name: "LoginBook",
+  data() {
+    return {
+      isFlipped: false,
+      username: "",
+      password: "",
+    };
+  },
+  methods: {
+    flipBook() {
+      this.isFlipped = !this.isFlipped;
+    },
+    handleBookClick(e) {
+      // Close the book if clicked outside when it's flipped
+      if (this.isFlipped && !e.target.closest(".page-right")) {
+        this.isFlipped = false;
+      }
+    },
+    handleSubmit() {
+      // Handle form submission
+      console.log("Login submitted:", this.username, this.password);
+      // Add your authentication logic here
+    },
+  },
 };
 </script>
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
-}
-
-#app {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+<style scoped>
+.login-container {
+  position: relative;
+  width: 100%;
   height: 100vh;
-}
-
-.personal-info-container {
-  text-align: center;
-  background-color: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-}
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.info-section {
-  margin-bottom: 2rem;
-}
-
-.info-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1rem;
-}
-
-.change-button {
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.change-button:hover {
-  background-color: #0056b3;
-}
-
-.actions {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-bottom: 2rem;
+  align-items: center;
+  overflow: hidden;
 }
 
-.save-button,
-.logout-button {
-  padding: 0.5rem 1rem;
+/* Background circles */
+.circle {
+  position: absolute;
+  border-radius: 70%;
+  filter: blur(70px);
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.circle-green {
+  width: 70px;
+  height: 400px;
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  box-shadow: 0 0 100px #4caf50;
+  margin-top: 2%;
+  margin-left: 10%;
+}
+
+.circle-orange {
+  width: 100px;
+  height: 300px;
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  box-shadow: 0 0 120px #ff9800;
+  margin-top: 20%;
+  margin-right: -90%;
+}
+/* Book container */
+.book {
+  display: flex;
+  width: 800px;
+  height: 500px;
+  perspective: 2000px;
+  z-index: 1;
+  position: relative;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Page styling */
+.page {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(89, 87, 104, 0.6);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  transition: all 0.8s ease;
+}
+
+/* Left page (welcome) */
+.page-left {
+  left: 0;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  transform-origin: right center;
+  backface-visibility: hidden;
+}
+
+/* Right page (login form) */
+.page-right {
+  right: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  transform-origin: left center;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+}
+
+/* Flipped state */
+.book.flipped {
+  transform: rotateY(180deg);
+}
+
+.book.flipped .page-left {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.book.flipped .page-right {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Rest of your styles remain the same */
+.welcome {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.login-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.flip-button {
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  color: white;
   border: none;
-  border-radius: 5px;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
-  font-size: 1rem;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+  transition: all 0.3s ease;
 }
 
-.save-button {
-  background-color: #28a745;
+.flip-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(76, 175, 80, 0.6);
+}
+
+.connect-title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 16px;
   color: white;
+  transition: all 0.3s ease;
 }
 
-.save-button:hover {
-  background-color: #218838;
+.form-group input:focus {
+  outline: none;
+  border-color: #4caf50;
+  background: rgba(255, 255, 255, 0.15);
 }
 
-.logout-button {
-  background-color: #dc3545;
-  color: white;
+.form-group input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
 }
 
-.logout-button:hover {
-  background-color: #c82333;
-}
-
-.danger-zone {
-  margin-bottom: 2rem;
-}
-
-.danger-item {
-  text-align: left;
-}
-
-.danger-item span {
-  font-weight: bold;
-}
-
-.danger-item p {
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.delete-button {
-  padding: 0.5rem 1rem;
-  background-color: #dc3545;
+.login-button {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 15px 0;
+  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
   cursor: pointer;
+  margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+  transition: all 0.3s ease;
 }
 
-.delete-button:hover {
-  background-color: #c82333;
+.login-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 20px rgba(255, 152, 0, 0.6);
 }
 
 .footer {
-  margin-top: 2rem;
-  font-size: 0.9rem;
+  margin-top: 40px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-links {
-  margin-top: 0.5rem;
+  margin-top: 10px;
 }
 
 .footer-links a {
-  margin: 0 0.5rem;
-  color: #007bff;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
+  margin: 0 10px;
+  transition: all 0.3s ease;
 }
 
 .footer-links a:hover {
+  color: #4caf50;
   text-decoration: underline;
 }
 </style>

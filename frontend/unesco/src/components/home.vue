@@ -2,13 +2,23 @@
   <div>
     <h1>Page d'accueil</h1>
     <p>Bienvenue sur notre site !</p>
-    <div id="cesiumContainer"></div>
+    <Suspense>
+      <div id="cesiumContainer"></div>
+    </Suspense>
   </div>
 </template>
 <script setup>
 import { onMounted } from "vue";
 import * as Cesium from "cesium";
-import { places } from "../../point.js";
+// import { places } from "../../point.js";
+const url = "http://localhost:3000/lieu";
+
+const placesJson = await fetch(url, {
+  method: "GET",
+});
+
+const places = await placesJson.json();
+console.log(places);
 
 Cesium.Ion.defaultAccessToken =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYzdjMDI0Yy1lNmRjLTRlNGQtODhlNC03MDk2YTFiOTkwZjIiLCJpZCI6Mjg1MDU5LCJpYXQiOjE3NDIyMTU0NTl9.O5SAKSAFH-6ir1VBpZPCduvvTJGKbNWiR6ivpwMBL-o"; // Remplace par ta clé
@@ -50,29 +60,29 @@ onMounted(async () => {
   };
   for (let place of places) {
     const position = Cesium.Cartesian3.fromDegrees(
-      place.coordinates.lon,
-      place.coordinates.lat
+      Number(place.longitude),
+      Number(place.latitude)
     );
 
     // Interroge l'altitude du terrain à cet endroit
     Cesium.sampleTerrainMostDetailed(viewer.terrainProvider, [
       Cesium.Cartographic.fromDegrees(
-        place.coordinates.lon,
-        place.coordinates.lat
+        Number(place.longitude),
+        Number(place.latitude)
       ),
     ]).then((updatedPositions) => {
       const height = updatedPositions[0].height || 0; // Hauteur du terrain
       const adjustedHeight = height + 2000; // On ajoute 2000m pour éviter tout enfouissement
 
       const adjustedPosition = Cesium.Cartesian3.fromDegrees(
-        place.coordinates.lon,
-        place.coordinates.lat,
+        Number(place.longitude),
+        Number(place.latitude),
         adjustedHeight
       );
 
       const entity = viewer.entities.add({
-        name: place.site,
-        description: place.short_description,
+        name: place.nom,
+        description: place.particularite,
         position: adjustedPosition,
         point: {
           pixelSize: 10,
@@ -80,7 +90,7 @@ onMounted(async () => {
           heightReference: Cesium.HeightReference.NONE, // Désactiver le clamp pour qu'il respecte l'altitude fixée
         },
         label: {
-          text: place.site,
+          text: place.nom,
           font: "14pt monospace",
           style: Cesium.LabelStyle.FILL_AND_OUTLINE,
           outlineWidth: 2,
