@@ -18,7 +18,7 @@
             <a href="register.ejs">Register</a>
           </li>
           <li>
-            <a href="account.ejs">Account</a>
+            <a href="AccountPage.vue">Account</a>
           </li>
         </ul>
       </nav>
