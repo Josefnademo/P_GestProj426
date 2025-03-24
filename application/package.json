@@ -5,20 +5,23 @@
   "description": "Projet pour le module 426 ()\u001b[DProgrammer avec des méthodes agiles)",
   "main": "src/app.mjs",
   "scripts": {
-    "start": "nodemon src/app.mjs"
+    "start": "nodemon src/app.mjs",
+    "seed": "node src/seed.mjs",
+    "antoine": "node src/seed.mjs"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "dotenv": "^16.4.7",
-    "ejs": "^3.1.10",
+  "dependencies": 
+    "bcrypt": "^5.1.1",
     "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
     "mysql2": "^3.12.0",
-    "sequelize": "^6.37.5"
+    "sequelize": "^6.37.5",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
   },
   "devDependencies": {
-    "ejs": "3.1.10",
-    "express": "4.21.2",
-    "nodemon": "^3.1.9"
+    "nodemon": "^3.1.9",
+    "vitest": "^3.0.5"
   }
 }

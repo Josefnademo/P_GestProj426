@@ -1,12 +1,39 @@
 import { sequelize, Compte } from "./db/sequelize.mjs";
 import express from "express";
-dotenv.config();
-console.log(process.env);
-
+import config from "./config.mjs";
+import cookieParser from "cookie-parser";
+import path from "path";
 const app = express();
-const port = 3000;
-app.use(express.json());
 app.set("view engine", "ejs");
+app.use(cookieParser);
+/*app.get("/", (req, res) => {
+  //res.render("accueil", { foo: "FOO" });
+});*/
+
+//Connection à la DB
+/*sequelize
+  .authenticate()
+  .then((_) =>
+    console.log("La connexion à la base de données a bien été établie")
+  )
+  .catch((error) => console.error("Impossible de se connecter à la DB"));
+});
+*/
+//middleWare pour cors policy
+app.use((req, res, next) => {
+  res.append("Access-Control-Allow-Origin", ["*"]);
+  res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+  res.append("Access-Control-Allow-Headers", "Content-Type");
+  next();
+});
+app.listen(config.app_port, () => {
+  console.log(`Example app listening at http://localhost:${config.app_port}`);
+});
+
+app.use(express.json());
+
+app.set("view engine", "ejs");
+
 import { avisRouter } from "./routes/avis.mjs";
 app.use("/avis/", avisRouter);
 
@@ -16,13 +43,23 @@ app.use("/compte/", compteRouter);
 import { lieuRouter } from "./routes/lieu.mjs";
 app.use("/lieu/", lieuRouter);
 
+import { loginRouter } from "./routes/login.mjs";
+app.use("/login/", loginRouter);
+
+/*import { registerRouter } from "./routes/register.mjs";
+app.use("/register/", registerRouter);*/
+
+import { adminRouter } from "./routes/admin.mjs";
+app.use("/admin/", adminRouter);
+
 app.get("/", (req, res) => {
-  res.render("accueil", { name: "antoine" });
+  //res.render("accueil");
 });
 
-app.get("/accueil/", (req, res) => {
-  res.render("accueil", { name: "utilisateur" });
-});
+/*
+app.get("/", (req, res) => {
+  res.redirect(`http://localhost:${port}/accueil/`);
+});*/
 app.use(({ res }) => {
   const message = "ERREUR 404";
   res.status(404).json(message);
