@@ -17,6 +17,7 @@ CREATE TABLE t_compte(
    email VARCHAR(50),
    salt CHAR(12) NOT NULL,
    hashedPassword CHAR(64) NOT NULL,
+   isAdmin BOOLEAN NOT NULL,
    PRIMARY KEY(compte_id),
    UNIQUE(username),
    UNIQUE(email)
