@@ -26,8 +26,8 @@ app.use((req, res, next) => {
   res.append("Access-Control-Allow-Headers", "Content-Type");
   next();
 });
-app.listen(config.app_port, () => {
-  console.log(`Example app listening at http://localhost:${config.app_port}`);
+app.listen(config.port, () => {
+  console.log(`Example app listening at http://localhost:${config.port}`);
 });
 
 app.use(express.json());
