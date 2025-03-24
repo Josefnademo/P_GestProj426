@@ -4,8 +4,13 @@ import LoginPage from "../views/LoginPage.vue";
 import DetailsPage from "../views/DetailsPage.vue";
 
 const routes = [
-  {
+  /* {
     path: "/",
+    name: "accueil"
+    views: HomePage,
+  },*/
+  {
+    path: "/search",
     name: "Search",
     component: SearchPage,
   },
