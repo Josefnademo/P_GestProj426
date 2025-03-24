@@ -1,4 +1,3 @@
-
 const db_name = "db_unesco";
 const db_user = "root";
 const db_password = "root";
