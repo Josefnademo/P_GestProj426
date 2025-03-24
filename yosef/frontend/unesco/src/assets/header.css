@@ -1,5 +1,5 @@
 header {
-  background-color: #ffffff;
+  background-color: #fffffe;
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   position: fixed;
@@ -36,8 +36,8 @@ nav ul li {
 
 .nav-button {
   text-decoration: none;
-  color: #ffffff;
-  background-color: #007bff;
+  color: #fffffe;
+  background-color: #13245a;
   font-family: Arial, sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -48,7 +48,7 @@ nav ul li {
 }
 
 .nav-button:hover {
-  background-color: #0056b3;
+  background-color: #13245a;
   transform: translateY(-2px);
 }
 
