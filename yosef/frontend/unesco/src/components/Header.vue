@@ -1,5 +1,6 @@
 <template>
-  <header><div class="Logo">
+  <header>
+    <div class="Logo">
       <a href="HomePage.vue"
         ><img src="./Logos/logo-ACD.png" alt="logo ACD motorsport"
       /></a>
@@ -8,18 +9,19 @@
       <nav>
         <ul>
           <li>
-            <a href="accueil.ejs">Accueil</a>
+            <a href="accueil" class="nav-button">Accueil</a>
           </li>
           <li>
-            <a href="login.ejs">Login</a>
+            <a href="login" class="nav-button">Login</a>
           </li>
           <li>
-            <a href="register.ejs">Register</a>
+            <a href="register" class="nav-button">Register</a>
           </li>
           <li>
-            <a href="AccountPage.vue">Account</a>
+            <a href="account" class="nav-button">Account</a>
           </li>
         </ul>
       </nav>
+    </div>
   </header>
 </template>
