@@ -1,315 +1,324 @@
-* 	 (HEAD -> main, origin/main, origin/Vue-home-include-map-point, origin/HEAD) Fix(Merge Issues)
-* 	 Config FIX
-*   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[32m|[m[33m\[m  
-[32m|[m *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[32m|[m [34m|[m[35m\[m  
-[32m|[m * [35m|[m 	 création de base vers page de l'accueil;
-* [35m|[m [35m|[m 	 Début de la suppression des imports sequelize
-[35m|[m [35m|[m[35m/[m  
-[35m|[m[35m/[m[35m|[m   
-* [35m|[m 	 Nettoyer le git
-* [35m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[36m|[m[1;31m\[m [35m\[m  
-[36m|[m * [35m|[m 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[36m|[m [1;32m|[m[35m\[m[35m|[m 
-[36m|[m * [35m|[m 	 Merge de toutes les branches
-* [1;33m|[m [35m|[m 	 Bugfix(dependencies)
-[35m|[m [1;33m|[m[35m/[m  
-[35m|[m[35m/[m[1;33m|[m   
-* [1;33m|[m   	 Merge pull request #54 from ASETML/frontend-VueJs
-[1;34m|[m[1;35m\[m [1;33m\[m  
-[1;34m|[m * [1;33m|[m 	 structurisation et liage des pages, creation des routeurs, creation des views(detailsPage,LoginPage)
-* [1;35m|[m [1;33m|[m 	 WIP AUTH
-* [1;35m|[m [1;33m|[m 	 Start(Auth) WIP
-[1;33m|[m [1;35m|[m[1;33m/[m  
-[1;33m|[m[1;33m/[m[1;35m|[m   
-* [1;35m|[m   	 Merge pull request #53 from ASETML/dev
-[1;36m|[m[31m\[m [1;35m\[m  
-[1;36m|[m * [1;35m\[m   	 Merge branch 'main' into dev
-[1;36m|[m [32m|[m[1;36m\[m [1;35m\[m  
-[1;36m|[m [32m|[m[1;36m/[m [1;35m/[m  
-[1;36m|[m[1;36m/[m[32m|[m [1;35m|[m   
-* [32m|[m [1;35m|[m   	 Merge pull request #52 from ASETML/backend
-[34m|[m[35m\[m [32m\[m [1;35m\[m  
-[34m|[m * [32m\[m [1;35m\[m   	 Merge pull request #42 from ASETML/main
-[34m|[m [36m|[m[1;31m\[m [32m\[m [1;35m\[m  
-* [36m|[m [1;31m\[m [32m\[m [1;35m\[m   	 Merge pull request #51 from ASETML/piguet
-[1;32m|[m[1;33m\[m [36m\[m [1;31m\[m [32m\[m [1;35m\[m  
-[1;32m|[m * [36m\[m [1;31m\[m [32m\[m [1;35m\[m   	 Merge branch 'main' into piguet
-[1;32m|[m [1;34m|[m[1;32m\[m [36m\[m [1;31m\[m [32m\[m [1;35m\[m  
-[1;32m|[m [1;34m|[m[1;32m/[m [36m/[m [1;31m/[m [32m/[m [1;35m/[m  
-[1;32m|[m[1;32m/[m[1;34m|[m [36m|[m [1;31m|[m [32m|[m [1;35m|[m   
-* [1;34m|[m [36m|[m [1;31m|[m [32m|[m [1;35m|[m   	 :twisted_rightwards_arrows: Merge pull request #50 from ASETML/frontend-VueJs
-[1;36m|[m[1;35m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m [1;35m\[m  
-[1;36m|[m [1;35m|[m [1;34m|[m[1;35m_[m[36m|[m[1;35m_[m[1;31m|[m[1;35m_[m[32m|[m[1;35m/[m  
-[1;36m|[m [1;35m|[m[1;35m/[m[1;34m|[m [36m|[m [1;31m|[m [32m|[m   
-[1;36m|[m * [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 (frontend-VueJs) Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
-[1;36m|[m [32m|[m[33m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[1;36m|[m [32m|[m * [1;34m\[m [36m\[m [1;31m\[m [32m\[m   	 Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
-[1;36m|[m [32m|[m [34m|[m[35m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[1;36m|[m [32m|[m * [35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Create routes accueil + map in VueJs
-[1;36m|[m * [35m|[m [35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 page du compte
-[1;36m|[m [35m|[m [35m|[m[35m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[1;36m|[m [35m|[m[35m/[m[35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   
-[1;36m|[m * [35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 page de details(html/css)
-[1;36m|[m * [35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Test de vuejs avec le globe
-[1;36m|[m * [35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 Merge pull request #49 from ASETML/main
-[1;36m|[m [35m|[m[1;31m\[m [35m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[1;36m|[m [35m|[m [1;31m|[m[35m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[1;36m|[m [35m|[m[35m/[m[1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   
-[1;36m|[m * [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
-[1;36m|[m [1;32m|[m[1;33m\[m [1;31m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[1;36m|[m [1;32m|[m * [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Création et structuration des fichiers dans framework Vue(routes, complements, public, assets,app.vue(template),main(import dans main)); + creation de route de Recherche(plus sa fonctionnalité); création de nouveau main.css;
-[1;36m|[m * [1;33m|[m [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 :construction: ajout de template (fonctionne pas)
-[1;36m|[m [1;33m|[m[1;33m/[m [1;31m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-* [1;33m|[m [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;34m|[m[1;35m\[m [1;33m\[m [1;31m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[1;34m|[m * [1;33m|[m [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Update admin.mjs
-* [1;35m|[m [1;33m|[m [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 update(fonction auth)
-[1;35m|[m[1;35m/[m [1;33m/[m [1;31m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-* [1;33m|[m [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;36m|[m[31m\[m [1;33m\[m [1;31m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[1;36m|[m * [1;33m|[m [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Petite réorganisation du repo
-[1;36m|[m * [1;33m|[m [1;31m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;36m|[m [32m|[m[33m\[m [1;33m\[m [1;31m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[1;36m|[m [32m|[m * [1;33m\[m [1;31m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;36m|[m [32m|[m [34m|[m[1;31m\[m [1;33m\[m [1;31m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[1;36m|[m [32m|[m [34m|[m [1;31m|[m [1;33m|[m[1;31m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[1;36m|[m [32m|[m [34m|[m [1;31m|[m[1;31m/[m[1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   
-[1;36m|[m [32m|[m * [1;31m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Create Point-ProductOwner.14.03.2025.txt
-[1;36m|[m * [35m|[m [1;31m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 FIGMA 17.03.2025
-[1;36m|[m [1;31m|[m [35m|[m[1;31m/[m [1;33m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[1;36m|[m [1;31m|[m[1;31m/[m[35m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   
-* [1;31m/[m [35m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 update(CA MARCHE)
-[1;31m|[m[1;31m/[m [35m/[m [1;33m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-* [35m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[36m|[m[1;31m\[m [35m\[m [1;33m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[36m|[m * [35m\[m [1;33m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[36m|[m [1;32m|[m[1;33m\[m [35m\[m [1;33m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[36m|[m [1;32m|[m * [35m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 New(retourPO)
-[36m|[m * [1;33m|[m [35m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 doc Git : premières possibilités et résultats
-[36m|[m [1;33m|[m[1;33m/[m [35m/[m [1;33m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[36m|[m * [35m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Masquage du bouton camera + changement de la distance d'affichage des labels
-[36m|[m * [35m|[m [1;33m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Style du globe
-[36m|[m [1;33m|[m [35m|[m[1;33m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[36m|[m [1;33m|[m[1;33m/[m[35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   
-[36m|[m * [35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 🔀 Merge pull request #45 from ASETML/frontend
-[36m|[m [1;34m|[m[1;35m\[m [35m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[36m|[m [1;34m|[m * [35m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m   	 Conflit dans app.mjs
-[36m|[m [1;34m|[m [1;36m|[m[1;34m\[m [35m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[36m|[m [1;34m|[m [1;36m|[m[1;34m/[m [35m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[36m|[m [1;34m|[m[1;34m/[m[1;36m|[m [35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   
-[36m|[m * [1;36m|[m [35m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Correction du globe
-[36m|[m [35m|[m [1;36m|[m[35m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[36m|[m [35m|[m[35m/[m[1;36m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   
-[36m|[m * [1;36m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 Affiche les labels SI la souris est assez proche : OK
-[36m|[m * [1;36m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[36m|[m [32m|[m[33m\[m [1;36m\[m [1;34m\[m [36m\[m [1;31m\[m [32m\[m  
-[36m|[m [32m|[m * [1;36m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 modification du globe pour qu'il affiche tous les monuments
-[36m|[m * [33m|[m [1;36m|[m [1;34m|[m [36m|[m [1;31m|[m [32m|[m 	 globe updated : point 100m au dessus de la surface
-[36m|[m [33m|[m[33m/[m [1;36m/[m [1;34m/[m [36m/[m [1;31m/[m [32m/[m  
-[36m|[m * [1;36m|[m [1;34m|[m [36m|[m [1;31m/[m [32m/[m 	 modification du globe
-[36m|[m [1;31m|[m [1;36m|[m[1;31m_[m[1;34m|[m[1;31m_[m[36m|[m[1;31m/[m [32m/[m  
-[36m|[m [1;31m|[m[1;31m/[m[1;36m|[m [1;34m|[m [36m|[m [32m|[m   
-[36m|[m [1;31m|[m * [1;34m|[m [36m|[m [32m|[m   	 Merge pull request #41 from ASETML/main
-[36m|[m [1;31m|[m [34m|[m[35m\[m [1;34m\[m [36m\[m [32m\[m  
-[36m|[m [1;31m|[m * [35m|[m [1;34m|[m [36m|[m [32m|[m 	 🚧frontend with VueJs searchBar
-[36m|[m [1;31m|[m * [35m|[m [1;34m|[m [36m|[m [32m|[m 	 Revert ":twisted_rightwards_arrows:Merge pull request #40 from ASETML/main"
-[36m|[m [1;31m|[m * [35m|[m [1;34m|[m [36m|[m [32m|[m   	 :twisted_rightwards_arrows:Merge pull request #40 from ASETML/main
-[36m|[m [1;31m|[m [36m|[m[1;31m\[m [35m\[m [1;34m\[m [36m\[m [32m\[m  
-[36m|[m [1;31m|[m * [1;31m\[m [35m\[m [1;34m\[m [36m\[m [32m\[m   	 :twisted_rightwards_arrows:Merge pull request #37 from ASETML/main
-[36m|[m [1;31m|[m [1;32m|[m[1;33m\[m [1;31m\[m [35m\[m [1;34m\[m [36m\[m [32m\[m  
-[36m|[m [1;31m|[m * [1;33m\[m [1;31m\[m [35m\[m [1;34m\[m [36m\[m [32m\[m   	 :twisted_rightwards_arrows: Merge pull request #36 from ASETML/main
-[36m|[m [1;31m|[m [1;34m|[m[1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;34m\[m [36m\[m [32m\[m  
-[36m|[m [1;31m|[m * [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;34m|[m [36m|[m [32m|[m 	 apprentissage de VueJs avec une API externe
-* [1;31m|[m [1;35m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;34m|[m [36m|[m [32m|[m 	 Create SprintReview14.03.25.jpg
-[1;31m|[m[1;31m/[m [1;35m/[m [1;35m/[m [1;33m/[m [1;31m/[m [35m/[m [1;34m/[m [36m/[m [32m/[m  
-* [1;35m|[m [1;35m|[m [1;33m|[m [1;31m|[m [35m|[m [1;34m|[m [36m|[m [32m|[m   	 Merge branch 'backend'
-[35m|[m[36m\[m [1;35m\[m [1;35m\[m [1;33m\[m [1;31m\[m [35m\[m [1;34m\[m [36m\[m [32m\[m  
-[35m|[m [36m|[m[35m_[m[1;35m|[m[35m_[m[1;35m|[m[35m_[m[1;33m|[m[35m_[m[1;31m|[m[35m/[m [1;34m/[m [36m/[m [32m/[m  
-[35m|[m[35m/[m[36m|[m [1;35m|[m [1;35m|[m [1;33m|[m [1;31m|[m [1;34m|[m [36m/[m [32m/[m   
-[35m|[m [36m|[m [1;35m|[m[36m_[m[1;35m|[m[36m_[m[1;33m|[m[36m_[m[1;31m|[m[36m_[m[1;34m|[m[36m/[m [32m/[m    
-[35m|[m [36m|[m[36m/[m[1;35m|[m [1;35m|[m [1;33m|[m [1;31m|[m [1;34m|[m [32m|[m     
-[35m|[m * [1;35m|[m [1;35m|[m [1;33m|[m [1;31m|[m [1;34m|[m [32m|[m 	 Start(Register) [WIP]
-* [31m|[m [1;35m|[m [1;35m|[m [1;33m|[m [1;31m|[m [1;34m|[m [32m|[m 	 :white_check_mark:Create test.txt
-[1;31m|[m [31m|[m[1;31m_[m[1;35m|[m[1;31m_[m[1;35m|[m[1;31m_[m[1;33m|[m[1;31m/[m [1;34m/[m [32m/[m  
-[1;31m|[m[1;31m/[m[31m|[m [1;35m|[m [1;35m|[m [1;33m|[m [1;34m|[m [32m|[m   
-* [31m|[m [1;35m|[m [1;35m|[m [1;33m|[m [1;34m|[m [32m|[m 	 Script Alban : OK
-* [31m|[m [1;35m|[m [1;35m|[m [1;33m|[m [1;34m|[m [32m|[m 	 css_global
-* [31m|[m [1;35m|[m [1;35m|[m [1;33m|[m [1;34m|[m [32m|[m   	 🔀 Merge pull request #39 from ASETML/globe
-[32m|[m[33m\[m [31m\[m [1;35m\[m [1;35m\[m [1;33m\[m [1;34m\[m [32m\[m  
-[32m|[m * [31m\[m [1;35m\[m [1;35m\[m [1;33m\[m [1;34m\[m [32m\[m   	 (globe) Merge branch 'main' of https://github.com/ASETML/P_GestProj426 into globe
-[32m|[m [34m|[m[1;33m\[m [31m\[m [1;35m\[m [1;35m\[m [1;33m\[m [1;34m\[m [32m\[m  
-[32m|[m [34m|[m [1;33m|[m [31m|[m[1;33m_[m[1;35m|[m[1;33m_[m[1;35m|[m[1;33m/[m [1;34m/[m [32m/[m  
-[32m|[m [34m|[m [1;33m|[m[1;33m/[m[31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m   
-[32m|[m * [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 supression du globe de app.mjs
-[32m|[m * [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m   	 Merge branch 'globe' of https://github.com/ASETML/P_GestProj426 into globe
-[32m|[m [36m|[m[1;31m\[m [1;33m\[m [31m\[m [1;35m\[m [1;35m\[m [1;34m\[m [32m\[m  
-[32m|[m [36m|[m * [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 (config.mjs) Le globe marche
-[32m|[m * [1;31m|[m [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Le globe marche
-[32m|[m [1;31m|[m[1;31m/[m [1;33m/[m [31m/[m [1;35m/[m [1;35m/[m [1;34m/[m [32m/[m  
-[32m|[m * [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Fin 28.02
-[32m|[m * [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Ajout d'un globe
-[32m|[m * [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 ajout test map
-* [1;31m|[m [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 COMMIT VITE
-* [1;31m|[m [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Add(Scripts)
-* [1;31m|[m [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;32m|[m[1;33m\[m [1;31m\[m [1;33m\[m [31m\[m [1;35m\[m [1;35m\[m [1;34m\[m [32m\[m  
-[1;32m|[m * [1;31m|[m [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Ajout du globe
-[1;32m|[m * [1;31m|[m [1;33m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Create globe.html
-[1;32m|[m [1;33m|[m [1;31m|[m[1;33m/[m [31m/[m [1;35m/[m [1;35m/[m [1;34m/[m [32m/[m  
-[1;32m|[m [1;33m|[m[1;33m/[m[1;31m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m   
-* [1;33m/[m [1;31m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Continue Merge
-[1;33m|[m[1;33m/[m [1;31m/[m [31m/[m [1;35m/[m [1;35m/[m [1;34m/[m [32m/[m  
-* [1;31m|[m [31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m   	 Merge branch 'backend'
-[1;34m|[m[31m\[m [1;31m\[m [31m\[m [1;35m\[m [1;35m\[m [1;34m\[m [32m\[m  
-[1;34m|[m [31m|[m [1;31m|[m[31m/[m [1;35m/[m [1;35m/[m [1;34m/[m [32m/[m  
-[1;34m|[m [31m|[m[31m/[m[1;31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m   
-[1;34m|[m * [1;31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Finish(/lieu/ routes)
-[1;34m|[m * [1;31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Test(DB)
-* [1;35m|[m [1;31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Corriger les scripts package.json
-* [1;35m|[m [1;31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;36m|[m[31m\[m [1;35m\[m [1;31m\[m [1;35m\[m [1;35m\[m [1;34m\[m [32m\[m  
-[1;36m|[m * [1;35m\[m [1;31m\[m [1;35m\[m [1;35m\[m [1;34m\[m [32m\[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;36m|[m [32m|[m[33m\[m [1;35m\[m [1;31m\[m [1;35m\[m [1;35m\[m [1;34m\[m [32m\[m  
-[1;36m|[m [32m|[m * [1;35m|[m [1;31m|[m [1;35m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Header/Footer(Views)
-[1;36m|[m [32m|[m [1;35m|[m [1;35m|[m[1;35m_[m[1;31m|[m[1;35m_[m[1;35m|[m[1;35m/[m [1;34m/[m [32m/[m  
-[1;36m|[m [32m|[m [1;35m|[m[1;35m/[m[1;35m|[m [1;31m|[m [1;35m|[m [1;34m|[m [32m|[m   
-[1;36m|[m * [1;35m|[m [1;35m|[m [1;31m|[m [1;35m|[m [1;34m|[m [32m|[m 	 script de lancement de l'environnement dev : OK
-[1;36m|[m * [1;35m|[m [1;35m|[m [1;31m|[m [1;35m|[m [1;34m|[m [32m|[m 	 script SQL : retour à la ligne ajouté pour que tout s'exécute
-[1;36m|[m [1;35m|[m[1;35m/[m [1;35m/[m [1;31m/[m [1;35m/[m [1;34m/[m [32m/[m  
-[1;36m|[m * [1;35m|[m [1;31m|[m [1;35m|[m [1;34m|[m [32m|[m 	 gitignore : exGitHub ajouté
-[1;36m|[m * [1;35m|[m [1;31m|[m [1;35m|[m [1;34m|[m [32m|[m 	 Fichier temp de Word ajouté au .gitignore
-[1;36m|[m [33m|[m [1;35m|[m [1;31m|[m [1;35m|[m * [32m|[m 	 update
-[1;36m|[m [33m|[m [1;35m|[m [1;31m|[m [1;35m|[m * [32m|[m 	 update
-[1;36m|[m [33m|[m [1;35m|[m [1;31m|[m [1;35m|[m * [32m|[m 	 update
-[1;36m|[m [33m|[m [1;35m|[m [1;31m|[m [1;35m|[m * [32m|[m 	 update
-[1;36m|[m [33m|[m[1;36m_[m[1;35m|[m[1;36m_[m[1;31m|[m[1;36m_[m[1;35m|[m[1;36m/[m [32m/[m  
-[1;36m|[m[1;36m/[m[33m|[m [1;35m|[m [1;31m|[m [1;35m|[m [32m|[m   
-* [33m|[m [1;35m|[m [1;31m|[m [1;35m|[m [32m|[m 	 feature(seeder)
-[33m|[m[33m/[m [1;35m/[m [1;31m/[m [1;35m/[m [32m/[m  
-* [1;35m|[m [1;31m|[m [1;35m/[m [32m/[m 	 Update(README.md)
-[1;35m|[m [1;35m|[m[1;35m_[m[1;31m|[m[1;35m/[m [32m/[m  
-[1;35m|[m[1;35m/[m[1;35m|[m [1;31m|[m [32m|[m   
-* [1;35m|[m [1;31m|[m [32m|[m   	 Merge pull request #34 from ASETML/model
-[1;35m|[m[35m\[m [1;35m\[m [1;31m\[m [32m\[m  
-[1;35m|[m [35m|[m[1;35m/[m [1;31m/[m [32m/[m  
-[1;35m|[m[1;35m/[m[35m|[m [1;31m|[m [32m|[m   
-[1;35m|[m * [1;31m|[m [32m|[m 	 update(modeles)
-[1;35m|[m * [1;31m|[m [32m|[m 	 Update(model) ajout de bcp de models
-* [35m|[m [1;31m|[m [32m|[m 	 Create Tableau Routes.url
-* [35m|[m [1;31m|[m [32m|[m 	 Create(lieucontroller)
-* [35m|[m [1;31m|[m [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[36m|[m[1;31m\[m [35m\[m [1;31m\[m [32m\[m  
-[36m|[m * [35m|[m [1;31m|[m [32m|[m 	 footer
-[36m|[m * [35m|[m [1;31m|[m [32m|[m 	 Merge pull request #33 from ASETML/model
-[36m|[m [1;32m|[m[35m\[m[35m|[m [1;31m|[m [32m|[m 
-[36m|[m [1;32m|[m * [1;31m|[m [32m|[m 	 update(templage)
-* [1;32m|[m [1;33m|[m [1;31m|[m [32m|[m 	 Setup(env)
-[1;32m|[m[1;32m/[m [1;33m/[m [1;31m/[m [32m/[m  
-* [1;33m|[m [1;31m|[m [32m|[m   	 Merge pull request #32 from ASETML/config.mjs
-[1;34m|[m[1;31m\[m [1;33m\[m [1;31m\[m [32m\[m  
-[1;34m|[m [1;31m|[m [1;33m|[m[1;31m/[m [32m/[m  
-[1;34m|[m [1;31m|[m[1;31m/[m[1;33m|[m [32m|[m   
-[1;34m|[m * [1;33m|[m [32m|[m 	 Supprimmer .env, ajout config.mjs, connection à la db
-[1;34m|[m [1;33m|[m[1;33m/[m [32m/[m  
-* [1;33m/[m [32m/[m 	 Figma
-[1;33m|[m[1;33m/[m [32m/[m  
-* [32m|[m 	 update(package.json)
-* [32m|[m 	 update(auth + map)
-* [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;36m|[m[31m\[m [32m\[m  
-* [31m|[m [32m|[m 	 backup fichier Figma 🗃
-[31m|[m [31m|[m * 	 (dev) recherche(recherche.ejs , route), css_global
-[31m|[m [31m|[m * 	 Create(InitFiles)
-[31m|[m [31m|[m[31m/[m  
-[31m|[m *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[31m|[m [32m|[m[31m\[m  
-[31m|[m [32m|[m[31m/[m  
-[31m|[m[31m/[m[32m|[m   
-* [32m|[m 	 Logo Final
-* [32m|[m 	 Minor change - notes
-* [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[34m|[m[35m\[m [32m\[m  
-[34m|[m * [32m|[m 	 Update(Readme)
-[34m|[m * [32m|[m 	 Reorganize(Repo)
-[34m|[m * [32m|[m 	 Move(Figma Link)
-[34m|[m * [32m|[m 	 Rename(Folders)
-[34m|[m * [32m|[m 	 figma
-* [35m|[m [32m|[m 	 NOTES sprint review - cliente 💞☢☣⚠🔆🔱🔱♻
-[35m|[m[35m/[m [32m/[m  
-* [32m|[m 	 CDC importé 💥💟
-* [32m|[m 	 Liens mis dans un dossier 💚
-* [32m|[m 	 Liens ajoutés 🛐🧺💦
-* [32m|[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[36m|[m[1;31m\[m [32m\[m  
-[36m|[m * [32m\[m   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[36m|[m [1;32m|[m[1;33m\[m [32m\[m  
-[36m|[m * [1;33m|[m [32m|[m 	 wip(route et views)
-* [1;33m|[m [1;33m|[m [32m|[m 	 Création du modèle Compte et ajout de variable d'environnement 🚑🚑🚑
-[1;33m|[m [1;33m|[m [1;33m|[m * 	 Create Lien Tableau Routes.url
-[1;33m|[m [1;33m|[m [1;33m|[m[1;33m/[m  
-[1;33m|[m [1;33m|[m *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;33m|[m [1;33m|[m [1;34m|[m[1;33m\[m  
-[1;33m|[m [1;33m|[m[1;33m_[m[1;34m|[m[1;33m/[m  
-[1;33m|[m[1;33m/[m[1;33m|[m [1;34m|[m   
-* [1;33m|[m [1;34m|[m 	 figma backup 31.01.2025
-[1;33m|[m[1;33m/[m [1;34m/[m  
-[1;33m|[m * 	 SCRIPT DB TERMINé !!!!!!!!! 🎉🎊🎁🥂🥳🥳🥳🎀🎁🥳🥳🥳🥳
-[1;33m|[m[1;33m/[m  
+* 	 (HEAD -> exportGit, origin/exportGit) Export du jdt et de l'arbre
+| *   	 (origin/main, origin/HEAD, main) Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| |/  
+|/|   
+* | 	 (origin/Vue-home-include-map-point) Fix(Merge Issues)
+* | 	 Config FIX
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+* | | 	 Début de la suppression des imports sequelize
+| | * 	 logo officiel; header[almost done] il reste css; footer[almost done]
+| |/  
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| |/  
+|/|   
+* | 	 Nettoyer le git
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \  
+| * | | 	 Merge de toutes les branches
+* | | | 	 Bugfix(dependencies)
+| |/ /  
+|/| |   
+| | * 	 création de base vers page de l'accueil;
+| |/  
+|/|   
+* |   	 Merge pull request #54 from ASETML/frontend-VueJs
+|\ \  
+| * | 	 structurisation et liage des pages, creation des routeurs, creation des views(detailsPage,LoginPage)
+* | | 	 WIP AUTH
+* | | 	 Start(Auth) WIP
+| |/  
+|/|   
+* |   	 Merge pull request #53 from ASETML/dev
+|\ \  
+| * \   	 Merge branch 'main' into dev
+| |\ \  
+| |/ /  
+|/| |   
+* | |   	 Merge pull request #52 from ASETML/backend
+|\ \ \  
+| * \ \   	 Merge pull request #42 from ASETML/main
+| |\ \ \  
+* | \ \ \   	 Merge pull request #51 from ASETML/piguet
+|\ \ \ \ \  
+| * \ \ \ \   	 Merge branch 'main' into piguet
+| |\ \ \ \ \  
+| |/ / / / /  
+|/| | | | |   
+* | | | | |   	 :twisted_rightwards_arrows: Merge pull request #50 from ASETML/frontend-VueJs
+|\ \ \ \ \ \  
+| | |_|_|_|/  
+| |/| | | |   
+| * | | | |   	 (frontend-VueJs) Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
+| |\ \ \ \ \  
+| | * \ \ \ \   	 Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
+| | |\ \ \ \ \  
+| | * | | | | | 	 Create routes accueil + map in VueJs
+| * | | | | | | 	 page du compte
+| | |/ / / / /  
+| |/| | | | |   
+| * | | | | | 	 page de details(html/css)
+| * | | | | | 	 Test de vuejs avec le globe
+| * | | | | |   	 Merge pull request #49 from ASETML/main
+| |\ \ \ \ \ \  
+| | |/ / / / /  
+| |/| | | | |   
+| * | | | | |   	 Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
+| |\ \ \ \ \ \  
+| | * | | | | | 	 Création et structuration des fichiers dans framework Vue(routes, complements, public, assets,app.vue(template),main(import dans main)); + creation de route de Recherche(plus sa fonctionnalité); création de nouveau main.css;
+| * | | | | | | 	 :construction: ajout de template (fonctionne pas)
+| |/ / / / / /  
+* | | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \ \ \ \  
+| * | | | | | | 	 Update admin.mjs
+* | | | | | | | 	 update(fonction auth)
+|/ / / / / / /  
+* | | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \ \ \ \  
+| * | | | | | | 	 Petite réorganisation du repo
+| * | | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \ \ \ \ \ \  
+| | * \ \ \ \ \ \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | |\ \ \ \ \ \ \  
+| | | | |/ / / / /  
+| | | |/| | | | |   
+| | * | | | | | | 	 Create Point-ProductOwner.14.03.2025.txt
+| * | | | | | | | 	 FIGMA 17.03.2025
+| | |/ / / / / /  
+| |/| | | | | |   
+* / | | | | | | 	 update(CA MARCHE)
+|/ / / / / / /  
+* | | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \ \ \ \  
+| * \ \ \ \ \ \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \ \ \ \ \ \  
+| | * | | | | | | 	 New(retourPO)
+| * | | | | | | | 	 doc Git : premières possibilités et résultats
+| |/ / / / / / /  
+| * | | | | | | 	 Masquage du bouton camera + changement de la distance d'affichage des labels
+| * | | | | | | 	 Style du globe
+| | |/ / / / /  
+| |/| | | | |   
+| * | | | | |   	 🔀 Merge pull request #45 from ASETML/frontend
+| |\ \ \ \ \ \  
+| | * \ \ \ \ \   	 Conflit dans app.mjs
+| | |\ \ \ \ \ \  
+| | |/ / / / / /  
+| |/| | | | | |   
+| * | | | | | | 	 Correction du globe
+| | |/ / / / /  
+| |/| | | | |   
+| * | | | | | 	 Affiche les labels SI la souris est assez proche : OK
+| * | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \ \ \ \ \  
+| | * | | | | | 	 modification du globe pour qu'il affiche tous les monuments
+| * | | | | | | 	 globe updated : point 100m au dessus de la surface
+| |/ / / / / /  
+| * | | | / / 	 modification du globe
+| | |_|_|/ /  
+| |/| | | |   
+| | * | | |   	 Merge pull request #41 from ASETML/main
+| | |\ \ \ \  
+| | * | | | | 	 🚧frontend with VueJs searchBar
+| | * | | | | 	 Revert ":twisted_rightwards_arrows:Merge pull request #40 from ASETML/main"
+| | * | | | |   	 :twisted_rightwards_arrows:Merge pull request #40 from ASETML/main
+| | |\ \ \ \ \  
+| | * \ \ \ \ \   	 :twisted_rightwards_arrows:Merge pull request #37 from ASETML/main
+| | |\ \ \ \ \ \  
+| | * \ \ \ \ \ \   	 :twisted_rightwards_arrows: Merge pull request #36 from ASETML/main
+| | |\ \ \ \ \ \ \  
+| | * | | | | | | | 	 apprentissage de VueJs avec une API externe
+* | | | | | | | | | 	 Create SprintReview14.03.25.jpg
+|/ / / / / / / / /  
+* | | | | | | | |   	 Merge branch 'backend'
+|\ \ \ \ \ \ \ \ \  
+| |_|_|_|_|/ / / /  
+|/| | | | | | / /   
+| | |_|_|_|_|/ /    
+| |/| | | | | |     
+| * | | | | | | 	 Start(Register) [WIP]
+* | | | | | | | 	 :white_check_mark:Create test.txt
+| |_|_|_|/ / /  
+|/| | | | | |   
+* | | | | | | 	 Script Alban : OK
+* | | | | | | 	 css_global
+* | | | | | |   	 🔀 Merge pull request #39 from ASETML/globe
+|\ \ \ \ \ \ \  
+| * \ \ \ \ \ \   	 (globe) Merge branch 'main' of https://github.com/ASETML/P_GestProj426 into globe
+| |\ \ \ \ \ \ \  
+| | | |_|_|/ / /  
+| | |/| | | | |   
+| * | | | | | | 	 supression du globe de app.mjs
+| * | | | | | |   	 Merge branch 'globe' of https://github.com/ASETML/P_GestProj426 into globe
+| |\ \ \ \ \ \ \  
+| | * | | | | | | 	 (config.mjs) Le globe marche
+| * | | | | | | | 	 Le globe marche
+| |/ / / / / / /  
+| * | | | | | | 	 Fin 28.02
+| * | | | | | | 	 Ajout d'un globe
+| * | | | | | | 	 ajout test map
+* | | | | | | | 	 COMMIT VITE
+* | | | | | | | 	 Add(Scripts)
+* | | | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \ \ \ \ \  
+| * | | | | | | | 	 Ajout du globe
+| * | | | | | | | 	 Create globe.html
+| | |/ / / / / /  
+| |/| | | | | |   
+* / | | | | | | 	 Continue Merge
+|/ / / / / / /  
+* | | | | | |   	 Merge branch 'backend'
+|\ \ \ \ \ \ \  
+| | |/ / / / /  
+| |/| | | | |   
+| * | | | | | 	 Finish(/lieu/ routes)
+| * | | | | | 	 Test(DB)
+* | | | | | | 	 Corriger les scripts package.json
+* | | | | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \ \ \ \  
+| * \ \ \ \ \ \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \ \ \ \ \ \  
+| | * | | | | | | 	 Header/Footer(Views)
+| | | |_|_|/ / /  
+| | |/| | | | |   
+| * | | | | | | 	 script de lancement de l'environnement dev : OK
+| * | | | | | | 	 script SQL : retour à la ligne ajouté pour que tout s'exécute
+| |/ / / / / /  
+| * | | | | | 	 gitignore : exGitHub ajouté
+| * | | | | | 	 Fichier temp de Word ajouté au .gitignore
+| | | | | * | 	 update
+| | | | | * | 	 update
+| | | | | * | 	 update
+| | | | | * | 	 update
+| |_|_|_|/ /  
+|/| | | | |   
+* | | | | | 	 feature(seeder)
+|/ / / / /  
+* | | / / 	 Update(README.md)
+| |_|/ /  
+|/| | |   
+* | | |   	 Merge pull request #34 from ASETML/model
+|\ \ \ \  
+| |/ / /  
+|/| | |   
+| * | | 	 update(modeles)
+| * | | 	 Update(model) ajout de bcp de models
+* | | | 	 Create Tableau Routes.url
+* | | | 	 Create(lieucontroller)
+* | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \  
+| * | | | 	 footer
+| * | | | 	 Merge pull request #33 from ASETML/model
+| |\| | | 
+| | * | | 	 update(templage)
+* | | | | 	 Setup(env)
+|/ / / /  
+* | | |   	 Merge pull request #32 from ASETML/config.mjs
+|\ \ \ \  
+| | |/ /  
+| |/| |   
+| * | | 	 Supprimmer .env, ajout config.mjs, connection à la db
+| |/ /  
+* / / 	 Figma
+|/ /  
+* | 	 update(package.json)
+* | 	 update(auth + map)
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+* | | 	 backup fichier Figma 🗃
+| | * 	 (dev) recherche(recherche.ejs , route), css_global
+| | * 	 Create(InitFiles)
+| |/  
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| |/  
+|/|   
+* | 	 Logo Final
+* | 	 Minor change - notes
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * | 	 Update(Readme)
+| * | 	 Reorganize(Repo)
+| * | 	 Move(Figma Link)
+| * | 	 Rename(Folders)
+| * | 	 figma
+* | | 	 NOTES sprint review - cliente 💞☢☣⚠🔆🔱🔱♻
+|/ /  
+* | 	 CDC importé 💥💟
+* | 	 Liens mis dans un dossier 💚
+* | 	 Liens ajoutés 🛐🧺💦
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \  
+| * | | 	 wip(route et views)
+* | | | 	 Création du modèle Compte et ajout de variable d'environnement 🚑🚑🚑
+| | | * 	 Create Lien Tableau Routes.url
+| | |/  
+| | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | |\  
+| |_|/  
+|/| |   
+* | | 	 figma backup 31.01.2025
+|/ /  
+| * 	 SCRIPT DB TERMINé !!!!!!!!! 🎉🎊🎁🥂🥳🥳🥳🎀🎁🥳🥳🥳🥳
+|/  
 * 	 backup figma 1 created 👁‍🗨🟩🟢
 * 	 Update MLD FINAL FOR REAL 🛐༼ つ ◕_◕ ༽つ©
 * 	 Finalize(looping) 👼
 * 	 Update db_unesco : WIP ☝👍💅
 * 	 déplacer nouveau logo ⬅🖼🖌
 *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;36m|[m[31m\[m  
-[1;36m|[m *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;36m|[m [32m|[m[33m\[m  
-[1;36m|[m * [33m|[m 	 add logo 🤔✔💋🎂👽
-[1;36m|[m * [33m|[m 	 Ajouter(logo) 🤳🐱‍👓🐱‍💻
-* [33m|[m [33m|[m 	 update(modif logo)
-[33m|[m [33m|[m[33m/[m  
-[33m|[m[33m/[m[33m|[m   
-* [33m|[m 	 update(post-meeting)
-[33m|[m[33m/[m  
+|\  
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| * | 	 add logo 🤔✔💋🎂👽
+| * | 	 Ajouter(logo) 🤳🐱‍👓🐱‍💻
+* | | 	 update(modif logo)
+| |/  
+|/|   
+* | 	 update(post-meeting)
+|/  
 * 	 ajout(logo)🐔🦿🧐
 *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[34m|[m[35m\[m  
-[34m|[m * 	 Lien Fima ajouté
-[34m|[m *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[34m|[m [36m|[m[1;31m\[m  
-[34m|[m * [1;31m|[m 	 add *.ini to gitignore
-* [1;31m|[m [1;31m|[m 	 Update GitIgnore
-[1;31m|[m [1;31m|[m[1;31m/[m  
-[1;31m|[m[1;31m/[m[1;31m|[m   
-* [1;31m|[m 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;32m|[m[1;31m\[m[1;31m|[m 
-[1;32m|[m * 	 update(directives)
-* [1;33m|[m 	 Revise(MCD, MLD, DBScript)
-[1;33m|[m[1;33m/[m  
+|\  
+| * 	 Lien Fima ajouté
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| * | 	 add *.ini to gitignore
+* | | 	 Update GitIgnore
+| |/  
+|/|   
+* | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| 
+| * 	 update(directives)
+* | 	 Revise(MCD, MLD, DBScript)
+|/  
 *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;34m|[m[1;35m\[m  
-[1;34m|[m *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[1;34m|[m [1;36m|[m[31m\[m  
-[1;34m|[m * [31m|[m 	 Icon added ➡✅
-* [31m|[m [31m|[m 	 Update(MCD)
-[31m|[m [31m|[m[31m/[m  
-[31m|[m[31m/[m[31m|[m   
-* [31m|[m 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-[32m|[m[31m\[m[31m|[m 
-[32m|[m * 	 Mettre chaque collaborateur du README sur une ligne chacun
-* [33m|[m 	 Create(ScriptSQL)
-[33m|[m[33m/[m  
+|\  
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| * | 	 Icon added ➡✅
+* | | 	 Update(MCD)
+| |/  
+|/|   
+* | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| 
+| * 	 Mettre chaque collaborateur du README sur une ligne chacun
+* | 	 Create(ScriptSQL)
+|/  
 * 	 Créer les dossiers pour les controllers et les views
 *   	 Merge pull request #2 from ASETML/dev
-[34m|[m[35m\[m  
-[34m|[m * 	 Création de l'arborescence
-* [35m|[m 	 Merge pull request #1 from ASETML/dev
-[36m|[m[35m\[m[35m|[m 
-[36m|[m * 	 Création du projet
-* [1;31m|[m 	 Add(MCD)
-* [1;31m|[m 	 Create README.md
-[1;31m|[m[1;31m/[m  
+|\  
+| * 	 Création de l'arborescence
+* | 	 Merge pull request #1 from ASETML/dev
+|\| 
+| * 	 Création du projet
+* | 	 Add(MCD)
+* | 	 Create README.md
+|/  
 * 	 Ajouter le docker base de données
