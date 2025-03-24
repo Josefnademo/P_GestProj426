@@ -2,13 +2,17 @@ DROP DATABASE IF EXISTS db_unesco;
 CREATE DATABASE db_unesco;
 USE db_unesco;
 
-CREATE TABLE IF NOT EXISTS t_user (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  username VARCHAR(255) UNIQUE NOT NULL,
-  hash VARCHAR(255) UNIQUE NOT NULL,
-  sel VARCHAR(255) NOT NULL,
-  isAdmin BOOLEAN DEFAULT FALSE
+CREATE TABLE t_compte(
+   compte_id INT AUTO_INCREMENT,
+   username VARCHAR(50) NOT NULL,
+   salt CHAR(12) NOT NULL,
+   hashedPassword CHAR(64) NOT NULL,
+   isAdmin BOOLEAN NOT NULL,
+   PRIMARY KEY(compte_id),
+   UNIQUE(username),
 );
+
+
 
 CREATE TABLE t_lieu(
    lieu_id INT AUTO_INCREMENT,
@@ -17,18 +21,6 @@ CREATE TABLE t_lieu(
    latitude DECIMAL(25,18) NOT NULL,
    particularite TEXT NOT NULL,
    PRIMARY KEY(lieu_id)
-);
-
-CREATE TABLE t_compte(
-   compte_id INT AUTO_INCREMENT,
-   username VARCHAR(50) NOT NULL,
-   email VARCHAR(50),
-   salt CHAR(12) NOT NULL,
-   hashedPassword CHAR(64) NOT NULL,
-   isAdmin BOOLEAN NOT NULL,
-   PRIMARY KEY(compte_id),
-   UNIQUE(username),
-   UNIQUE(email)
 );
 
 CREATE TABLE t_pays(
