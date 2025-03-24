@@ -5,7 +5,7 @@ USE db_unesco;
 CREATE TABLE t_compte(
    compte_id INT AUTO_INCREMENT,
    username VARCHAR(50) NOT NULL,
-   salt CHAR(12) NOT NULL,
+   salt CHAR(32) NOT NULL,
    hashedPassword CHAR(255) NOT NULL,
    isAdmin BOOLEAN NOT NULL,
    PRIMARY KEY(compte_id),
