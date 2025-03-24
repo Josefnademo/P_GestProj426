@@ -16,7 +16,7 @@ const sequelize = new Sequelize(
 );
 
 // Initialisation du modèle Product
-const Compte = CompteModel(sequelize, DataTypes);
+const compte = CompteModel(sequelize, DataTypes);
 
 // Exporter les ressources nécessaires
-export { sequelize, Compte };
+export { sequelize, compte };
