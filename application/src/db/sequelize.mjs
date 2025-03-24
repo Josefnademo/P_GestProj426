@@ -1,5 +1,6 @@
 import { Sequelize, DataTypes } from "sequelize";
 import { CompteModel } from "../models/compte.mjs";
+
 import config from "../config.mjs";
 
 // Configuration de la connexion Sequelize

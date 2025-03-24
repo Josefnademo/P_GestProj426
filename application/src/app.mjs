@@ -55,6 +55,7 @@ app.use("/admin/", adminRouter);
 app.get("/", (req, res) => {
   //res.render("accueil");
 });
+
 /*
 app.get("/", (req, res) => {
   res.redirect(`http://localhost:${port}/accueil/`);
@@ -62,4 +63,16 @@ app.get("/", (req, res) => {
 app.use(({ res }) => {
   const message = "ERREUR 404";
   res.status(404).json(message);
+});
+
+//recherche
+const adminRoute = require("./routes/search-user");
+const searchRouter = require("./routes/search-user");
+
+app.use(searchRouter);
+app.use(authRoute);
+//
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
 });
