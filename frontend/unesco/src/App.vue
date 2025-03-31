@@ -11,7 +11,7 @@ import Footer from "./components/Footer.vue";
 import Header from "./components/Header.vue";
 import "./assets/footer.css";
 import "./assets/header.css";
-import "../../../../Logos/logo-ACD.png";
+import "../../../Logos/logo-ACD.png";
 
 export default {
   name: "App",
