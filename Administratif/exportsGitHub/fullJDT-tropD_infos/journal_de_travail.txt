@@ -1,93 +1,111 @@
-an,  s
+
+6eb8d86 - ASETML, 2 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+055ad1e - ASETML, 2 minutes ago : JDT du 24.03
+ .../fullJDT-tropD_infos/journal_de_travail.txt     | 135 +++++++++++++++++----
+ Administratif/exportsGitHub/gitTree/GitTree.txt    |  70 ++++++++---
+ 2 files changed, 169 insertions(+), 36 deletions(-)
+
+74d8c70 - C-HM, 9 minutes ago : Update Header.vue
+ yosef/frontend/unesco/src/components/Header.vue | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+c0ad5ab - YOSEF NADEMO, 14 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+8129d4e - YOSEF NADEMO, 14 minutes ago : header.vue liens corrects
+ yosef/frontend/unesco/src/components/Header.vue | 12 +++++++-----
+ 1 file changed, 7 insertions(+), 5 deletions(-)
+
+8a77360 - pn41htu, 15 minutes ago : Package-lock.json created - when "npm i"
  application/package-lock.json | 3136 +++++++++++++++++++++++++++++++++++++++++
  1 file changed, 3136 insertions(+)
 
-an,  s
-an,  s
+270f08f - C-HM, 22 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+08a1217 - C-HM, 22 minutes ago : feat(Imports)
  yosef/frontend/unesco/src/App.vue | 3 +++
  1 file changed, 3 insertions(+)
 
-an,  s
-an,  s
+e8c1d0b - antoineFabr, 24 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+03f106d - antoineFabr, 24 minutes ago : 🔥 remove fake Data
  frontend/unesco/point.js | 41973 ---------------------------------------------
  1 file changed, 41973 deletions(-)
 
-an,  s
-an,  s
+6814fe2 - YOSEF NADEMO, 25 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+038c9f9 - antoineFabr, 26 minutes ago : 🩹 point sur la carte + description :DONE
  frontend/unesco/src/App.vue             |  4 +++-
  frontend/unesco/src/components/home.vue | 32 +++++++++++++++++++++-----------
  2 files changed, 24 insertions(+), 12 deletions(-)
 
-an,  s
+
+a3e294b - YOSEF NADEMO, 26 minutes ago : AccountPage(Ajout de la zone IN DANGER)[]IN PROGRESS;  LoginPage(la structure HTML(formulaire,titres), et une grande partie de CSS sont fait); Routes(Ajout de route Account, correction de route Details)
  yosef/frontend/unesco/src/components/Header.vue |   2 +-
  yosef/frontend/unesco/src/router/index.js       |   8 +-
  yosef/frontend/unesco/src/views/AccountPage.vue |  13 +
  yosef/frontend/unesco/src/views/LoginPage.vue   | 330 ++++++++++++++++--------
  4 files changed, 241 insertions(+), 112 deletions(-)
 
-an,  s
-an,  s
+5386f83 - Romain Pierre Marie Denis, 31 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+39fef42 - Romain Pierre Marie Denis, 31 minutes ago : Add(Argument)
  Backend/src/routes/lieu.mjs | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-an,  s
+95eedc1 - C-HM, 34 minutes ago : feat(footer.css)
  yosef/frontend/unesco/src/assets/footer.css | 67 +++++++++++++++++++++++++++++
  yosef/frontend/unesco/src/assets/header.css |  8 ++--
  2 files changed, 71 insertions(+), 4 deletions(-)
 
-an,  s
-an,  s
+
+2af2bc0 - Romain Pierre Marie Denis, 40 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+ede12c5 - Romain Pierre Marie Denis, 42 minutes ago : Tweak(Salt Char Length)
  DB/db_unesco.sql | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-an,  s
-an,  s
+ce92e3e - C-HM, 41 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+81fd352 - C-HM, 41 minutes ago : feat(header)
  yosef/frontend/unesco/src/assets/header.css     | 80 +++++++++++++++++++++++++
  yosef/frontend/unesco/src/components/Header.vue | 44 +++++++-------
  2 files changed, 102 insertions(+), 22 deletions(-)
 
-an,  s
+cc79e45 - Romain Pierre Marie Denis, 42 minutes ago : Tweak(Salt Char Length)
  DB/db_unesco.sql | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-an,  s
+0de8603 - Romain Pierre Marie Denis, 46 minutes ago : Change(Password Length)
  DB/db_unesco.sql | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
-an,  s
-an,  s
+2c652db - Romain Pierre Marie Denis, 52 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+4067a0e - Romain Pierre Marie Denis, 52 minutes ago : Remove(Email Field)
  DB/MLD.lo1       | Bin 82888 -> 86630 bytes
  DB/MLD.loo       | Bin 86630 -> 86380 bytes
  DB/db_unesco.sql |  28 ++++++++++------------------
  3 files changed, 10 insertions(+), 18 deletions(-)
 
-an,  s
-an,  s
-an,  s
+9a80a13 - ASETML, 81 minutes ago : Merge pull request #56 from ASETML/exportGit
+83ad0b7 - Antoine, 81 minutes ago : 🔀Merge pull request #55 from ASETML/Vue-home-include-map-point
+62884fc - ASETML, 82 minutes ago : Export de l'arbre (l'option couleur ne fonctionne pas)
  Administratif/exportsGitHub/gitTree/GitTree.txt | 615 ++++++++++++------------
  Administratif/exportsGitHub/gitTree/infos.txt   |   2 +-
  2 files changed, 313 insertions(+), 304 deletions(-)
 
-an,  s
+6f4931d - antoineFabr, 82 minutes ago : :safety_vest: carte sur la page home avec les points : OK
  frontend/unesco/point.js                  | 41973 ++++++++++++++++++++++++++++
  frontend/unesco/src/components/home.vue   |   119 +
  frontend/unesco/src/components/search.vue |     6 +-
  3 files changed, 42097 insertions(+), 1 deletion(-)
 
-an,  s
-an,  s
+21606fb - Romain Pierre Marie Denis, 83 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+c2ddd9c - Romain Pierre Marie Denis, 83 minutes ago : Update db_unesco.sql
  DB/db_unesco.sql | 8 ++++++++
  1 file changed, 8 insertions(+)
 
-an,  s
+cf2c466 - ASETML, 84 minutes ago : Export du jdt et de l'arbre
  .../fullJDT-tropD_infos/journal_de_travail.txt     | 611 +++++++++++++++++----
  Administratif/exportsGitHub/gitTree/Git Tree.txt   | 219 --------
  Administratif/exportsGitHub/gitTree/GitTree.txt    | 315 +++++++++++
  Administratif/exportsGitHub/gitTree/infos.txt      |   2 +-
  4 files changed, 806 insertions(+), 341 deletions(-)
 
-an,  s
-an,  s
+f1c9be5 - YOSEF NADEMO, 86 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+c8c537c - YOSEF NADEMO, 87 minutes ago : logo officiel; header[almost done] il reste css; footer[almost done]
  Logos/logo-ACD.png                                 | Bin 0 -> 17971 bytes
  yosef/frontend/unesco/src/App.vue                  |  13 +++++++++-
  yosef/frontend/unesco/src/components/Footer.vue    |  12 +++++++++
@@ -95,33 +113,33 @@ an,  s
  .../frontend/unesco/src/views/partials/footer.ejs  |  14 -----------
  5 files changed, 51 insertions(+), 15 deletions(-)
 
-an,  s
+af639f4 - Romain Pierre Marie Denis, 2 hours ago : Fix(Merge Issues)
  Backend/src/app.mjs               | 19 ++----------
  Backend/src/routes/search-user.js | 63 ---------------------------------------
  globe/globe.html                  |  2 +-
  3 files changed, 3 insertions(+), 81 deletions(-)
 
-an,  s
+61ee21c - Romain Pierre Marie Denis, 2 hours ago : Config FIX
  Backend/.config.mjs        | 28 ++++++++++++++++++++++++++++
  Backend/config.mjs.example | 28 ++++++++++++++++++++++++++++
  Backend/src/config.mjs     | 30 ++++++++++++++++++++----------
  3 files changed, 76 insertions(+), 10 deletions(-)
 
-an,  s
-an,  s
+06ec8fd - ASETML, 2 hours ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+f6e2bd1 - ASETML, 2 hours ago : Début de la suppression des imports sequelize
  Backend/.config.mjs       |   0
  Backend/package-lock.json | 127 ----------------------------------------------
  Backend/src/app.mjs       |   5 --
  3 files changed, 132 deletions(-)
 
-an,  s
-an,  s
+23f2619 - YOSEF NADEMO, 2 hours ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+dfb1eb7 - YOSEF NADEMO, 2 hours ago : création de base vers page de l'accueil;
  yosef/frontend/unesco/src/router/index.js           |  7 ++++++-
  yosef/frontend/unesco/src/views/AccountPage.vue     |  0
  yosef/frontend/unesco/src/views/partials/footer.ejs | 14 ++++++++++++++
  3 files changed, 20 insertions(+), 1 deletion(-)
 
-an,  s
+693e868 - ASETML, 2 hours ago : Nettoyer le git
  {application => Backend}/.config.mjs               |    0
  {application => Backend}/package-lock.json         |   20 -
  {application => Backend}/package.json              |    0
@@ -211,40 +229,40 @@ an,  s
  tests/frontend-globe/vite.config.js                |   18 -
  87 files changed, 20 insertions(+), 4736 deletions(-)
 
-an,  s
-an,  s
+4529593 - Romain Pierre Marie Denis, 2 hours ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+683f1bc - Romain Pierre Marie Denis, 2 hours ago : Bugfix(dependencies)
  application/package-lock.json | 700 ------------------------------------------
  application/package.json      |   2 +-
  2 files changed, 1 insertion(+), 701 deletions(-)
 
-an,  s
-an,  s
-an,  s
-an,  s
+ec96bdf - ASETML, 2 hours ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+84c6641 - ASETML, 2 hours ago : Merge de toutes les branches
+d1bd69c - ASETML, 2 hours ago : Merge pull request #54 from ASETML/frontend-VueJs
+03ae174 - YOSEF NADEMO, 2 hours ago : structurisation et liage des pages, creation des routeurs, creation des views(detailsPage,LoginPage)
  yosef/frontend/unesco/src/App.vue               | 277 ------------------------
  yosef/frontend/unesco/src/router/index.js       |  12 +
  yosef/frontend/unesco/src/views/DetailsPage.vue |  90 ++++++++
  yosef/frontend/unesco/src/views/LoginPage.vue   | 183 ++++++++++++++++
  4 files changed, 285 insertions(+), 277 deletions(-)
 
-an,  s
+b7035af - Romain Pierre Marie Denis, 2 hours ago : WIP AUTH
  application/src/app.mjs          |  4 ++--
  application/src/routes/login.mjs | 30 +++++++++++++++++++++++++++++-
  2 files changed, 31 insertions(+), 3 deletions(-)
 
-an,  s
+882b955 - Romain Pierre Marie Denis, 2 hours ago : Start(Auth) WIP
  application/src/controllers/loginController.mjs | 38 -------------------------
  application/src/routes/login.mjs                | 37 ++++++++++++++++++++++++
  2 files changed, 37 insertions(+), 38 deletions(-)
 
-an,  s
-an,  s
-an,  s
-an,  s
-an,  s
-an,  s
-an,  s
-an,  s
+42614b3 - ASETML, 2 hours ago : Merge pull request #53 from ASETML/dev
+92a534c - ASETML, 2 hours ago : Merge branch 'main' into dev
+f35c685 - ASETML, 2 hours ago : Merge pull request #52 from ASETML/backend
+2e5c074 - ASETML, 2 hours ago : Merge pull request #51 from ASETML/piguet
+79c3123 - ASETML, 2 hours ago : Merge branch 'main' into piguet
+2a47449 - Antoine, 2 hours ago : :twisted_rightwards_arrows: Merge pull request #50 from ASETML/frontend-VueJs
+ac1c652 - YOSEF NADEMO, 7 days ago : Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
+70d46a4 - YOSEF NADEMO, 7 days ago : page du compte
  yosef/frontend/unesco/src/App.vue | 187 +++++++++++++++++++++++++++++++++++++-
  1 file changed, 186 insertions(+), 1 deletion(-)
 

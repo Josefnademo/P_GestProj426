@@ -1,45 +1,42 @@
-/*import express from "express";
+import express from "express";
 import crypto from "crypto";
-import mysql from "mysql2/promise";
 import jwt from "jsonwebtoken";
+import mysql from "mysql2/promise";
 import config from "../config.mjs";
+
 const registerRouter = express.Router();
 
-registerRouter.post("/", (req, res) => {
-  const { username, password, email } = req.body;
-
+registerRouter.post("/", async (req, res) => {
+  const { username, password } = req.body;
   const isAdmin = false;
-  // Generate a salt
-  const salt = crypto.randomBytes(16).toString("hex");
 
-  // Hash the password with the salt
-  crypto.pbkdf2(password, salt, 1000, 64, "sha512", (err, derivedKey) => {
-    if (err) {
-      console.error("Error hashing password:", err);
-      return res.status(500).send("Error registering user");
-    }
+  try {
+    // Generate a salt
+    const salt = crypto.randomBytes(16).toString("hex");
+
+    // Hash the password with the salt
+    const derivedKey = await new Promise((resolve, reject) => {
+      crypto.pbkdf2(password, salt, 1000, 64, "sha256", (err, key) => {
+        if (err) reject(err);
+        resolve(key);
+      });
+    });
 
     const hash = derivedKey.toString("hex");
-    const connection = mysql.createConnection(config.dbConfig);
-    connection.execute(
-      "INSERT INTO t_compte (compte_id, username, email, salt, hashedPassword, isAdmin) VALUES (?, ?, ?, ?, ?, ?)",
-      [null, username, email, salt, hash, isAdmin]
-      [siteId, compteId, dateVisite]
-    ); {
-      if (err) {
-        console.error("Error inserting user:", err.stack);
-        return res.status(500).send("Error registering user");
-      }
-      console.log("User registered:", username);
 
-      const token = jwt.sign({ username }, process.env.privateKey, {
-        expiresIn: "1y",
-      });
-      res.cookie("authcookie", token, { httpOnly: true });
+    const connection = await mysql.createConnection(config.dbConfig);
+    const query =
+      "INSERT INTO t_compte (username, hashedPassword, salt, isAdmin) VALUES (?, ?, ?, ?)";
+    await connection.execute(query, [username, hash, salt, isAdmin]);
 
-      res.redirect("/login");
+    const token = jwt.sign({ username }, config.private_key, {
+      expiresIn: "1y",
     });
-  });
+    res.json({ token });
+  } catch (err) {
+    console.error("Error registering user:", err);
+    res.status(500).send("Error registering user");
+  }
 });
 
-export { registerRouter };*/
+export { registerRouter };

@@ -1,34 +1,95 @@
-* ds
-*   ds
+*   	 (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\  
-| *   ds
+| * 	 (origin/fusion-vues-Yosef-frontend) Update Header.vue
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | |\  
-| | *   ds
+| | * 	 Package-lock.json created - when "npm i"
+| * | 	 header.vue liens corrects
+* | | 	 JDT du 24.03
+| |/  
+|/|   
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\| 
+| | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | | |\  
-| | * | ds
-| * | | ds
+| | * | 	 AccountPage(Ajout de la zone IN DANGER)[]IN PROGRESS;  LoginPage(la structure HTML(formulaire,titres), et une grande partie de CSS sont fait); Routes(Ajout de route Account, correction de route Details)
+| * | | 	 🔥 remove fake Data
 | | |/  
 | |/|   
-| * | ds
-* | | ds
+| * | 	 🩹 point sur la carte + description :DONE
+* | | 	 feat(Imports)
 |/ /  
-* |   ds
+| | * 	 (origin/auth) Feat(Register)
+| | * 	 Chore(Cleanup)
+| |/  
+|/|   
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\ \  
-| * | ds
-* | | ds
-* | | ds
+| * | 	 feat(footer.css)
+* | | 	 Add(Argument)
+* | | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\| | 
-| * |   ds
+| * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | |\ \  
-| | * | ds
-| * | | ds
-* | | | ds
+| | * | 	 Tweak(Salt Char Length)
+| * | | 	 feat(header)
+* | | | 	 Tweak(Salt Char Length)
 | |/ /  
 |/| |   
-* | | ds
-* | | ds
+* | | 	 Change(Password Length)
+* | | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\| | 
-| * |   ds
+| * |   	 Merge pull request #56 from ASETML/exportGit
+| |\ \  
+| | * | 	 (exportGit) Export de l'arbre (l'option couleur ne fonctionne pas)
+| | * | 	 Export du jdt et de l'arbre
+| * | |   	 🔀Merge pull request #55 from ASETML/Vue-home-include-map-point
+| |\ \ \  
+| | * | | 	 :safety_vest: carte sur la page home avec les points : OK
+| | |/ /  
+* | / / 	 Remove(Email Field)
+|/ / /  
+* | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \  
+| | |/  
+| |/|   
+| * | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\| 
+| * | 	 logo officiel; header[almost done] il reste css; footer[almost done]
+* | | 	 Update db_unesco.sql
+| |/  
+|/|   
+* | 	 Fix(Merge Issues)
+* | 	 Config FIX
+* | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| 
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| * | 	 création de base vers page de l'accueil;
+* | | 	 Début de la suppression des imports sequelize
+| |/  
+|/|   
+* | 	 Nettoyer le git
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\| 
+| * | 	 Merge de toutes les branches
+* | | 	 Bugfix(dependencies)
+| |/  
+|/|   
+* |   	 Merge pull request #54 from ASETML/frontend-VueJs
+|\ \  
+| * | 	 structurisation et liage des pages, creation des routeurs, creation des views(detailsPage,LoginPage)
+* | | 	 WIP AUTH
+* | | 	 Start(Auth) WIP
+| |/  
+|/|   
+* |   	 Merge pull request #53 from ASETML/dev
+|\ \  
+| * \   	 Merge branch 'main' into dev
 | |\ \  
 | | * | ds
 | | * | ds
