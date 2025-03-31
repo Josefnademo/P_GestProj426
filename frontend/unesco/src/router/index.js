@@ -3,14 +3,11 @@ import home from "../components/home.vue";
 import about from "../components/about.vue";
 
 const routes = [
-  {
-    path: "/",
-    name: "Search",
-    component: home,
-  },
+  { path: "/", component: home },
+  { path: "/about", component: about },
   {
     path: "/search",
-    component: about,
+    component: search,
   },
 ];
 
