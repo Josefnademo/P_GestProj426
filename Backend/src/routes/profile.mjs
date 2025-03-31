@@ -60,6 +60,7 @@ profileRouter.patch("/:id", async (req, res) => {
 
       let updates = [];
       let values = [];
+
       // Puts in the parameters the new values if they are not undefined or null
       // Does this for everything
       if (newUsername && typeof newUsername === "string") {
@@ -129,4 +130,43 @@ profileRouter.patch("/:id", async (req, res) => {
     return res.status(500).json({ message: "Internal server error" });
   }
 });
+
+//WIP not done yet
+profileRouter.delete("/:id", async (req, res) => {
+  const token = req.headers["authorization"]?.split(" ")[1];
+  if (!token) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+  try {
+    const decoded = jwt.verify(token, config.private_key);
+    const username = decoded.username;
+    const { id } = req.params;
+
+    const connection = await mysql.createConnection(config.dbConfig);
+    const [results] = await connection.execute(
+      "SELECT * FROM t_compte WHERE username = ?",
+      [username]
+    );
+
+    if (results.length === 0) {
+      return res.status(404).json({ message: "User not found" });
+    } else {
+      const user = results[0];
+
+      if (parseInt(id, 10) !== user.compte_id) {
+        return res.status(403).json({ message: "Forbidden: ID mismatch" });
+      }
+
+      await connection.execute("DELETE FROM t_compte WHERE compte_id = ?", [
+        user.compte_id,
+      ]);
+
+      return res.status(200).json({ message: "User deleted successfully" });
+    }
+  } catch (err) {
+    console.error("Error deleting user profile:", err);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+});
+
 export { profileRouter };
