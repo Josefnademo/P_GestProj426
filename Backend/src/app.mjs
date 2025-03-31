@@ -44,6 +44,9 @@ app.use("/register/", registerRouter);
 import { adminRouter } from "./routes/admin.mjs";
 app.use("/admin/", adminRouter);
 
+import { profileRouter } from "./routes/profile.mjs";
+app.use("/profile/", profileRouter);
+
 app.get("/", (req, res) => {
   //res.render("accueil");
 });
