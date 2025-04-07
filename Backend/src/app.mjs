@@ -1,19 +1,7 @@
 import express from "express";
 import config from "./config.mjs";
 const app = express();
-/*app.get("/", (req, res) => {
-  //res.render("accueil", { foo: "FOO" });
-});*/
 
-//Connection à la DB
-/*sequelize
-  .authenticate()
-  .then((_) =>
-    console.log("La connexion à la base de données a bien été établie")
-  )
-  .catch((error) => console.error("Impossible de se connecter à la DB"));
-});
-*/
 //middleWare pour cors policy
 app.use((req, res, next) => {
   res.append("Access-Control-Allow-Origin", ["*"]);
@@ -24,7 +12,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.set("view engine", "ejs");
+app.use("/images", express.static("images"));
 
 
 import { lieuRouter } from "./routes/lieu.mjs";
