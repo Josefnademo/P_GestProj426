@@ -6,11 +6,11 @@ const adminRouter = express();
 
 // POST /country - Ajouter un pays (admin seulement)
 adminRouter.post("/country", async (/*, isAdmin*/ req, res) => {
-  const countryName = req.body;
+  const countryName = req.body;                                                           //Get countryname from body
   const connection = await mysql.createConnection(config.dbConfig);
-  try {
-    await connection.execute("INSERT INTO t_pays (nom) VALUES (?, ?)", [
-      countryName,
+  try {                                                                                   //Run query to insert country
+    await connection.execute("INSERT INTO t_pays (nom) VALUES (?, ?)", [                  //
+      countryName,                                                                        //
     ]);
     res.json({
       message: `Country ${countryName} added!`,
@@ -25,13 +25,13 @@ adminRouter.post("/country", async (/*, isAdmin*/ req, res) => {
 
 // PATCH /country - Mettre a jour un pays (admin seulement)
 adminRouter.patch("/country/:id", async (/*, isAdmin*/ req, res) => {
-  const countryId = req.params.id;
+  const countryId = req.params.id;                                                        //Get country id from body
   const { countryName } = req.body;
   const connection = await mysql.createConnection(config.dbConfig);
   try {
-    await connection.execute("UPDATE t_pays SET nom = ? WHERE id = ?", [
-      countryName,
-      countryId,
+    await connection.execute("UPDATE t_pays SET nom = ? WHERE id = ?", [                   //Run query to update country
+      countryName,                                                                         //
+      countryId,                                                                           //
     ]);
     res.json({
       message: `Country with ID ${countryId} MAJ !`,
@@ -48,11 +48,11 @@ adminRouter.patch("/country/:id", async (/*, isAdmin*/ req, res) => {
 adminRouter.delete(
   "/country/:id",
   /*, isAdmin*/ async (req, res) => {
-    const countryId = req.params.id;
+    const countryId = req.params.id;                                                            //Get country id from body
     const connection = await mysql.createConnection(config.dbConfig);
     try {
-      await connection.execute("DELETE FROM t_pays WHERE id = ?", [countryId]);
-      res.json({
+      await connection.execute("DELETE FROM t_pays WHERE id = ?", [countryId]);                 //Run query to delete country
+      res.json({ 
         message: `Country with ID ${countryId} deleted!`,
       });
     } catch (error) {
@@ -66,12 +66,12 @@ adminRouter.delete(
 
 // POST /country - Ajouter un pays (admin seulement)
 adminRouter.post("/region", async (/*, isAdmin*/ req, res) => {
-  const regionName = req.body;
+  const regionName = req.body;                                                                      //Get regionname from body
   const connection = await mysql.createConnection(config.dbConfig);
   try {
-    await connection.execute("INSERT INTO t_region (nom) VALUES (?, ?)", [
-      regionName,
-    ]);
+    await connection.execute("INSERT INTO t_region (nom) VALUES (?, ?)", [                          //Run query to insert region
+      regionName,                                                                                   //
+    ]);                                                                                             //
     res.json({
       message: `Region ${regionName} added!`,
     });
@@ -85,14 +85,14 @@ adminRouter.post("/region", async (/*, isAdmin*/ req, res) => {
 
 // PATCH /country - Mettre a jour un pays (admin seulement)
 adminRouter.patch("/region/:id", async (/*, isAdmin*/ req, res) => {
-  const regionId = req.params.id;
+  const regionId = req.params.id;                                                                       //Get region id from body
   const { regionName } = req.body;
   const connection = await mysql.createConnection(config.dbConfig);
   try {
-    await connection.execute("UPDATE t_region SET nom = ? WHERE id = ?", [
-      regionName,
-      regionId,
-    ]);
+    await connection.execute("UPDATE t_region SET nom = ? WHERE id = ?", [                                //Run query to update region
+      regionName,                                                                                         //
+      regionId,                                                                                           //
+    ]);                                                                                                   //
     res.json({
       message: `Region with ID ${regionId} MAJ !`,
     });
@@ -108,10 +108,10 @@ adminRouter.patch("/region/:id", async (/*, isAdmin*/ req, res) => {
 adminRouter.delete(
   "/region/:id",
   /*, isAdmin*/ async (req, res) => {
-    const regionId = req.params.id;
+    const regionId = req.params.id;                                                                          //Get region id from body
     const connection = await mysql.createConnection(config.dbConfig);
     try {
-      await connection.execute("DELETE FROM t_region WHERE id = ?", [
+      await connection.execute("DELETE FROM t_region WHERE id = ?", [                                        //Delete region
         countryId,
       ]);
       res.json({
