@@ -130,6 +130,21 @@ onMounted(async () => {
 <style>
 #cesiumContainer {
   width: 100%;
-  height: 60%;
+}
+.cesium-sceneModePicker-dropDown-icon[data-bind*="COLUMBUS_VIEW"] {
+  display: none;
+}
+.cesium-widget-credits {
+  display: none !important;
+}
+#cesium-viewer {
+  width: 100%;
+  height: 150%;
+}
+body {
+  background-color: black;
+}
+button.cesium-infoBox-camera {
+  display: none;
 }
 </style>

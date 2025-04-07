@@ -3,12 +3,12 @@ import crypto from "crypto";
 import jwt from "jsonwebtoken";
 import mysql from "mysql2/promise";
 import config from "../config.mjs";
-
+const regex = /^[^@]+@[^@]+\.[^@]+$/;
 const registerRouter = express.Router();
 
 //POST to register a new user
 registerRouter.post("/", async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password, email } = req.body;
   const isAdmin = false;
 
   try {
@@ -30,7 +30,6 @@ registerRouter.post("/", async (req, res) => {
         message: "Vous devez entrer une email valide contenant un @ et un .",
       });
     }
-
     const connection = await mysql.createConnection(config.dbConfig);
     const query =                                                                                         //Run the query
       "INSERT INTO t_compte (username, hashedPassword, salt, isAdmin, email) VALUES (?, ?, ?, ?, ?)";     //

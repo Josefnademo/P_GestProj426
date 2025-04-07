@@ -24,10 +24,10 @@ profileRouter.get("/:id", async (req, res) => {
       return res.status(400).json({ message: "User not found" });     //
     } else {
       const user = results[0];
-      return res.status(200).json({                                   //If token is fine and user exists, return information 
-        id: user.id,                                                  //
-        username: user.username,                                      //
-        hashedPassword: user.hashedPassword,                          //
+      return res.status(200).json({
+        id: user.id,
+        username: user.username,
+        hashedPassword: user.hashedPassword,
         email: user.email,
       });
     }
