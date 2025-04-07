@@ -26,11 +26,6 @@ app.use(express.json());
 
 app.set("view engine", "ejs");
 
-import { avisRouter } from "./routes/avis.mjs";
-app.use("/avis/", avisRouter);
-
-import { compteRouter } from "./routes/compte.mjs";
-app.use("/compte/", compteRouter);
 
 import { lieuRouter } from "./routes/lieu.mjs";
 app.use("/lieu/", lieuRouter);
