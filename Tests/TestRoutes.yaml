@@ -345,7 +345,7 @@ collection:
         meta:
           id: req_8a1f10abd45240808a4c3d0c6e534061
           created: 1741358701946
-          modified: 1743422005118
+          modified: 1744027004466
           isPrivate: false
           sortKey: -1740753069190
         method: POST
@@ -353,8 +353,9 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"username" : "1234567",
-            	"password" : "1234567"
+            	"username" : "12345678",
+            	"password" : "12345678",
+            	"email" : "piguetgmailcom"
             }
         headers:
           - name: Content-Type
@@ -374,7 +375,7 @@ collection:
         meta:
           id: req_7922740d44f04d67bac0c843de2ad660
           created: 1742819899844
-          modified: 1743422023727
+          modified: 1744022177495
           isPrivate: false
           sortKey: -1740753069240
         method: POST
@@ -382,8 +383,8 @@ collection:
           mimeType: application/json
           text: |-
             {
-            	"username" : "1234567",
-            	"password" : "1234567"
+            	"username" : "12345678",
+            	"password" : "12345678"
             }
         headers:
           - name: Content-Type
@@ -395,7 +396,7 @@ collection:
           - id: pair_f9ced3d304494bb88bf01a2403effba8
             name: Authorization
             value: Bearer
-              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMzQ1NjciLCJpYXQiOjE3NDM0MjIwMDYsImV4cCI6MTc3NDk3OTYwNn0.888dQrAjnzw8k32sZQLVBLjznhLMmrJD8L7wQAcCZZw
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMzQ1Njc4IiwiaWF0IjoxNzQ0MDIyMTY1LCJleHAiOjE3NzU1Nzk3NjV9.Zi0KCNHXs6KOR6TTp5yqdYxBMp5Fiovh_21XgBy4W8A
             disabled: false
         settings:
           renderRequestBody: true
@@ -437,11 +438,11 @@ collection:
             store: true
           rebuildPath: true
       - url: http://localhost:3000/profile/2
-        name: New Request
+        name: Update Profile
         meta:
           id: req_9047d6f8147a4a46be94d240380b6c59
           created: 1743419748406
-          modified: 1743422304354
+          modified: 1744025481580
           isPrivate: false
           sortKey: -1740753070140
         method: PATCH
@@ -477,22 +478,18 @@ collection:
         meta:
           id: req_50717501d7ca4399ad564a36d4d10b9d
           created: 1743422379263
-          modified: 1743424825778
+          modified: 1744022218237
           isPrivate: false
           sortKey: -1740753070115
         method: DELETE
-        body:
-          mimeType: application/json
         headers:
-          - name: Content-Type
-            value: application/json
           - name: User-Agent
             value: insomnia/11.0.1
             id: pair_6ec37982faee4f71b28f410f23585f57
           - id: pair_edc6792c2bd0476ca7b9d818e753dfac
             name: Authorization
             value: Bearer
-              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImhlbGxvaGlpbWRvaW5naXQxIiwiaWF0IjoxNzQzNDIyMTA5LCJleHAiOjE3NDM0MjU3MDl9.ut5J8HXetBIZMmiJrv0ABadkBf4WPS1h9XIxFycuVp4
+              eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IjEyMzQ1Njc4IiwiaWF0IjoxNzQ0MDIyMTc5LCJleHAiOjE3NDQwMjU3Nzl9.ynsLi9GOlGN3Yhn3qmp-vGMf2NZl4S7jN5xLec0P5kE
             disabled: false
         settings:
           renderRequestBody: true
