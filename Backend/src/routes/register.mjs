@@ -21,12 +21,20 @@ registerRouter.post("/", async (req, res) => {
       });
     });
 
-    const hash = derivedKey.toString("hex");                                                  //Convert the hash to hex
+     const hash = derivedKey.toString("hex");
+    if (regex.test(email)) {
+      console.log("Email valide");
+    } else {
+      console.log("Email invalide");
+      return res.status(500).json({
+        message: "Vous devez entrer une email valide contenant un @ et un .",
+      });
+    }
 
     const connection = await mysql.createConnection(config.dbConfig);
-    const query =                                                                             //Run the query
-      "INSERT INTO t_compte (username, hashedPassword, salt, isAdmin) VALUES (?, ?, ?, ?)";   //
-    await connection.execute(query, [username, hash, salt, isAdmin]);                         //
+    const query =                                                                                         //Run the query
+      "INSERT INTO t_compte (username, hashedPassword, salt, isAdmin, email) VALUES (?, ?, ?, ?, ?)";     //
+    await connection.execute(query, [username, hash, salt, isAdmin, email]);                    
 
     const token = jwt.sign({ username }, config.private_key, {                                //Make a JWT token with the user in the payload
       expiresIn: "1y",                                                                        //

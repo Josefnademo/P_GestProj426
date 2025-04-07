@@ -28,6 +28,7 @@ profileRouter.get("/:id", async (req, res) => {
         id: user.id,                                                  //
         username: user.username,                                      //
         hashedPassword: user.hashedPassword,                          //
+        email: user.email,
       });
     }
   } catch (err) {
