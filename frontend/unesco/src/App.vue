@@ -29,7 +29,6 @@ body {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   background-color: #f7f9fc;
   color: #222;
-  line-height: 1.6;
 }
 
 /* Error message styling */
@@ -107,7 +106,6 @@ p:nth-child(1) {
 /* User list block styling */
 div {
   margin-top: 30px;
-  padding: 0 10%;
 }
 
 /* Each user card */

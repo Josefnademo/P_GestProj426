@@ -23,7 +23,7 @@ body {
   font-size: 1rem;
   background-color: var(--main-bg);
   color: var(--text-color);
-  line-height: 1.6;
+
   max-width: 100%;
   max-height: 100%;
 }
