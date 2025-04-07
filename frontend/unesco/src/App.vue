@@ -1,22 +1,19 @@
 <template>
   <div>
-    <nav>
-      <router-link to="/">Accueil</router-link> |
-      <router-link to="/about">À propos</router-link> |
-      <router-link to="/search">recherche</router-link>
-    </nav>
+    <tete></tete>
     <main>
       <suspense>
         <router-view></router-view>
       </suspense>
     </main>
-    <footer>
-      <p>&copy; 2025 UNESCO - Tous droits réservés</p>
-    </footer>
+    <fouter></fouter>
   </div>
 </template>
 
-<script></script>
+<script setup>
+import fouter from "./components/fouter.vue";
+import tete from "./components/tete.vue";
+</script>
 <style>
 /* General body styling for clean and modern look */
 body {
