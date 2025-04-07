@@ -1,28 +1,28 @@
-const map = L.map("map").setView([46.523268, 6.615687], 13); //ETML
-const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  maxZoom: 20,
-  attribution:
-    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-}).addTo(map);
+const map = L.map("map").setView([46.523268, 6.615687], 13);                                    //Map to center the map on the ETML coordinates by default
+
+const tiles = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {                   //Tiles to use for the map    
+  maxZoom: 20,                                                                                  //
+  attribution:                                                                                  //
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',                //
+}).addTo(map);                                                                                  //Add to map
 
 const pathToJson = "/static/sites.json";
 
-async function fetchAndDisplaySites() {
+async function fetchAndDisplaySites() {                                                         //Async function to fetch the JSON file and display the sites on the map
   try {
-    const res = await fetch(pathToJson);
+    const res = await fetch(pathToJson);                                                        //Get the JSON
     if (!res.ok) throw new Error(`Erreur HTTP: ${res.status}`);
-    //attende que la requete soit
-    const sites = await res.json(); // Pas besoin de JSON.se(), fetch().json() le fait déjà
+    const sites = await res.json();                                                             //Pas besoin de JSON.se(), fetch().json() le fait déjà
 
-    for (const site of sites) {
-      //dans le json:  lon et
-      //Mais il faut inverser => [lat, lon];
-      L.circle([site.coordinates.lat, site.coordinates.lon], {
-        radius: 1,
-        color: "red",
-      })
-        .addTo(map)
-        .bindPopup(
+    for (const site of sites) {                                                                 //For each site in the JSON
+
+      L.circle([site.coordinates.lat, site.coordinates.lon], {                                  //Create a circle at the coordinates of the site
+        radius: 1,                                                                              //
+        color: "red",                                                                           //
+      })                                                                                        //
+        
+        .addTo(map)                                                                             //Adds a popup to the site that shows the title and a description-
+        .bindPopup(                                                                             //when clicked
           "<b>" +
             site.site +
             "</b>" +
@@ -37,4 +37,5 @@ async function fetchAndDisplaySites() {
   }
 }
 
+//Call the function when page is loaded
 fetchAndDisplaySites();
