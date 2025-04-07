@@ -22,22 +22,22 @@ loginRouter.post("/", async (req, res) => {
       return res.status(400).send("Invalid username or password");                  //
     }                                                                               //
 
-    const user = results[0];
-    const salt = user.salt;
-    const storedHash = user.hashedPassword;
+    const user = results[0];                                                        //Stores user found
+    const salt = user.salt;                                                         //Stores salt of the user
+    const storedHash = user.hashedPassword;                                         //Stores hashed password of the user
 
-    crypto.pbkdf2(password, salt, 1000, 64, "sha256", (err, derivedKey) => {
-      if (err) {
-        console.error("Error hashing password:", err);
+    crypto.pbkdf2(password, salt, 1000, 64, "sha256", (err, derivedKey) => {        //Crypto function to hash the password with the salt
+      if (err) {                                                                    //1000 is the number of iterations, 64 is the length of the key,
+        console.error("Error hashing password:", err);                              //sha256 is the algorithm
         return res.status(500).send("Error logging in");
       }
 
       const derivedHash = derivedKey.toString("hex");
 
-      if (derivedHash === storedHash) {
-        const token = jwt.sign({ username }, config.private_key, {
-          expiresIn: "1h",
-        });
+      if (derivedHash === storedHash) {                                             //If hashed password is the same as the one in the database
+        const token = jwt.sign({ username }, config.private_key, {                  //Sign JWT token with the user in the payload
+          expiresIn: "1h",                                                          //This effectively logs the user in 
+        });                                                                         //
 
         res.json({ token });
       } else {
