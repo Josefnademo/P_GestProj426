@@ -10,6 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .logo img {
@@ -48,7 +49,7 @@ nav ul li {
 }
 
 .nav-button:hover {
-  background-color: #13245a;
+  background-color: #0f1d4a;
   transform: translateY(-2px);
 }
 
@@ -56,25 +57,34 @@ nav ul li {
   transform: translateY(0);
 }
 
+/* ✅ Медиазапрос для мобильных устройств */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
+    align-items: flex-start;
     padding: 1rem;
+  }
+
+  .logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  nav {
+    width: 100%;
   }
 
   nav ul {
     flex-direction: column;
-    text-align: center;
+    align-items: stretch;
     gap: 0.75rem;
-    margin-top: 1rem;
-  }
-
-  .logo img {
-    height: 40px;
   }
 
   .nav-button {
     width: 100%;
-    padding: 0.75rem 1.5rem;
+    text-align: center;
+    padding: 0.75rem 1rem;
   }
 }

@@ -5,24 +5,25 @@
       <li>+41 79 417 71 55</li>
       <li>ccroset@acd-motorsport.ch</li>
     </ul>
-    <a href="HomePage.vue"
-      ><img src="./Logos/logo-ACD.png" alt="logo ACD motorsport"
-    /></a>
+    <a href="HomePage.vue">
+      <img src="./Logos/logo-ACD.png" alt="logo ACD motorsport" />
+    </a>
   </footer>
 </template>
+
 <style scoped>
 footer {
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(89, 87, 104, 0.8); /* Matching book style */
+  background-color: rgba(89, 87, 104, 0.8);
   padding: 1.5rem 4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px); /* Frosted glass effect */
+  backdrop-filter: blur(5px);
   z-index: 100;
 }
 
@@ -33,7 +34,7 @@ footer ul {
 }
 
 footer ul li {
-  font-family: "Montserrat", sans-serif; /* Matching book font */
+  font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
@@ -78,7 +79,7 @@ footer a:hover img {
 
 @media (max-width: 480px) {
   footer {
-    padding: 1rem;
+    padding: 1rem 1.5rem;
   }
 
   footer ul li {
@@ -86,7 +87,7 @@ footer a:hover img {
   }
 
   footer ul li:first-child {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
   }
 
   footer img {

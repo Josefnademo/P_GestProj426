@@ -133,7 +133,7 @@ button:focus {
   box-shadow: 0 0 6px rgba(76, 175, 80, 0.5);
 }
 
-/* Добавим плавные анимации появления */
+/* Ajoutons des animations fluides d'apparence*/
 .fade-in {
   animation: fadeIn 0.6s ease forwards;
 }

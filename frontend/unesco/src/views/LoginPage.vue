@@ -1,43 +1,89 @@
 <template>
-  <div class="login-container">
-    <div class="circle circle-green"></div>
-    <div class="circle circle-orange"></div>
+  <div class="app-container">
+    <div class="background">
+      <div class="circle circle-green"></div>
+      <div class="circle circle-orange"></div>
+    </div>
 
-    <div class="book" :class="{ flipped: isFlipped }" @click="handleBookClick">
-      <!-- Left page (Welcome) -->
-      <div class="page page-left">
-        <div class="welcome">Content de vous revoir !</div>
-        <div class="login-title">ACD Motorsport</div>
-        <button class="flip-button" @click.stop="flipBook">Login</button>
-      </div>
-
-      <!-- Right page (Login form) -->
-      <div class="page page-right">
-        <div class="connect-title">Se connecter</div>
-
-        <form @submit.prevent="handleSubmit">
-          <div class="form-group">
-            <label for="username">Nom d'utilisateur</label>
-            <input
-              type="text"
-              id="username"
-              placeholder="Entrez votre nom"
-              v-model="username"
-            />
+    <div class="book-container">
+      <div
+        class="book"
+        :class="{
+          'flipped-login': currentPage === 'login',
+          'flipped-register': currentPage === 'register',
+        }"
+      >
+        <!-- Cover Page -->
+        <div class="page cover">
+          <div class="welcome">Content de vous revoir !</div>
+          <div class="logo">ACD Motorsport</div>
+          <div class="buttons">
+            <button class="action-btn login-btn" @click="flipTo('login')">
+              Login
+            </button>
+            <button class="action-btn register-btn" @click="flipTo('register')">
+              Registration
+            </button>
           </div>
+        </div>
 
-          <div class="form-group">
-            <label for="password">Mot de passe</label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Entrez votre mot de passe"
-              v-model="password"
-            />
-          </div>
+        <!-- Login Page -->
+        <div class="page login">
+          <div class="title">Se connecter</div>
+          <form @submit.prevent="handleLogin">
+            <div class="form-group">
+              <label>Nom d'utilisateur</label>
+              <input
+                type="text"
+                placeholder="Entrez votre nom"
+                v-model="loginForm.username"
+              />
+            </div>
+            <div class="form-group">
+              <label>Mot de passe</label>
+              <input
+                type="password"
+                placeholder="Entrez votre mot de passe"
+                v-model="loginForm.password"
+              />
+            </div>
+            <button type="submit" class="submit-btn">Se connecter</button>
+          </form>
+          <div class="back-btn" @click="flipTo('cover')">← Retour</div>
+        </div>
 
-          <button type="submit" class="login-button">Se connecter</button>
-        </form>
+        <!-- Registration Page -->
+        <div class="page register">
+          <div class="title">S'inscrire</div>
+          <form @submit.prevent="handleRegister">
+            <div class="form-group">
+              <label>Email</label>
+              <input
+                type="email"
+                placeholder="Votre email"
+                v-model="registerForm.email"
+              />
+            </div>
+            <div class="form-group">
+              <label>Nom d'utilisateur</label>
+              <input
+                type="text"
+                placeholder="Choisissez un nom"
+                v-model="registerForm.username"
+              />
+            </div>
+            <div class="form-group">
+              <label>Mot de passe</label>
+              <input
+                type="password"
+                placeholder="Créez un mot de passe"
+                v-model="registerForm.password"
+              />
+            </div>
+            <button type="submit" class="submit-btn">S'inscrire</button>
+          </form>
+          <div class="back-btn" @click="flipTo('cover')">← Retour</div>
+        </div>
       </div>
     </div>
   </div>
@@ -45,192 +91,215 @@
 
 <script>
 export default {
-  name: "LoginBook",
+  name: "InteractiveBook",
   data() {
     return {
-      isFlipped: false,
-      username: "",
-      password: "",
+      currentPage: "cover",
+      loginForm: {
+        username: "",
+        password: "",
+      },
+      registerForm: {
+        email: "",
+        username: "",
+        password: "",
+      },
     };
   },
   methods: {
-    flipBook() {
-      this.isFlipped = !this.isFlipped;
+    flipTo(page) {
+      this.currentPage = page;
     },
-    handleBookClick(e) {
-      // Close the book if clicked outside when it's flipped
-      if (this.isFlipped && !e.target.closest(".page-right")) {
-        this.isFlipped = false;
-      }
+    handleLogin() {
+      console.log("Login submitted:", this.loginForm);
+      // Add login logic
     },
-    handleSubmit() {
-      // Handle form submission
-      console.log("Login submitted:", this.username, this.password);
-      // Add your authentication logic here
+    handleRegister() {
+      console.log("Register submitted:", this.registerForm);
+      // Add registration logic
     },
   },
 };
 </script>
 
 <style scoped>
-.login-container {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Background circles */
-.circle {
+.app-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+}
+
+/* Background Effects */
+.background {
   position: absolute;
-  border-radius: 70%;
-  filter: blur(70px);
-  opacity: 0.6;
+  width: 100%;
+  height: 100%;
   z-index: 0;
 }
 
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.8;
+}
+
 .circle-green {
-  width: 70px;
-  height: 400px;
+  width: 700px;
+  height: 700px;
   background: linear-gradient(135deg, #4caf50, #8bc34a);
-  box-shadow: 0 0 100px #4caf50;
-  margin-top: 2%;
-  margin-left: 10%;
+  top: -100px;
+  left: -100px;
+  box-shadow: 0 0 150px #4caf50;
 }
 
 .circle-orange {
-  width: 100px;
-  height: 300px;
+  width: 700px;
+  height: 700px;
   background: linear-gradient(135deg, #ff9800, #ff5722);
-  box-shadow: 0 0 120px #ff9800;
-  margin-top: 20%;
-  margin-right: -90%;
-}
-/* Book container */
-.book {
-  display: flex;
-  width: 800px;
-  height: 500px;
-  perspective: 2000px;
-  z-index: 1;
-  position: relative;
-  transition: transform 0.8s;
-  transform-style: preserve-3d;
+  bottom: -150px;
+  right: -100px;
+  box-shadow: 0 0 180px #ff9800;
 }
 
-/* Page styling */
-.page {
-  position: absolute;
-  width: 50%;
-  height: 100%;
-  padding: 50px;
+/* Book Container */
+.book-container {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - 100px);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(89, 87, 104, 0.6);
+  z-index: 1;
+  perspective: 2000px;
+  margin-bottom: 100px;
+}
+
+.book {
+  position: relative;
+  width: 900px;
+  height: 600px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease;
+}
+
+/* Page Styles */
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  background: rgba(89, 87, 104, 0.7);
   backdrop-filter: blur(10px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   transition: all 0.8s ease;
-}
-
-/* Left page (welcome) */
-.page-left {
-  left: 0;
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-right: 1px solid rgba(255, 255, 255, 0.1);
-  transform-origin: right center;
   backface-visibility: hidden;
 }
 
-/* Right page (login form) */
-.page-right {
-  right: 0;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  transform-origin: left center;
-  transform: rotateY(180deg);
-  backface-visibility: hidden;
+/* Cover Page */
+.cover {
+  transform: rotateY(0deg);
+  z-index: 3;
 }
 
-/* Flipped state */
-.book.flipped {
-  transform: rotateY(180deg);
-}
-
-.book.flipped .page-left {
-  opacity: 0;
-  pointer-events: none;
-}
-
-.book.flipped .page-right {
-  opacity: 1;
-  pointer-events: all;
-}
-
-/* Rest of your styles remain the same */
 .welcome {
-  font-size: 32px;
+  font-size: 42px;
   font-weight: 700;
   margin-bottom: 20px;
-  text-align: center;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.login-title {
+.logo {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 60px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 60%;
+}
+
+.action-btn {
+  padding: 18px;
+  border: none;
+  border-radius: 50px;
   font-size: 18px;
   font-weight: 600;
-  margin-bottom: 40px;
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.flip-button {
-  background: linear-gradient(135deg, #4caf50, #8bc34a);
-  color: white;
-  border: none;
-  padding: 15px 40px;
-  border-radius: 30px;
-  font-size: 16px;
-  font-weight: 600;
   cursor: pointer;
-  margin-top: 20px;
-  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
   transition: all 0.3s ease;
 }
 
-.flip-button:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(76, 175, 80, 0.6);
+.login-btn {
+  background: linear-gradient(135deg, #4caf50, #8bc34a);
+  color: white;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
 }
 
-.connect-title {
-  font-size: 28px;
+.login-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(76, 175, 80, 0.6);
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #2196f3, #3f51b5);
+  color: white;
+  box-shadow: 0 6px 20px rgba(33, 150, 243, 0.4);
+}
+
+.register-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(33, 150, 243, 0.6);
+}
+
+/* Login/Register Pages */
+.login,
+.register {
+  transform: rotateY(180deg);
+  z-index: 2;
+}
+
+.title {
+  font-size: 36px;
   font-weight: 700;
-  margin-bottom: 30px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .form-group {
-  margin-bottom: 20px;
   width: 100%;
-  max-width: 300px;
+  max-width: 400px;
+  margin-bottom: 25px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .form-group input {
   width: 100%;
-  padding: 12px 15px;
+  padding: 15px 20px;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 8px;
@@ -243,51 +312,104 @@ export default {
   outline: none;
   border-color: #4caf50;
   background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
 }
 
-.form-group input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.login-button {
+.submit-btn {
+  width: 100%;
+  max-width: 400px;
+  padding: 16px;
   background: linear-gradient(135deg, #ff9800, #ff5722);
   color: white;
   border: none;
-  padding: 15px 0;
-  width: 100%;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
   cursor: pointer;
   margin-top: 20px;
-  box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
   transition: all 0.3s ease;
 }
 
-.login-button:hover {
+.submit-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 7px 20px rgba(255, 152, 0, 0.6);
+  box-shadow: 0 10px 25px rgba(255, 152, 0, 0.6);
 }
 
-.footer {
-  margin-top: 40px;
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-links {
-  margin-top: 10px;
-}
-
-.footer-links a {
-  color: rgba(255, 255, 255, 0.8);
-  text-decoration: none;
-  margin: 0 10px;
+.back-btn {
+  margin-top: 30px;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
   transition: all 0.3s ease;
 }
 
-.footer-links a:hover {
-  color: #4caf50;
+.back-btn:hover {
+  color: white;
   text-decoration: underline;
+}
+
+/* Book Flip Animations */
+.flipped-login {
+  transform: rotateY(-180deg);
+}
+
+.flipped-register {
+  transform: rotateY(-180deg);
+}
+
+@media (max-width: 768px) {
+  .book-container {
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box;
+  }
+
+  .book {
+    flex-direction: column;
+    transform: none !important;
+    width: 100%;
+    min-height: auto;
+    box-shadow: none;
+  }
+
+  .page {
+    width: 100%;
+    height: auto;
+    padding: 1.5rem;
+    box-sizing: border-box;
+    border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
+  }
+
+  .cover .buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .action-btn,
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+  }
+
+  .back-btn {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .form-group {
+    margin-bottom: 1rem;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+  }
 }
 </style>
