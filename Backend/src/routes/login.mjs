@@ -6,20 +6,21 @@ import config from "../config.mjs";
 
 const loginRouter = express.Router();
 
+//POST to login a user
 loginRouter.post("/", async (req, res) => {
-  const { username, password } = req.body;
+  const { username, password } = req.body;                                          //Get the arguments from the request body
 
   try {
     const connection = await mysql.createConnection(config.dbConfig);
 
-    const [results] = await connection.execute(
-      "SELECT * FROM t_compte WHERE username = ?",
-      [username]
-    );
+    const [results] = await connection.execute(                                     //Search for user entered
+      "SELECT * FROM t_compte WHERE username = ?",                                  //
+      [username]                                                                    //
+    );                                                                              //
 
-    if (results.length === 0) {
-      return res.status(400).send("Invalid username or password");
-    }
+    if (results.length === 0) {                                                     //If nothing is found
+      return res.status(400).send("Invalid username or password");                  //
+    }                                                                               //
 
     const user = results[0];
     const salt = user.salt;
