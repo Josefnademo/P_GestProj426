@@ -8,6 +8,7 @@ CREATE TABLE t_compte(
    salt CHAR(32) NOT NULL,
    hashedPassword CHAR(255) NOT NULL,
    isAdmin BOOLEAN NOT NULL,
+   email VARCHAR(100) NOT NULL,
    PRIMARY KEY(compte_id),
    UNIQUE(username)
 );
