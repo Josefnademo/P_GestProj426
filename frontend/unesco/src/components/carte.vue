@@ -1,9 +1,5 @@
 <template>
-  <div>
-    <Suspense>
-      <div id="cesiumContainer"></div>
-    </Suspense>
-  </div>
+  <div id="cesiumContainer"></div>
 </template>
 <script setup>
 import { onMounted } from "vue";
@@ -113,9 +109,22 @@ onMounted(async () => {
 #cesiumContainer {
   width: 100%;
   height: 100%;
+
   margin: 0;
   padding: 0;
-  overflow: hidden;
+
   font-family: sans-serif;
+}
+.cesium-viewer-cesiumWidgetContainer {
+  width: 1908px;
+  height: 745px;
+}
+.cesium-viewer {
+  width: 1908px;
+  height: 745px;
+}
+.cesium-widget canvas {
+  width: 1908px;
+  height: 745px;
 }
 </style>
