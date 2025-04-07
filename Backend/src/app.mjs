@@ -12,7 +12,7 @@ app.use((req, res, next) => {
 
 app.use(express.json());
 
-app.use(express.static("public"));
+app.use("/images", express.static("images"));
 
 import { avisRouter } from "./routes/avis.mjs";
 app.use("/avis/", avisRouter);
