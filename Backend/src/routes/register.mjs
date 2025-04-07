@@ -27,15 +27,13 @@ registerRouter.post("/", async (req, res) => {
       console.log("Email valide");
     } else {
       console.log("Email invalide");
-      return res
-        .status(500)
-        .json({
-          message: "vous devez entrer une email valide contenant un @ et un .",
-        });
+      return res.status(500).json({
+        message: "Vous devez entrer une email valide contenant un @ et un .",
+      });
     }
     const connection = await mysql.createConnection(config.dbConfig);
     const query =
-      "INSERT INTO t_compte (username, hashedPassword, salt, isAdmin, email) VALUES (?, ?, ?, ?)";
+      "INSERT INTO t_compte (username, hashedPassword, salt, isAdmin, email) VALUES (?, ?, ?, ?, ?)";
     await connection.execute(query, [username, hash, salt, isAdmin, email]);
 
     const token = jwt.sign({ username }, config.private_key, {
