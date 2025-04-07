@@ -1,45 +1,46 @@
 DROP DATABASE IF EXISTS db_unesco;
 CREATE DATABASE db_unesco;
-USE db_unesco;
-
-CREATE TABLE t_compte(
-   compte_id INT AUTO_INCREMENT,
-   username VARCHAR(50) NOT NULL,
-   salt CHAR(32) NOT NULL,
-   hashedPassword CHAR(255) NOT NULL,
-   isAdmin BOOLEAN NOT NULL,
-   email VARCHAR(100) NOT NULL,
-   PRIMARY KEY(compte_id),
-   UNIQUE(username)
-);
-
-
-
-CREATE TABLE t_lieu(
+USE db_unesco;CREATE TABLE t_lieu(
    lieu_id INT AUTO_INCREMENT,
    nom TEXT NOT NULL,
    longitude DECIMAL(25,18) NOT NULL,
    latitude DECIMAL(25,18) NOT NULL,
    particularite TEXT NOT NULL,
-   PRIMARY KEY(lieu_id)
+   histoire TEXT,
+   PRIMARY KEY(lieu_id),
+   UNIQUE(nom)
+);
+
+CREATE TABLE t_compte(
+   compte_id INT AUTO_INCREMENT,
+   username VARCHAR(50) NOT NULL,
+   salt CHAR(12) NOT NULL,
+   hashedPassword CHAR(64) NOT NULL,
+   email VARCHAR(50) NOT NULL,
+   profil_image TINYINT NOT NULL,
+   PRIMARY KEY(compte_id),
+   UNIQUE(username),
+   UNIQUE(email)
 );
 
 CREATE TABLE t_pays(
    pays_id INT AUTO_INCREMENT,
    nom VARCHAR(100) NOT NULL,
-   PRIMARY KEY(pays_id)
+   PRIMARY KEY(pays_id),
+   UNIQUE(nom)
 );
 
 CREATE TABLE t_region(
    region_id INT AUTO_INCREMENT,
-   nom VARCHAR(500) NOT NULL,
-   PRIMARY KEY(region_id)
+   nom TEXT NOT NULL,
+   PRIMARY KEY(region_id),
+   UNIQUE(nom)
 );
 
 CREATE TABLE t_avis(
    avis_id INT AUTO_INCREMENT,
    rating INT NOT NULL,
-   commentaire VARCHAR(500),
+   description VARCHAR(500),
    lieu_id_fk INT NOT NULL,
    compte_id_fk INT NOT NULL,
    PRIMARY KEY(avis_id),
@@ -79,6 +80,7 @@ CREATE TABLE t_reside(
    FOREIGN KEY(lieu_id_fk) REFERENCES t_lieu(lieu_id),
    FOREIGN KEY(region_id_fk) REFERENCES t_region(region_id)
 );
+
 
 
 
