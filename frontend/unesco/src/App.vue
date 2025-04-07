@@ -1,18 +1,25 @@
 <template>
-  <div>
-    <tete></tete>
-    <main>
-      <suspense>
-        <router-view></router-view>
-      </suspense>
-    </main>
-    <fouter></fouter>
+  <div id="app">
+    <Header />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
-<script setup>
-import fouter from "./components/fouter.vue";
-import tete from "./components/tete.vue";
+<script>
+import Footer from "./components/Footer.vue";
+import Header from "./components/Header.vue";
+import "./assets/footer.css";
+import "./assets/header.css";
+import "../../../Logos/logo-ACD.png";
+
+export default {
+  name: "App",
+  components: {
+    Header,
+    Footer,
+  },
+};
 </script>
 <style>
 /* General body styling for clean and modern look */
