@@ -1,22 +1,26 @@
 <template>
-  <div>
-    <nav>
-      <router-link to="/">Accueil</router-link> |
-      <router-link to="/about">À propos</router-link> |
-      <router-link to="/search">recherche</router-link>
-    </nav>
-    <main>
-      <suspense>
-        <router-view></router-view>
-      </suspense>
-    </main>
-    <footer>
-      <p>&copy; 2025 UNESCO - Tous droits réservés</p>
-    </footer>
+  <div id="app">
+    <Header />
+    <router-view />
+    <Footer />
   </div>
 </template>
 
-<script></script>
+<script>
+import Footer from "./components/Footer.vue";
+import Header from "./components/Header.vue";
+import "./assets/footer.css";
+import "./assets/header.css";
+import "../../../Logos/logo-ACD.png";
+
+export default {
+  name: "App",
+  components: {
+    Header,
+    Footer,
+  },
+};
+</script>
 <style>
 /* General body styling for clean and modern look */
 body {

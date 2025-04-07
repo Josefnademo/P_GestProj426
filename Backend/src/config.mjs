@@ -13,6 +13,8 @@ const dbConfig = {
   password: db_password,
   database: db_name,
   port: db_port,
+  dialect: db_dialect,
+  logging: sequelize_log,
 };
 
 export default {
