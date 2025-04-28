@@ -1,56 +1,78 @@
-*   	 (HEAD -> main, origin/main, origin/HEAD) 🔀 Merge pull request #65 from ASETML/image
+* 	 (HEAD -> main, origin/main, origin/HEAD) Déplacer le json de l'unesco dans le dossier DB
+* 	 Add Image of SpeedBoat
+* 	 Add files via upload
+*   	 🔀Merge pull request #80 from ASETML/fusion-vues-Yosef-frontend
 |\  
-| * 	 (image) Le backend est près à servir les images de profil
-| * 	 début des images
-* | 	 Update TestRoutes.yaml
-* |   	 🔀Merge pull request #64 from ASETML/comments
-|\ \  
-| |/  
-|/|   
-| *   	 (origin/comments) Merge branch 'main' into comments
+| *   	 (fusion-vues-Yosef-frontend) Merge branch 'fusion-vues-Yosef-frontend' of https://github.com/ASETML/P_GestProj426 into fusion-vues-Yosef-frontend
 | |\  
+| | * 	 adaptation de la carte pour le site
+| * | 	 page de login nouveau design(card),addition du formulaire registration dans la fonctionnalité de cette carte ; responsive design (Header, footer ,book(login-register)
 | |/  
-|/|   
-* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-|\ \  
-| * | 	 Update register.mjs
-| * | 	 Update db_unesco.sql
-* | | 	 ajout des images de profil à la DB
-|/ /  
-* | 	 update(add email)
-* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-|\ \  
-| * | 	 (origin/yosef) Design, Figma (accueil, page du compte)
-* | | 	 update(mld email add)
-|/ /  
-* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-|\ \  
-* | | 	 suppresion de dossier "yosef",l'exportation de tous les nouveaux développements dans un dossier séparé a réussi et j'ai complété notre application minière
-| | * 	 Fix(Conflicts)
-| | * 	 format(lieu.mjs)
-| | * 	 format(admin.mjs)
-| | * 	 chore(Remove files we dont use)
-| | * 	 format(Login.mjs)
-| | * 	 chore(Remove unused file)
-| | * 	 Format(Register.mjs)
-| | * 	 Format(Map.mjs)
-| | * 	 format(Login.mjs)
-| | * 	 Create prettier.config.js
-| | * 	 Format(Profile Page)
-| |/  
-|/|   
-| | * 	 (origin/fusion-vues-Yosef-frontend, fusion-vues-Yosef-frontend) adaptation de la carte pour le site
-| | * 	 ajout du component carte
-| | *   	 Merge branch 'fusion-vues-Yosef-frontend' of https://github.com/ASETML/P_GestProj426 into fusion-vues-Yosef-frontend
+| * 	 ajout du component carte
+| *   	 Merge branch 'fusion-vues-Yosef-frontend' of https://github.com/ASETML/P_GestProj426 into fusion-vues-Yosef-frontend
+| |\  
+| | *   	 🔀Merge pull request #63 from ASETML/main
 | | |\  
-| | | *   	 🔀Merge pull request #63 from ASETML/main
-| | | |\  
+| * | | 	 Ajout du footer, du header et de la carte
+| |/ /  
+* | | 	 Export git du 07.04.25
+* | |   	 🔀 Merge pull request #65 from ASETML/image
+|\ \ \  
+| * | | 	 (image) Le backend est près à servir les images de profil
+| * | | 	 début des images
+* | | | 	 Update TestRoutes.yaml
+* | | |   	 🔀Merge pull request #64 from ASETML/comments
+|\ \ \ \  
+| |/ / /  
+|/| | |   
+| * | |   	 (origin/comments) Merge branch 'main' into comments
+| |\ \ \  
+| |/ / /  
+|/| | |   
+* | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \  
+| * | | | 	 Update register.mjs
+| * | | | 	 Update db_unesco.sql
+* | | | | 	 ajout des images de profil à la DB
+|/ / / /  
+* | | | 	 update(add email)
+* | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \  
+| * | | | 	 (origin/yosef) Design, Figma (accueil, page du compte)
+* | | | | 	 update(mld email add)
+|/ / / /  
+* | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \  
 | | |_|/  
 | |/| |   
-| * | | 	 Merge branch 'fusion-vues-Yosef-frontend' into main
-|/| | | 
-| | |/  
-| |/|   
+| * | |   	 Merge branch 'fusion-vues-Yosef-frontend' into main
+| |\ \ \  
+| | | |/  
+| | |/|   
+| | * | 	 feat(front) : minor change (balise HTML supprimée dans un fichier CSS)
+| | * | 	 feat(carte): cacher la vue colombus qui faisait crasher l'application
+| | * | 	 👷 update router
+| | * | 	 👷 update import router
+| | * | 	 👷 changement de fichier de route
+| | * | 	 Balises HTML supprimées des données
+| | * | 	 👷 update de la base de donnée
+| | * |   	 Merge pull request #59 from ASETML/main
+| | |\ \  
+* | | | | 	 suppresion de dossier "yosef",l'exportation de tous les nouveaux développements dans un dossier séparé a réussi et j'ai complété notre application minière
+|/ / / /  
+| | | * 	 Fix(Conflicts)
+| | | * 	 format(lieu.mjs)
+| | | * 	 format(admin.mjs)
+| | | * 	 chore(Remove files we dont use)
+| | | * 	 format(Login.mjs)
+| | | * 	 chore(Remove unused file)
+| | | * 	 Format(Register.mjs)
+| | | * 	 Format(Map.mjs)
+| | | * 	 format(Login.mjs)
+| | | * 	 Create prettier.config.js
+| | | * 	 Format(Profile Page)
+| |_|/  
+|/| |   
 * | |   	 Merge pull request #60 from ASETML/profile
 |\ \ \  
 | * | | 	 Create TestRoutes.yaml
@@ -60,17 +82,6 @@
 * | | | 	 liage des roues et main.js
 |/ / /  
 * | | 	 enlevé le button count
-| | * 	 Ajout du footer, du header et de la carte
-| |/  
-| * 	 feat(front) : minor change (balise HTML supprimée dans un fichier CSS)
-| * 	 feat(carte): cacher la vue colombus qui faisait crasher l'application
-| * 	 👷 update router
-| * 	 👷 update import router
-| * 	 👷 changement de fichier de route
-| * 	 Balises HTML supprimées des données
-| * 	 👷 update de la base de donnée
-| *   	 Merge pull request #59 from ASETML/main
-| |\  
 | | | * 	 (origin/sequelize) update()
 | | | * 	 update(sequelize) login, lieu
 | | | * 	 update(add sequelize to register)
