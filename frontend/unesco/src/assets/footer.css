@@ -7,7 +7,9 @@ footer {
   border-top: 1px solid #e9ecef;
   width: 100%;
   bottom: 0;
-  color: #686767;
+  color: #fffffe;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 footer ul {
@@ -58,10 +60,10 @@ footer a:hover img {
 
 @media (max-width: 480px) {
   footer ul li {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
   }
 
   footer img {
-    height: 40px;
+    height: 35px;
   }
 }
