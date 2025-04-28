@@ -1,0 +1,18 @@
+Notes 28.04.2025
+Retour client
+
+Problèmes d'affichages.
+
+Zoomer plus sur la carte
+Distingages par couleures différentes les types de sites.
+Zoomer sur current location from pc.
+(Ajout des fonctions des sites visités, etc...)
+Ajouts filtres par pays/ régions.
+Fonctionalité liés au compte (Sites visités, site aimé,...)
+
+
+Trucs à présenter pour la prochaine fois.
+
+Compte sites visité, like,...
+carte filtres par régon et par type de sites, couleures différentes.
+Réglages des problèmes d'affichage.
