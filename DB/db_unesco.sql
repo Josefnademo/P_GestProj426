@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS db_unesco;
 CREATE DATABASE db_unesco;
 USE db_unesco;CREATE TABLE t_lieu(
    lieu_id INT AUTO_INCREMENT,
-   nom TEXT NOT NULL,
+   nom VARCHAR(512) NOT NULL,
    longitude DECIMAL(25,18) NOT NULL,
    latitude DECIMAL(25,18) NOT NULL,
    particularite TEXT NOT NULL,
@@ -32,7 +32,7 @@ CREATE TABLE t_pays(
 
 CREATE TABLE t_region(
    region_id INT AUTO_INCREMENT,
-   nom TEXT NOT NULL,
+   nom VARCHAR(512) NOT NULL,
    PRIMARY KEY(region_id),
    UNIQUE(nom)
 );
