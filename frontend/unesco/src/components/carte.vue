@@ -32,9 +32,9 @@ onMounted(async () => {
   viewer.scene.primitives.add(buildingTileset);
   const point = {
     pixelSize: 10,
-    color: Cesium.Color.RED,
     outlineColor: Cesium.Color.WHITE,
     outlineWidth: 2,
+    color: Cesium.Color.RED,
   };
   for (let place of places) {
     const position = Cesium.Cartesian3.fromDegrees(
@@ -64,9 +64,11 @@ onMounted(async () => {
         position: adjustedPosition,
         point: {
           pixelSize: 10,
-          color: Cesium.Color.RED,
-          heightReference: Cesium.HeightReference.NONE, // Désactiver le clamp pour qu'il respecte l'altitude fixée
+          color:
+            Number(place.latitude) > 0 ? Cesium.Color.BLUE : Cesium.Color.RED,
+          heightReference: Cesium.HeightReference.NONE,
         },
+
         label: {
           text: place.nom,
           font: "14pt monospace",
