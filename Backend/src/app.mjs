@@ -30,6 +30,9 @@ app.use("/admin/", adminRouter);
 import { profileRouter } from "./routes/profile.mjs";
 app.use("/profile/", profileRouter);
 
+import { visitRouter } from "./routes/visit.mjs";
+app.use("/visit/", visitRouter);
+
 app.get("/", (req, res) => {
   //res.render("accueil");
 });
