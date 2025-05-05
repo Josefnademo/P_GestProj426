@@ -37,6 +37,7 @@
                 type="text"
                 placeholder="Entrez votre nom"
                 v-model="loginForm.username"
+                required
               />
             </div>
             <div class="form-group">
@@ -45,9 +46,14 @@
                 type="password"
                 placeholder="Entrez votre mot de passe"
                 v-model="loginForm.password"
+                required
               />
             </div>
-            <button type="submit" class="submit-btn">Se connecter</button>
+            <div v-if="loginError" class="error-message">{{ loginError }}</div>
+            <button type="submit" class="submit-btn" :disabled="loading">
+              <span v-if="!loading">Se connecter</span>
+              <span v-else>Connexion...</span>
+            </button>
           </form>
           <div class="back-btn" @click="flipTo('cover')">← Retour</div>
         </div>
@@ -62,6 +68,7 @@
                 type="email"
                 placeholder="Votre email"
                 v-model="registerForm.email"
+                required
               />
             </div>
             <div class="form-group">
@@ -70,6 +77,7 @@
                 type="text"
                 placeholder="Choisissez un nom"
                 v-model="registerForm.username"
+                required
               />
             </div>
             <div class="form-group">
@@ -78,9 +86,19 @@
                 type="password"
                 placeholder="Créez un mot de passe"
                 v-model="registerForm.password"
+                required
               />
             </div>
-            <button type="submit" class="submit-btn">S'inscrire</button>
+            <div v-if="registerError" class="error-message">
+              {{ registerError }}
+            </div>
+            <div v-if="registerSuccess" class="success-message">
+              {{ registerSuccess }}
+            </div>
+            <button type="submit" class="submit-btn" :disabled="loading">
+              <span v-if="!loading">S'inscrire</span>
+              <span v-else>Inscription...</span>
+            </button>
           </form>
           <div class="back-btn" @click="flipTo('cover')">← Retour</div>
         </div>
@@ -90,11 +108,22 @@
 </template>
 
 <script>
+/*import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
+import { getDatabase, ref, set } from "firebase/database";
+*/
 export default {
   name: "InteractiveBook",
   data() {
     return {
       currentPage: "cover",
+      loading: false,
+      loginError: "",
+      registerError: "",
+      registerSuccess: "",
       loginForm: {
         username: "",
         password: "",
@@ -109,15 +138,96 @@ export default {
   methods: {
     flipTo(page) {
       this.currentPage = page;
+      this.loginError = "";
+      this.registerError = "";
+      this.registerSuccess = "";
     },
-    handleLogin() {
-      console.log("Login submitted:", this.loginForm);
-      // Add login logic
+    async handleLogin() {
+      this.loading = true;
+      this.loginError = "";
+
+      try {
+        const auth = getAuth();
+        await signInWithEmailAndPassword(
+          auth,
+          this.loginForm.username,
+          this.loginForm.password
+        );
+
+        // Login successful - redirect or show success
+        console.log("User logged in successfully");
+        // You can redirect or update UI here
+      } catch (error) {
+        this.loginError = this.getFirebaseError(error.code);
+        console.error("Login error:", error);
+      } finally {
+        this.loading = false;
+      }
     },
-    handleRegister() {
-      console.log("Register submitted:", this.registerForm);
-      // Add registration logic
+    async handleRegister() {
+      this.loading = true;
+      this.registerError = "";
+      this.registerSuccess = "";
+
+      if (
+        !this.registerForm.email ||
+        !this.registerForm.username ||
+        !this.registerForm.password
+      ) {
+        this.registerError = "Veuillez remplir tous les champs";
+        this.loading = false;
+        return;
+      }
+
+      try {
+        const auth = getAuth();
+        const db = getDatabase();
+
+        // Create user with email/password
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          this.registerForm.email,
+          this.registerForm.password
+        );
+
+        // Save additional user data to database
+        await set(ref(db, "users/" + userCredential.user.uid), {
+          username: this.registerForm.username,
+          email: this.registerForm.email,
+          createdAt: new Date().toISOString(),
+        });
+
+        this.registerSuccess =
+          "Inscription réussie! Vous pouvez maintenant vous connecter.";
+        this.registerForm = { email: "", username: "", password: "" };
+
+        // Auto flip to login after successful registration
+        setTimeout(() => {
+          this.flipTo("login");
+        }, 2000);
+      } catch (error) {
+        this.registerError = this.getFirebaseError(error.code);
+        console.error("Registration error:", error);
+      } finally {
+        this.loading = false;
+      }
     },
+    /*getFirebaseError(code) {
+      switch (code) {
+        case "auth/email-already-in-use":
+          return "Cet email est déjà utilisé";
+        case "auth/invalid-email":
+          return "Email invalide";
+        case "auth/weak-password":
+          return "Le mot de passe doit contenir au moins 6 caractères";
+        case "auth/user-not-found":
+          return "Utilisateur non trouvé";
+        case "auth/wrong-password":
+          return "Mot de passe incorrect";
+        default:
+          return "Une erreur est survenue";
+      }
+    },*/
   },
 };
 </script>
