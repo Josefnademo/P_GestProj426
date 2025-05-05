@@ -36,11 +36,11 @@ const likedImage = "";
         <p>{{ detail.histoire }}</p>
       </div>
       <div class="buttons">
-        <button class="action-button" @click="/*methodeLiked*/">
+        <button class="action-button" @click="methodeLiked">
           <img v-if="isLiked" src="http://localhost:3000/images/likeRED.jpg" />
           <img v-else src="http://localhost:3000/images/like.jpg" />
         </button>
-        <button class="action-button" @click="/*methodeVisité*/">
+        <button class="action-button" @click="methodeVisité;">
           <img src="http://localhost:3000/images/visited.jpg" />
         </button>
       </div>
