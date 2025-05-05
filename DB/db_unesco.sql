@@ -7,6 +7,7 @@ USE db_unesco;CREATE TABLE t_lieu(
    latitude DECIMAL(25,18) NOT NULL,
    particularite TEXT NOT NULL,
    histoire TEXT,
+   categorie TEXT NOT NULL,
    PRIMARY KEY(lieu_id),
    UNIQUE(nom)
 );
