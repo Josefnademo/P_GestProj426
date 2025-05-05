@@ -236,6 +236,8 @@ export default {
   flex-direction: column;
   gap: 20px;
   width: 60%;
+  align-items: center;
+  justify-content: center;
 }
 
 .action-btn {
@@ -271,10 +273,13 @@ export default {
 }
 
 /* Login/Register Pages */
+
+/* Remove initial rotations - let the BOOK handle flipping */
 .login,
 .register {
-  transform: rotateY(180deg);
-  z-index: 2;
+  transform: rotateY(0); /* Changed from ±180deg */
+  opacity: 0; /* Hide initially */
+  z-index: 1; /* Same z-index */
 }
 
 .title {
@@ -348,15 +353,39 @@ export default {
   text-decoration: underline;
 }
 
-/* Book Flip Animations */
+/* Show active page */
+.flipped-login .login,
+.flipped-register .register {
+  opacity: 1;
+  z-index: 2;
+}
+
+/* Flip animations */
 .flipped-login {
   transform: rotateY(-180deg);
 }
-
 .flipped-register {
+  transform: rotateY(180deg);
+}
+/* Keep initial rotations but add visibility control */
+.login {
   transform: rotateY(-180deg);
+  backface-visibility: hidden;
+}
+.register {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
 }
 
+/* Flip book to reveal correct side */
+.flipped-login {
+  transform: rotateY(-180deg);
+}
+.flipped-register {
+  transform: rotateY(180deg);
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .book-container {
     width: 100%;
@@ -410,6 +439,255 @@ export default {
     width: 100%;
     padding: 0.75rem;
     font-size: 1rem;
+  }
+
+  /* Show only active page */
+  .book.cover .cover,
+  .book.login .login,
+  .book.register .register {
+    display: flex;
+  }
+
+  /* Text adjustments */
+  .welcome {
+    font-size: 1.8rem;
+    color: #222;
+    margin-bottom: 1.5rem;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 1.8rem;
+  }
+
+  /* Button styles */
+  .buttons {
+    width: 100%;
+    max-width: 100%;
+    gap: 1rem;
+  }
+
+  .action-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    border-radius: 0.5rem;
+  }
+
+  .login-btn {
+    background: linear-gradient(135deg, #3d8b40, #6fa832);
+  }
+
+  .register-btn {
+    background: linear-gradient(135deg, #1a7fd8, #2f3f9e);
+  }
+
+  /* Form elements */
+  .form-group {
+    margin-bottom: 1.2rem;
+    width: 100%;
+  }
+
+  .form-group label {
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  .form-group input {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+    background: rgba(0, 0, 0, 0.05);
+    border: 1px solid #ddd;
+    color: #333;
+  }
+
+  .form-group input:focus {
+    background: rgba(0, 0, 0, 0.08);
+    border-color: #4caf50;
+  }
+
+  .submit-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    background: linear-gradient(135deg, #e68a00, #d84315);
+  }
+
+  /* Back button */
+  .back-btn {
+    margin-top: 1.5rem;
+    color: #555;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .back-btn:hover {
+    color: #000;
+  }
+
+  /* Background elements adjustment */
+  .circle {
+    filter: blur(40px);
+    opacity: 0.6;
+  }
+
+  .circle-green {
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -50px;
+  }
+
+  .circle-orange {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    right: -50px;
+  }
+}
+
+/* Extra small devices (phones) */
+@media (max-width: 480px) {
+  .page {
+    padding: 1.5rem 1rem;
+    min-height: calc(100vh - 1rem);
+  }
+
+  .welcome {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .logo {
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .action-btn,
+  .submit-btn {
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .form-group input {
+    padding: 0.8rem;
+  }
+
+  .back-btn {
+    font-size: 0.9rem;
+  }
+  .circle {
+    filter: blur(30px);
+    opacity: 0.5;
+  }
+
+  .circle-green {
+    width: 250px;
+    height: 250px;
+    top: -30px;
+    left: -30px;
+  }
+
+  .circle-orange {
+    width: 250px;
+    height: 250px;
+    bottom: -30px;
+    right: -30px;
+  }
+  .app-container {
+    background-color: #121212;
+  }
+
+  .page {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+  }
+
+  .form-group input {
+    background: rgba(255, 255, 255, 0.2);
+    color: #e0e0e0;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .form-group input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #4caf50;
+  }
+
+  .action-btn,
+  .submit-btn {
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    color: white;
+  }
+
+  .login-btn,
+  .register-btn,
+  .submit-btn {
+    box-shadow: none;
+    transition: none;
+  }
+
+  .back-btn {
+    color: #e0e0e0;
+  }
+
+  .back-btn:hover {
+    color: #fff;
+  }
+}
+/* Dark mode styles */
+@media (prefers-color-scheme: dark) {
+  .app-container {
+    background-color: #121212;
+  }
+
+  .page {
+    background: rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+  }
+
+  .form-group input {
+    background: rgba(255, 255, 255, 0.2);
+    color: #e0e0e0;
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .form-group input:focus {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: #4caf50;
+  }
+
+  .action-btn,
+  .submit-btn {
+    background: linear-gradient(135deg, #4caf50, #8bc34a);
+    color: white;
+  }
+
+  .login-btn,
+  .register-btn,
+  .submit-btn {
+    box-shadow: none;
+    transition: none;
+  }
+
+  .back-btn {
+    color: #e0e0e0;
+  }
+
+  .back-btn:hover {
+    color: #fff;
   }
 }
 </style>
