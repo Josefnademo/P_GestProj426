@@ -76,8 +76,11 @@ onMounted(async () => {
         position: adjustedPosition,
         point: {
           pixelSize: 10,
+
           color:
-            Number(place.latitude) > 0 ? Cesium.Color.BLUE : Cesium.Color.RED,
+            place.categorie === "Natural"
+              ? Cesium.Color.GREEN
+              : Cesium.Color.YELLOW,
           heightReference: Cesium.HeightReference.NONE,
         },
 
