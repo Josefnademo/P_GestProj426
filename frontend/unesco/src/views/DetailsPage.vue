@@ -1,33 +1,60 @@
+<script setup>
+import { ref, onMounted } from "vue";
+import ShowDetails from "@/services/ShowDetails.js";
+
+const props = defineProps({
+  id: {
+    required: true,
+  },
+  compte_id: {
+    required: true,
+  },
+});
+
+const detail = ref(null);
+
+onMounted(() => {
+  ShowDetails.getDetails(props.id)
+    .then((response) => {
+      detail.value = response.data;
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+});
+const likedImage = "";
+</script>
+
 <template>
   <div id="app">
     <div class="content-container">
       <h1>Lorem ipsum dolor od tempor</h1>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-        occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-        mollit anim id est laborum.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-        commodo consequat.
-      </p>
+      <p></p>
+      <div v-if="detail">
+        <h1>{{ detail.nom }}</h1>
+        <p>{{ detail.particularite }}</p>
+        <p>{{ detail.histoire }}</p>
+      </div>
       <div class="buttons">
-        <button class="action-button">J’ai visité ce lieu</button>
-        <button class="action-button">Je veux visiter ce lieu</button>
+        <button class="action-button" @click="/*methodeLiked*/">
+          <img v-if="isLiked" src="http://localhost:3000/images/likeRED.jpg" />
+          <img v-else src="http://localhost:3000/images/like.jpg" />
+        </button>
+        <button class="action-button" @click="/*methodeVisité*/">
+          <img src="http://localhost:3000/images/visited.jpg" />
+        </button>
       </div>
     </div>
+    <img :src="detail.image" />
   </div>
 </template>
 
 <script>
 export default {
   name: "App",
+  isLiked(lieu_id, compte_id) {
+    ShowDetails.wantToVisit(lieu_id, compte_id);
+  },
 };
 </script>
 

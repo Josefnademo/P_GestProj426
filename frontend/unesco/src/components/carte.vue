@@ -23,6 +23,18 @@ onMounted(async () => {
     timeline: false,
   });
 
+  //Zoom sur l'utilisateur
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition((position) => {
+      const latitude = position.coords.latitude;
+      const longitude = position.coords.longitude;
+      console.log(latitude, longitude);
+      viewer.camera.flyTo({
+        destination: Cesium.Cartesian3.fromDegrees(longitude, latitude, 0),
+      });
+    });
+  }
+
   viewer.scene.screenSpaceCameraController.minimumZoomDistance = 6378137 * 0.05;
 
   var imagery = Cesium.createDefaultImageryProviderViewModels();
