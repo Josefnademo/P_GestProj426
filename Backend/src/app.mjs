@@ -33,6 +33,9 @@ app.use("/profile/", profileRouter);
 import { visitRouter } from "./routes/visit.mjs";
 app.use("/visit/", visitRouter);
 
+import { avisitRouter } from "./routes/avisit.mjs";
+app.use("/avisit/", avisitRouter);
+
 app.get("/", (req, res) => {
   //res.render("accueil");
 });

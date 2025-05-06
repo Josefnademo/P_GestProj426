@@ -20,8 +20,8 @@ registerRouter.post("/", async (req, res) => {
         resolve(key);                                                                         //sha256 is the algorithm
       });
     });
-
-     const hash = derivedKey.toString("hex");
+    const isAdmin = false;                                                                    //Qui a enlevé cette ligne? je vous aime pas - ROMAIN
+    const hash = derivedKey.toString("hex");
     if (regex.test(email)) {
       console.log("Email valide");
     } else {
