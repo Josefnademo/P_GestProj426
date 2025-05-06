@@ -54,7 +54,7 @@ lieuRouter.post("/:id/visiter", async (req, res) => {
   const connection = await mysql.createConnection(config.dbConfig);
   try {
   await connection.execute(                                                         //Run query to insert the ids into the table
-    "INSERT INTO t_visiter (lieu_id_fk, compte_id_fk) VALUES (?, ?)",               //
+    "INSERT INTO t_aimeraitVisiter (lieu_id_fk, compte_id_fk) VALUES (?, ?)",       //
     [siteId, compteId]                                                              //
   );                                                                                //
   res.json({
