@@ -1,10 +1,8 @@
 import express from "express";
-// c'est une erreur touchez pas ca marche
-import { isAdmin } from "../middleware/adminCheck.mjs";
-import { dbMiddleware } from "../middleware/dbConnection.mjs";
+
 const adminRouter = express();
 
-// POST /country - Ajouter un pays (admin seulement)
+// POST /country - Add a country (admin only)
 adminRouter.post("/country", async (/*, isAdmin*/ req, res) => {
   const countryName = req.body;                                                           //Get countryname from body
   const connection = await mysql.createConnection(config.dbConfig);
@@ -23,7 +21,7 @@ adminRouter.post("/country", async (/*, isAdmin*/ req, res) => {
   }
 });
 
-// PATCH /country - Mettre a jour un pays (admin seulement)
+// PATCH /country - Update country (admin only)
 adminRouter.patch("/country/:id", async (/*, isAdmin*/ req, res) => {
   const countryId = req.params.id;                                                        //Get country id from body
   const { countryName } = req.body;
@@ -44,7 +42,7 @@ adminRouter.patch("/country/:id", async (/*, isAdmin*/ req, res) => {
   }
 });
 
-// DELETE /country - Supprimer un pays (admin seulement)
+// DELETE /country - Delete a country (admin only)
 adminRouter.delete(
   "/country/:id",
   /*, isAdmin*/ async (req, res) => {
@@ -64,7 +62,7 @@ adminRouter.delete(
   }
 );
 
-// POST /country - Ajouter un pays (admin seulement)
+// POST /country - Add a country (admin only)
 adminRouter.post("/region", async (/*, isAdmin*/ req, res) => {
   const regionName = req.body;                                                                      //Get regionname from body
   const connection = await mysql.createConnection(config.dbConfig);
@@ -83,7 +81,7 @@ adminRouter.post("/region", async (/*, isAdmin*/ req, res) => {
   }
 });
 
-// PATCH /country - Mettre a jour un pays (admin seulement)
+// PATCH /country - Update a country (admin only)
 adminRouter.patch("/region/:id", async (/*, isAdmin*/ req, res) => {
   const regionId = req.params.id;                                                                       //Get region id from body
   const { regionName } = req.body;
@@ -104,7 +102,7 @@ adminRouter.patch("/region/:id", async (/*, isAdmin*/ req, res) => {
   }
 });
 
-// DELETE /country - Supprimer un pays (admin seulement)
+// DELETE /country - Delete a country (admin only)
 adminRouter.delete(
   "/region/:id",
   /*, isAdmin*/ async (req, res) => {
