@@ -44,9 +44,9 @@ onMounted(async () => {
   viewer.scene.primitives.add(buildingTileset);
   const point = {
     pixelSize: 10,
-    color: Cesium.Color.RED,
     outlineColor: Cesium.Color.WHITE,
     outlineWidth: 2,
+    color: Cesium.Color.RED,
   };
   for (let place of places) {
     const position = Cesium.Cartesian3.fromDegrees(
@@ -69,16 +69,27 @@ onMounted(async () => {
         Number(place.latitude),
         adjustedHeight
       );
-
+      console.log(place.categorie);
       const entity = viewer.entities.add({
         name: place.nom,
         description: place.particularite,
         position: adjustedPosition,
         point: {
           pixelSize: 10,
-          color: Cesium.Color.RED,
-          heightReference: Cesium.HeightReference.NONE, //Deactivate to match the height set
+
+
+          color: (() => {
+            const cat = String(place.categorie).trim().toLowerCase();
+            if (cat === "cultural") return Cesium.Color.GREEN;
+            if (cat === "natural") return Cesium.Color.YELLOW;
+            if (cat === "mixed" || cat === "mixt") return Cesium.Color.ORANGE;
+            return Cesium.Color.GRAY; // Pour null, undefined, ou autre
+          })(),
+
+          heightReference: Cesium.HeightReference.NONE,
+
         },
+
         label: {
           text: place.nom,
           font: "14pt monospace",
