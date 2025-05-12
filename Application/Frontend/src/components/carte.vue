@@ -79,7 +79,6 @@ onMounted(async () => {
         point: {
           pixelSize: 10,
 
-
           color: (() => {
             const cat = String(place.categorie).trim().toLowerCase();
             if (cat === "cultural") return Cesium.Color.GREEN;
@@ -89,7 +88,6 @@ onMounted(async () => {
           })(),
 
           heightReference: Cesium.HeightReference.NONE,
-
         },
 
         label: {
@@ -131,25 +129,52 @@ onMounted(async () => {
 });
 </script>
 <style>
-#cesiumContainer {
-  width: 100%;
-  height: 100%;
-
+/* Applique un fond stylé à la page */
+body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  font-family: sans-serif;
+/* Conteneur de la carte : fenêtre avec style */
+#cesiumContainer {
+  width: 90vw;
+  height: 75vh;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #1e1e1e;
+  transition: all 0.3s ease;
+  position: relative;
 }
-.cesium-viewer-cesiumWidgetContainer {
-  width: 1908px;
-  height: 745px;
-}
-.cesium-viewer {
-  width: 1908px;
-  height: 745px;
-}
+
+/* Rendre tout le canvas de la carte responsive */
+.cesium-viewer,
+.cesium-viewer-cesiumWidgetContainer,
 .cesium-widget canvas {
-  width: 1908px;
-  height: 745px;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Optionnel : cacher les crédits en bas */
+.cesium-viewer-bottom {
+  display: none !important;
+}
+
+/* Responsive design pour petits écrans */
+@media (max-width: 768px) {
+  #cesiumContainer {
+    width: 95vw;
+    height: 65vh;
+  }
 }
 </style>
