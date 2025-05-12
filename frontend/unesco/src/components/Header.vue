@@ -2,7 +2,10 @@
   <header>
     <div class="logo">
       <a href="HomePage.vue">
-        <img src="./Logos/logo-ACD.png" alt="logo ACD motorsport" />
+        <img
+          src="../../../public/images/logo-ACD.png"
+          alt="logo ACD motorsport"
+        />
       </a>
     </div>
     <nav>
