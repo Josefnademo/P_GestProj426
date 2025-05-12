@@ -69,7 +69,7 @@ onMounted(async () => {
         Number(place.latitude),
         adjustedHeight
       );
-
+      console.log(place.categorie);
       const entity = viewer.entities.add({
         name: place.nom,
         description: place.particularite,
@@ -77,10 +77,14 @@ onMounted(async () => {
         point: {
           pixelSize: 10,
 
-          color:
-            place.categorie === "Natural"
-              ? Cesium.Color.GREEN
-              : Cesium.Color.YELLOW,
+          color: (() => {
+            const cat = String(place.categorie).trim().toLowerCase();
+            if (cat === "cultural") return Cesium.Color.GREEN;
+            if (cat === "natural") return Cesium.Color.YELLOW;
+            if (cat === "mixed" || cat === "mixt") return Cesium.Color.ORANGE;
+            return Cesium.Color.GRAY; // Pour null, undefined, ou autre
+          })(),
+
           heightReference: Cesium.HeightReference.NONE,
         },
 
