@@ -1,18 +1,28 @@
-* 	 (HEAD -> main) refactor(globe): Suprimmer le JSON de l'unesco du globe
-* 	 (origin/main, origin/HEAD) Chore(Cleanup)Remove Exess Layer in Frontend, Put Frontend and Backend in the same dir, Move Globe into Tests
-*   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+*   	 (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\  
 | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | |\  
-| | * 	 Tweak(Package.json): Both frontend and backend now run from npm start
-| | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-| | |\  
-| | * | 	 Parse(db_unesco.sql): Remove HTML assets in name fields
-| * | | 	 feat(carte): Le bouton home amène sur la position de l'utilisateur
-| | |/  
-| |/|   
-* | | 	 CSS pour la carte
-* | | 	 feature(footer, header et App.vue)
+| * | 	 Update( ReadMe.md pour mettre en place le projet)
+* | | 	 chore(repo): Exports git du 12.05.25
+* | | 	 refactor(globe): Suprimmer le JSON de l'unesco du globe
+| |/  
+|/|   
+* | 	 Chore(Cleanup)Remove Exess Layer in Frontend, Put Frontend and Backend in the same dir, Move Globe into Tests
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \  
+| | * | 	 Tweak(Package.json): Both frontend and backend now run from npm start
+| | * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | |\ \  
+| | * | | 	 Parse(db_unesco.sql): Remove HTML assets in name fields
+| * | | | 	 feat(carte): Le bouton home amène sur la position de l'utilisateur
+| | |/ /  
+| |/| |   
+* | | | 	 CSS pour la carte
+* | | | 	 feature(footer, header et App.vue)
+| |_|/  
+|/| |   
 | | | * 	 (origin/brancheDetails) WIP(PageDetails)
 | | |/  
 | |/|   

@@ -1,8 +1,20 @@
-4db82fc - ASETML, 43 seconds ago : refactor(globe): Suprimmer le JSON de l'unesco du globe
+2fe0ec1 - ASETML, 71 seconds ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+7e80343 - ASETML, 2 minutes ago : chore(repo): Exports git du 12.05.25
+ .../fullJDT-tropD_infos/journal_de_travail.txt     | 710 ++++++++++++++-------
+ Administratif/exportsGitHub/gitTree/GitTree.txt    |  72 ++-
+ GitTree.txt                                        | 369 -----------
+ 3 files changed, 534 insertions(+), 617 deletions(-)
+
+4db82fc - ASETML, 3 minutes ago : refactor(globe): Suprimmer le JSON de l'unesco du globe
  Tests/Globe/globe.html | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
-2738519 - Romain Pierre Marie Denis, 8 minutes ago : Chore(Cleanup)Remove Exess Layer in Frontend, Put Frontend and Backend in the same dir, Move Globe into Tests
+04e66b1 - antoineFabr, 7 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+65f5283 - antoineFabr, 8 minutes ago : Update( ReadMe.md pour mettre en place le projet)
+ README.md | 39 +++++++++++++++++++++++++++++++--------
+ 1 file changed, 31 insertions(+), 8 deletions(-)
+
+2738519 - Romain Pierre Marie Denis, 10 minutes ago : Chore(Cleanup)Remove Exess Layer in Frontend, Put Frontend and Backend in the same dir, Move Globe into Tests
  Application/Backend/.gitignore                     |   1 +
  .../Backend}/config.mjs.example                    |   0
  {Backend => Application/Backend}/images/1.jpg      | Bin
@@ -67,54 +79,54 @@
  {globe => Tests/Globe}/globe.html                  |   0
  62 files changed, 8 insertions(+), 88 deletions(-)
 
-8b1d32c - YOSEF NADEMO, 12 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-14ee137 - YOSEF NADEMO, 13 minutes ago : CSS pour la carte
+8b1d32c - YOSEF NADEMO, 15 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+14ee137 - YOSEF NADEMO, 15 minutes ago : CSS pour la carte
  frontend/unesco/src/components/carte.vue | 56 ++++++++++++++++++++++++++++++++
  1 file changed, 56 insertions(+)
 
-2af9e2c - YOSEF NADEMO, 13 minutes ago : feature(footer, header et App.vue)
+2af9e2c - YOSEF NADEMO, 15 minutes ago : feature(footer, header et App.vue)
  frontend/unesco/src/App.vue               | 15 ++++++++++++++-
  frontend/unesco/src/components/Header.vue |  2 +-
  frontend/unesco/src/components/carte.vue  |  2 --
  3 files changed, 15 insertions(+), 4 deletions(-)
 
-74fe196 - ASETML, 15 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-f94088b - ASETML, 15 minutes ago : feat(carte): Le bouton home amène sur la position de l'utilisateur
+74fe196 - ASETML, 18 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+f94088b - ASETML, 18 minutes ago : feat(carte): Le bouton home amène sur la position de l'utilisateur
  frontend/unesco/src/components/carte.vue | 22 +++++++++++++++++-----
  globe/globe.html                         |  8 +++++---
  2 files changed, 22 insertions(+), 8 deletions(-)
 
-3b2636f - Romain Pierre Marie Denis, 24 minutes ago : Tweak(Package.json): Both frontend and backend now run from npm start
+3b2636f - Romain Pierre Marie Denis, 27 minutes ago : Tweak(Package.json): Both frontend and backend now run from npm start
  Backend/package.json         | 1 -
  frontend/unesco/package.json | 2 +-
  2 files changed, 1 insertion(+), 2 deletions(-)
 
-2e0f4b9 - Romain Pierre Marie Denis, 30 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-a08afa6 - Romain Pierre Marie Denis, 37 minutes ago : Parse(db_unesco.sql): Remove HTML assets in name fields
+2e0f4b9 - Romain Pierre Marie Denis, 33 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+a08afa6 - Romain Pierre Marie Denis, 39 minutes ago : Parse(db_unesco.sql): Remove HTML assets in name fields
  DB/db_unesco.sql | 38 +++++++++++++++++++-------------------
  1 file changed, 19 insertions(+), 19 deletions(-)
 
-8bbdd32 - ASETML, 38 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-0726d8b - ASETML, 38 minutes ago : feat(carte): Ajout d'un bouton à l'infoBox d'un site
+8bbdd32 - ASETML, 40 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+0726d8b - ASETML, 40 minutes ago : feat(carte): Ajout d'un bouton à l'infoBox d'un site
  frontend/unesco/src/components/carte.vue | 4 +++-
  1 file changed, 3 insertions(+), 1 deletion(-)
 
-eae39d2 - C-HM, 56 minutes ago : Update(DetailsPage)
+eae39d2 - C-HM, 59 minutes ago : Update(DetailsPage)
  frontend/unesco/src/services/ShowDetails.js | 6 +++---
  frontend/unesco/src/views/DetailsPage.vue   | 8 +++-----
  2 files changed, 6 insertions(+), 8 deletions(-)
 
-2c5d9a8 - YOSEF NADEMO, 65 minutes ago : fix(footer et header)
+2c5d9a8 - YOSEF NADEMO, 68 minutes ago : fix(footer et header)
  frontend/unesco/src/components/Footer.vue | 2 +-
  frontend/unesco/src/components/Header.vue | 2 +-
  2 files changed, 2 insertions(+), 2 deletions(-)
 
-30a5e73 - YOSEF NADEMO, 73 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-2bae507 - YOSEF NADEMO, 73 minutes ago : ajout des logos, correction des css pour Footer
+30a5e73 - YOSEF NADEMO, 75 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+2bae507 - YOSEF NADEMO, 76 minutes ago : ajout des logos, correction des css pour Footer
  frontend/unesco/src/components/Footer.vue | 3 ++-
  1 file changed, 2 insertions(+), 1 deletion(-)
 
-1ffe3ca - YOSEF NADEMO, 77 minutes ago : ajout des logos, correction des css pour Header
+1ffe3ca - YOSEF NADEMO, 79 minutes ago : ajout des logos, correction des css pour Header
  frontend/unesco/public/images/logo-ACD.png | Bin 0 -> 17971 bytes
  frontend/unesco/src/assets/footer.css      |   5 ++++-
  frontend/unesco/src/assets/header.css      |  17 +++++++++++------
@@ -122,14 +134,14 @@ eae39d2 - C-HM, 56 minutes ago : Update(DetailsPage)
  frontend/unesco/src/components/Header.vue  |   5 ++++-
  5 files changed, 27 insertions(+), 13 deletions(-)
 
-3f76336 - Antoine, 86 minutes ago : 🔀Merge pull request #93 from ASETML/Couleur-Point-
-7425ccd - Antoine, 86 minutes ago : Merge branch 'main' into Couleur-Point-
-b7897dc - antoineFabr, 88 minutes ago : Fix(Affichage des différents points sur la carte)
+3f76336 - Antoine, 88 minutes ago : 🔀Merge pull request #93 from ASETML/Couleur-Point-
+7425ccd - Antoine, 88 minutes ago : Merge branch 'main' into Couleur-Point-
+b7897dc - antoineFabr, 2 hours ago : Fix(Affichage des différents points sur la carte)
  frontend/unesco/src/components/carte.vue | 14 +++++++++-----
  1 file changed, 9 insertions(+), 5 deletions(-)
 
-7848902 - Romain, 89 minutes ago : Merge pull request #92 from ASETML/translate-comments
-aa6e88f - antoineFabr, 89 minutes ago : Change(Requette SQL pour ajouter Categorie)
+7848902 - Romain, 2 hours ago : Merge pull request #92 from ASETML/translate-comments
+aa6e88f - antoineFabr, 2 hours ago : Change(Requette SQL pour ajouter Categorie)
  Backend/src/routes/lieu.mjs | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)
 
