@@ -74,11 +74,12 @@ onMounted(async () => {
         name: place.nom,
         description:
           place.particularite +
-          '<a target="_blank" href="gogole.com">Page de détails</a>',
+          '<br/><a target="_blank" href="' +
+          GoToDetails(place.id, this.userId) +
+          '">Page de détails</a>',
         position: adjustedPosition,
         point: {
           pixelSize: 10,
-
 
           color: (() => {
             const cat = String(place.categorie).trim().toLowerCase();
@@ -89,7 +90,6 @@ onMounted(async () => {
           })(),
 
           heightReference: Cesium.HeightReference.NONE,
-
         },
 
         label: {
@@ -129,6 +129,10 @@ onMounted(async () => {
     }
   }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 });
+
+function GoToDetails(lieu_id, user_id) {
+  return `/details/lieu=${lieu_id}/user=${user_id}`;
+}
 </script>
 <style>
 #cesiumContainer {

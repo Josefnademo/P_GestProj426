@@ -2,17 +2,12 @@
 import { ref, onMounted } from "vue";
 import ShowDetails from "@/services/ShowDetails.js";
 
-const props = defineProps({
-  id: {
-    type: String,
-    required: true,
-  },
-});
-
 const detail = ref(null);
 const isLiked = ref(false);
 const error = ref(null);
 const loading = ref(true);
+const userId = ref($route.params.user_id);
+const lieuId = ref($route.params.lieu_id);
 
 const handleLike = async () => {
   try {
@@ -51,7 +46,6 @@ onMounted(async () => {
       <p>{{ detail.histoire }}</p>
 
       <div class="buttons">
-
         <button class="action-button" @click="handleLike">
           <img
             v-if="isLiked"

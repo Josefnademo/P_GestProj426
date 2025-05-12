@@ -17,7 +17,11 @@ const routes = [
   // /login returns the login component
   { path: "/login", name: "Login", component: LoginPage },
   // /details returns the details component
-  { path: "/details", name: "Details", component: DetailsPage },
+  {
+    path: "/details/lieu/:lieu_id/user/:user_id",
+    name: "Details",
+    component: DetailsPage,
+  },
   // /account returns the account component
   { path: "/account", name: "Account", component: AccountPage },
 ];
