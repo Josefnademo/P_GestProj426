@@ -30,7 +30,7 @@ footer {
 
 footer ul {
   list-style: none;
-  margin: 0;
+  margin-left: 5em;
   padding: 0;
 }
 
@@ -49,6 +49,7 @@ footer ul li:first-child {
 }
 
 footer img {
+  margin-right: 5em;
   height: 100px;
   max-width: 100%;
   width: auto;
