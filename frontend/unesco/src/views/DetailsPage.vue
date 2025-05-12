@@ -13,6 +13,8 @@ const props = defineProps({
 
 const detail = ref(null);
 const isLiked = ref(false);
+const error = ref(null);
+const loading = ref(true);
 
 const handleLike = async () => {
   try {
@@ -23,38 +25,58 @@ const handleLike = async () => {
   }
 };
 
-onMounted(() => {
-  ShowDetails.getDetails(props.id)
-    .then((response) => {
-      detail.value = response.data;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+onMounted(async () => {
+  try {
+    loading.value = true;
+    const response = await ShowDetails.getDetails(props.id);
+    detail.value = response.data;
+  } catch (err) {
+    error.value = "Failed to load details. Please try again later.";
+    console.error(err);
+  } finally {
+    loading.value = false;
+  }
 });
 </script>
 
 <template>
   <div id="app">
-    <div class="content-container">
-      <h1>Lorem ipsum dolor od tempor</h1>
-      <p></p>
-      <div v-if="detail">
-        <h1>{{ detail.nom }}</h1>
-        <p>{{ detail.particularite }}</p>
-        <p>{{ detail.histoire }}</p>
-      </div>
+    <div v-if="loading" class="loading">Loading...</div>
+
+    <div v-else-if="error" class="error">
+      {{ error }}
+    </div>
+
+    <div v-else-if="detail" class="content-container">
+      <h1>{{ detail.nom }}</h1>
+      <p>{{ detail.particularite }}</p>
+      <p>{{ detail.histoire }}</p>
+
       <div class="buttons">
         <button class="action-button" @click="handleLike">
-          <img v-if="isLiked" src="http://localhost:3000/images/likeRED.jpg" />
-          <img v-else src="http://localhost:3000/images/like.jpg" />
+          <img
+            v-if="isLiked"
+            src="http://localhost:3000/images/likeRED.jpg"
+            alt="Liked"
+          />
+          <img
+            v-else
+            src="http://localhost:3000/images/like.jpg"
+            alt="Not liked"
+          />
         </button>
         <button class="action-button">
-          <img src="http://localhost:3000/images/visited.jpg" />
+          <img src="http://localhost:3000/images/visited.jpg" alt="Visited" />
         </button>
       </div>
+
+      <img
+        v-if="detail.image"
+        :src="detail.image"
+        :alt="detail.nom"
+        class="detail-image"
+      />
     </div>
-    <img :src="detail.image" />
   </div>
 </template>
 
@@ -80,7 +102,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2rem;
 }
 
 .content-container {
@@ -89,7 +112,21 @@ body {
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
+  max-width: 800px;
+  width: 100%;
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.error {
+  color: #dc3545;
 }
 
 h1 {
@@ -107,7 +144,7 @@ p {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin-top: 2rem;
+  margin: 2rem 0;
 }
 
 .action-button {
@@ -118,9 +155,25 @@ p {
   border-radius: 5px;
   cursor: pointer;
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.action-button img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
 }
 
 .action-button:hover {
   background-color: #0056b3;
+}
+
+.detail-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 1rem;
 }
 </style>
