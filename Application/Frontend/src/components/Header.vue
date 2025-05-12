@@ -10,7 +10,7 @@
     </div>
     <nav>
       <ul>
-        <li><a href="accueil" class="nav-button">Accueil</a></li>
+        <li><a href="/" class="nav-button">Accueil</a></li>
         <li><a href="login" class="nav-button">Login</a></li>
         <li><a href="account" class="nav-button">Account</a></li>
       </ul>
