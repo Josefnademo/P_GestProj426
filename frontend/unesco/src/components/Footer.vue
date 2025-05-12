@@ -5,7 +5,7 @@
       <li>+41 79 417 71 55</li>
       <li>ccroset@acd-motorsport.ch</li>
     </ul>
-    <a href="HomePage.vue">
+    <a href="/">
       <img
         src="../../../public/images/logo-ACD.png"
         alt="logo ACD motorsport"

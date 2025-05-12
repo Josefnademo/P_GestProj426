@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="logo">
-      <a href="HomePage.vue">
+      <a href="/">
         <img
           src="../../../public/images/logo-ACD.png"
           alt="logo ACD motorsport"
