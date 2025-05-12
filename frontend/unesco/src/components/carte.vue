@@ -29,6 +29,19 @@ onMounted(async () => {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
       console.log(latitude, longitude);
+      //HOME
+      viewer.homeButton.viewModel.command.beforeExecute.addEventListener(
+        function (e) {
+          e.cancel = true;
+          viewer.camera.flyTo({
+            destination: Cesium.Cartesian3.fromDegrees(
+              longitude,
+              latitude,
+              6378137 * 0.05
+            ),
+          });
+        }
+      );
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(longitude, latitude, 0),
       });
@@ -69,19 +82,22 @@ onMounted(async () => {
         Number(place.latitude),
         adjustedHeight
       );
-      console.log(place.categorie);
       const entity = viewer.entities.add({
         name: place.nom,
-        description: place.particularite,
+        description:
+          place.particularite +
+          '<a target="_blank" href="gogole.com">Page de détails</a>',
         position: adjustedPosition,
         point: {
           pixelSize: 10,
 
           color: (() => {
             const cat = String(place.categorie).trim().toLowerCase();
-            if (cat === "cultural") return Cesium.Color.GREEN;
-            if (cat === "natural") return Cesium.Color.YELLOW;
+            if (cat === "cultural") return Cesium.Color.YELLOW;
+            if (cat === "natural") return Cesium.Color.LIME;
+            if (cat === "Agile") return Cesium.Color.PINK;
             if (cat === "mixed" || cat === "mixt") return Cesium.Color.ORANGE;
+            console.log(place);
             return Cesium.Color.GRAY; // Pour null, undefined, ou autre
           })(),
 

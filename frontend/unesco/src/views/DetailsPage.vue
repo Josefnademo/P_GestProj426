@@ -4,9 +4,7 @@ import ShowDetails from "@/services/ShowDetails.js";
 
 const props = defineProps({
   id: {
-    required: true,
-  },
-  compte_id: {
+    type: String,
     required: true,
   },
 });
@@ -18,7 +16,7 @@ const loading = ref(true);
 
 const handleLike = async () => {
   try {
-    await ShowDetails.wantToVisit(props.id, props.compte_id);
+    await ShowDetails.wantToVisit(props.id, localStorage.getItem("user_id"));
     isLiked.value = !isLiked.value;
   } catch (error) {
     console.error("Error toggling like:", error);
@@ -28,7 +26,7 @@ const handleLike = async () => {
 onMounted(async () => {
   try {
     loading.value = true;
-    const response = await ShowDetails.getDetails(props.id);
+    const response = await ShowDetails.getDetail(props.id);
     detail.value = response.data;
   } catch (err) {
     error.value = "Failed to load details. Please try again later.";

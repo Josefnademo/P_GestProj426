@@ -1233,7 +1233,7 @@ VALUES
 
 
 
-
+UPDATE t_lieu SET categorie = 'Agile' WHERE nom = 'Antoine’s House';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Galápagos Islands';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'City of Quito';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Aachen Cathedral';
@@ -1257,7 +1257,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Mesa Verde National Park';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Yellowstone National Park';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Historic Centre of Kraków';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Historic Centre of Warsaw';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Auschwitz Birkenau <br /><small>German Nazi Concentration and Extermination Camp (1940-1945)</small>';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Auschwitz Birkenau German Nazi Concentration and Extermination Camp (1940-1945)';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Wieliczka and Bochnia Royal Salt Mines';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Białowieża Forest';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Forts and Castles, Volta, Greater Accra, Central and Western Regions';
@@ -1334,7 +1334,7 @@ UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Niokolo-Koba National Park'
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Great Barrier Reef';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Mount Nimba Strict Nature Reserve';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Serengeti National Park';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'S<U>G</U>ang Gwaay';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'SGang Gwaay';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Head-Smashed-In Buffalo Jump';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Darien National Park';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Palace and Park of Fontainebleau';
@@ -1543,7 +1543,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Mausoleum of the First Qin
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Monticello and the University of Virginia in Charlottesville';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Ksar of Ait-Ben-Haddou';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Brasilia';
-UPDATE t_lieu SET categorie = 'Mixed' WHERE nom = 'Ulu<U>r</U>u-Kata Tju<U>t</U>a National Park';
+UPDATE t_lieu SET categorie = 'Mixed' WHERE nom = 'Uluru-Kata Tjuta National Park';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Nemrut Dağ';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Peking Man Site at Zhoukoudian';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Sacred City of Kandy';
@@ -1553,7 +1553,7 @@ UPDATE t_lieu SET categorie = 'Mixed' WHERE nom = 'Mount Athos';
 UPDATE t_lieu SET categorie = 'Mixed' WHERE nom = 'Meteora';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Paleochristian and Byzantine Monuments of Thessalonika';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Trinidad and the Valley de los Ingenios';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Hortobágy National Park - the <i>Puszta</i>';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Hortobágy National Park - the Puszta';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Manovo-Gounda St Floris National Park';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Chongoni Rock-Art Area';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Town of Luang Prabang';
@@ -1569,7 +1569,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Sanctuary of Asklepios at 
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Taos Pueblo';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Medieval City of Rhodes';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Tsingy de Bemaraha Strict Nature Reserve';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Strasbourg, Grande-Île and <em>Neustadt</em>';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Strasbourg, Grande-Île and Neustadt';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Canterbury Cathedral, St Augustine''s Abbey, and St Martin''s Church';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Medina of Sousse';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Kairouan';
@@ -1686,7 +1686,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Archaeological Ensemble of
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Royal Monastery of Santa María de Guadalupe';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Lumbini, the Birthplace of the Lord Buddha';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Angkor';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Routes of Santiago de Compostela: <i>Camino Francés</i> and Routes of Northern Spain';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Routes of Santiago de Compostela: Camino Francés and Routes of Northern Spain';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'The Sassi and the Park of the Rupestrian Churches of Matera';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Ha Long Bay';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Joya de Cerén Archaeological Site';
@@ -1737,7 +1737,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Kutná Hora: Historical To
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Ferrara, City of the Renaissance, and its Po Delta';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Historic Villages of Shirakawa-go and Gokayama';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Seokguram Grotto and Bulguksa Temple';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Haeinsa Temple Janggyeong Panjeon, the Depositories for the <I>Tripitaka Koreana</I> Woodblocks';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Haeinsa Temple Janggyeong Panjeon, the Depositories for the Tripitaka Koreana Woodblocks';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Jongmyo Shrine';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Schokland and Surroundings';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Gough and Inaccessible Islands';
@@ -1747,7 +1747,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'National Archeological Par
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'San Agustín Archaeological Park';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Historic Quarter of the City of Colonia del Sacramento';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'W-Arly-Pendjari Complex';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Ancient <I>Ksour</I> of Ouadane, Chinguetti, Tichitt and Oualata';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Ancient Ksour of Ouadane, Chinguetti, Tichitt and Oualata';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Verla Groundwood and Board Mill';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Medina of Essaouira (formerly Mogador)';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Lake Baikal';
@@ -1779,7 +1779,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Luther Memorials in Eisleb
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Historic Centre of the City of Salzburg';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Semmering Railway';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Palace and Gardens of Schönbrunn';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'The <I>Trulli</I> of Alberobello';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'The Trulli of Alberobello';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Early Christian Monuments of Ravenna';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Historic Centre of the City of Pienza';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Archaeological Site of Panamá Viejo and Historic District of Panamá';
@@ -1996,7 +1996,7 @@ UPDATE t_lieu SET categorie = 'Mixed' WHERE nom = 'Ancient Maya City and Protect
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Tokaj Wine Region Historic Cultural Landscape';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Upper Middle Rhine Valley';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Historic Centres of Stralsund and Wismar';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = '<I>Sacri Monti</I> of Piedmont and Lombardy';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Sacri Monti of Piedmont and Lombardy';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Citadel, Ancient City and Fortress Buildings of Derbent';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Gebel Barkal and the Sites of the Napatan Region';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Gobustan Rock Art Cultural Landscape';
@@ -2024,7 +2024,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Biblical Tels - Megiddo, H
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Historic Centre of Macao';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Cultural Landscape of Honghe Hani Rice Terraces';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Kaiping Diaolou and Villages';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Fujian <em>Tulou</em>';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Fujian Tulou';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Yin Xu';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Lagoons of New Caledonia: Reef Diversity and Associated Ecosystems';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Quebrada de Humahuaca';
@@ -2072,17 +2072,17 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Soltaniyeh';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Harar Jugol, the Fortified Historic Town';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Qal’at al-Bahrain – Ancient Harbour and Capital of Dilmun';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Shiretoko';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Cultural Landscape of Bali Province: the <em>Subak</em> System as a Manifestation of the <em>Tri Hita Karana</em> Philosophy';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Cultural Landscape of Bali Province: the Subak System as a Manifestation of the Tri Hita Karana Philosophy';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'West Norwegian Fjords – Geirangerfjord and Nærøyfjord';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Architectural, Residential and Cultural Complex of the Radziwill Family at Nesvizh';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Kunya-Urgench';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Syracuse and the Rocky Necropolis of Pantalica';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Urban Historic Centre of Cienfuegos';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Central Highlands of Sri Lanka';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = '<i>Aflaj</i> Irrigation Systems of Oman';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Aflaj Irrigation Systems of Oman';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Bam and its Cultural Landscape';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Agave Landscape and Ancient Industrial Facilities of Tequila';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Genoa: <i>Le Strade Nuove</i> and the system of the<i> Palazzi dei Rolli</i>';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Genoa: Le Strade Nuove and the system of the Palazzi dei Rolli';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Sichuan Giant Panda Sanctuaries - Wolong, Mt Siguniang and Jiajin Mountains';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Sewell Mining Town';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Cornwall and West Devon Mining Landscape';
@@ -2109,7 +2109,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Lavaux, Vineyard Terraces'
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'San Marino Historic Centre and Mount Titano';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Iwami Ginzan Silver Mine and its Cultural Landscape';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'South China Karst';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Central University City Campus of the <i>Universidad Nacional Autónoma de México</i> (UNAM)';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Central University City Campus of the Universidad Nacional Autónoma de México (UNAM)';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Tajik National Park (Mountains of the Pamirs)';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Gamzigrad-Romuliana, Palace of Galerius';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Twyfelfontein or /Ui-//aes';
@@ -2229,7 +2229,7 @@ UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Stevns Klint';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Fujisan, sacred place and source of artistic inspiration';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Golestan Palace';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Cultural Landscape of Maymand';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Wooden <em>Tserkvas</em> of the Carpathian Region in Poland and Ukraine';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Wooden Tserkvas of the Carpathian Region in Poland and Ukraine';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'The Climats, terroirs of Burgundy';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Decorated Cave of Pont d’Arc, known as Grotte Chauvet-Pont d’Arc, Ardèche';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Mount Etna';
@@ -2308,7 +2308,7 @@ UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Los Alerces National Park';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Caves and Ice Age Art in the Swabian Jura';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Taputapuātea';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Temple Zone of Sambor Prei Kuk, Archaeological Site of Ancient Ishanapura';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Venetian Works of Defence between the 16th and 17th Centuries: <em>Stato da Terra</em> – Western <em>Stato da Mar</em>';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Venetian Works of Defence between the 16th and 17th Centuries: Stato da Terra – Western Stato da Mar';
 UPDATE t_lieu SET categorie = 'Mixed' WHERE nom = 'Tehuacán-Cuicatlán Valley: originary habitat of Mesoamerica';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Sacred Island of Okinoshima and Associated Sites in the Munakata Region';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Kujataa Greenland: Norse and Inuit Farming at the Edge of the Ice Cap';
@@ -2334,7 +2334,7 @@ UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Hebron/Al-Khalil Old Town'
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Sassanid Archaeological Landscape of Fars Region';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Le Colline del Prosecco di Conegliano e Valdobbiadene';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Göbekli Tepe';
-UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Royal Building of <i>Mafra</i> – Palace, Basilica, Convent, <i>Cerco</i> Garden and Hunting Park (<i>Tapada</i>)';
+UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Royal Building of Mafra – Palace, Basilica, Convent, Cerco Garden and Hunting Park (Tapada)';
 UPDATE t_lieu SET categorie = 'Natural' WHERE nom = 'Barberton Makhonjwa Mountains';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Budj Bim Cultural Landscape';
 UPDATE t_lieu SET categorie = 'Cultural' WHERE nom = 'Risco Caido and the Sacred Mountains of Gran Canaria Cultural Landscape';
