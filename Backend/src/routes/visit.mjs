@@ -4,7 +4,7 @@ import config from "../config.mjs";
 const visitRouter = express.Router();
 const app = express();
 
-
+//GET boolean value if the user has already visited the place
 visitRouter.get("/", async (req, res) => {
   try {
     const connection = await mysql.createConnection(config.dbConfig);
