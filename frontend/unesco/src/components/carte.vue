@@ -77,7 +77,6 @@ onMounted(async () => {
         point: {
           pixelSize: 10,
 
-
           color: (() => {
             const cat = String(place.categorie).trim().toLowerCase();
             if (cat === "cultural") return Cesium.Color.GREEN;
@@ -87,7 +86,6 @@ onMounted(async () => {
           })(),
 
           heightReference: Cesium.HeightReference.NONE,
-
         },
 
         label: {
