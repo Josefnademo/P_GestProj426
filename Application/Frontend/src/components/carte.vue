@@ -72,7 +72,9 @@ onMounted(async () => {
       console.log(place.categorie);
       const entity = viewer.entities.add({
         name: place.nom,
-        description: place.particularite,
+        description:
+          place.particularite +
+          '<a target="_blank" href="gogole.com">Page de détails</a>',
         position: adjustedPosition,
         point: {
           pixelSize: 10,
