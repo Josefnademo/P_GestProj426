@@ -151,7 +151,7 @@ export default {
         localStorage.setItem("auth_token", token);
 
         // Redirection vers la page principale ou détails
-        this.$router.push("/home"); // adapte selon ta route
+        this.$router.push("/"); // adapte selon ta route
       } catch (error) {
         this.loginError = "Nom d'utilisateur ou mot de passe invalide.";
         console.error(error);
@@ -175,7 +175,7 @@ export default {
 
         this.registerSuccess = "Inscription réussie ! Redirection...";
         setTimeout(() => {
-          this.$router.push("/home");
+          this.$router.push("/");
         }, 1500);
       } catch (error) {
         this.registerError =
