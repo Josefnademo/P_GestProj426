@@ -22,7 +22,6 @@ export default {
 };
 </script>
 <style>
-/* General body styling for clean and modern look */
 body {
   margin: 0;
   padding: 0;
@@ -31,7 +30,6 @@ body {
   color: #222;
 }
 
-/* Error message styling */
 .erreur {
   color: #e53935;
   font-weight: 600;
@@ -39,7 +37,6 @@ body {
   text-align: center;
 }
 
-/* Search bar styling - almost full screen width */
 input[type="search"] {
   width: 95%;
   max-width: 800px;
@@ -53,21 +50,18 @@ input[type="search"] {
   transition: all 0.3s ease;
 }
 
-/* Search bar focus effect */
 input[type="search"]:focus {
   border-color: #6a1b9a;
   outline: none;
   box-shadow: 0 4px 10px rgba(106, 27, 154, 0.2);
 }
 
-/* Counter text styling */
 p {
   text-align: center;
   font-size: 1.1rem;
   margin: 15px 0;
 }
 
-/* Buttons styling - consistent and modern */
 button {
   display: block;
   width: 90%;
@@ -84,31 +78,26 @@ button {
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Button hover effect */
 button:hover {
   background-color: #673ab7;
   transform: translateY(-3px);
 }
 
-/* Button active/click effect */
 button:active {
   background-color: #5e35b1;
   transform: translateY(1px);
 }
 
-/* Highlight text when count is 5 */
 p:nth-child(1) {
   font-size: 1.5rem;
   font-weight: bold;
   color: #ff5722;
 }
 
-/* User list block styling */
 div {
   margin-top: 30px;
 }
 
-/* Each user card */
 div p {
   background-color: #ffffff;
   border-left: 6px solid #7e57c2;
@@ -123,7 +112,6 @@ div p:hover {
   background-color: #f0ebfa;
 }
 
-/* Responsive typography for heading if needed */
 h1,
 h2 {
   text-align: center;

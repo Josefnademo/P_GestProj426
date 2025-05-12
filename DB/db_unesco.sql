@@ -14,10 +14,11 @@ USE db_unesco;CREATE TABLE t_lieu(
 CREATE TABLE t_compte(
    compte_id INT AUTO_INCREMENT,
    username VARCHAR(50) NOT NULL,
-   salt CHAR(12) NOT NULL,
-   hashedPassword CHAR(64) NOT NULL,
+   salt CHAR(64) NOT NULL,            -- Ici aussi. POURQUOI???
+   hashedPassword CHAR(255) NOT NULL, -- Pourquoi toutes les valeur sont changés ? ditent moi si vous changez les trucs - ROMAIN
    email VARCHAR(50) NOT NULL,
-   profil_image TINYINT NOT NULL,
+   profil_image TINYINT,
+   isAdmin BOOLEAN, 
    PRIMARY KEY(compte_id),
    UNIQUE(username),
    UNIQUE(email)

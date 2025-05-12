@@ -1,4 +1,27 @@
-* 	 (HEAD -> main, origin/main, origin/HEAD) Déplacer le json de l'unesco dans le dossier DB
+* 	 (HEAD -> main, origin/main, origin/HEAD) Create(visit Router)
+| *   	 (origin/Couleur-Point-) Merge pull request #88 from ASETML/main
+| |\  
+| |/  
+|/|   
+* | 	 Create(ShowDetails),(peer programming feat(C-H)
+* |   	 Merge pull request #87 from ASETML/add-categorie-field
+|\ \  
+| * | 	 Import(Categories)
+| * | 	 Remove(Histoire Field)
+| * | 	 Delete(Sequelize)
+| * | 	 add(categorie field)
+* | |   	 🔀  La carte zoom sur la position de l'utilisateur
+|\ \ \  
+| * | | 	 (83-zoomer-sur-la-position-de-lutilisateur) La carte zoom sur la position de l'utilisateur
+| |/ /  
+* | | 	 Début de construction de logique pour interaction avec la DB via formlaire d'inscription-connexion + adaptation de header(suppression du button registration)
+* | | 	 Page de login (css, formulaire), darkmode✅ ,  Responsive Design
+|/ /  
+| * 	 Create Condition couleur point
+|/  
+* 	 Change(t_lieu, t_region nom)
+* 	 Export git du 28.04.25
+* 	 Déplacer le json de l'unesco dans le dossier DB
 * 	 Add Image of SpeedBoat
 * 	 Add files via upload
 *   	 🔀Merge pull request #80 from ASETML/fusion-vues-Yosef-frontend
@@ -25,7 +48,7 @@
 |\ \ \ \  
 | |/ / /  
 |/| | |   
-| * | |   	 (origin/comments) Merge branch 'main' into comments
+| * | |   	 Merge branch 'main' into comments
 | |\ \ \  
 | |/ / /  
 |/| | |   
@@ -38,7 +61,7 @@
 * | | | 	 update(add email)
 * | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\ \ \ \  
-| * | | | 	 (origin/yosef) Design, Figma (accueil, page du compte)
+| * | | | 	 Design, Figma (accueil, page du compte)
 * | | | | 	 update(mld email add)
 |/ / / /  
 * | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
@@ -82,11 +105,6 @@
 * | | | 	 liage des roues et main.js
 |/ / /  
 * | | 	 enlevé le button count
-| | | * 	 (origin/sequelize) update()
-| | | * 	 update(sequelize) login, lieu
-| | | * 	 update(add sequelize to register)
-| |_|/  
-|/| |   
 * | | 	 adapt(sequelize)
 * | | 	 Chore(rapport .md)
 * | | 	 rajout(sequelize models)

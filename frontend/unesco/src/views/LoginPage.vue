@@ -108,13 +108,8 @@
 </template>
 
 <script>
-/*import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-} from "firebase/auth";
-import { getDatabase, ref, set } from "firebase/database";
-*/
+import axios from "axios";
+
 export default {
   name: "InteractiveBook",
   data() {
@@ -145,21 +140,21 @@ export default {
     async handleLogin() {
       this.loading = true;
       this.loginError = "";
-
       try {
-        const auth = getAuth();
-        await signInWithEmailAndPassword(
-          auth,
-          this.loginForm.username,
-          this.loginForm.password
+        const response = await axios.post(
+          "http://localhost:3000/login/",
+          this.loginForm
         );
+        const token = response.data.token;
 
-        // Login successful - redirect or show success
-        console.log("User logged in successfully");
-        // You can redirect or update UI here
+        // Stocker le token dans localStorage ou cookies
+        localStorage.setItem("auth_token", token);
+
+        // Redirection vers la page principale ou détails
+        this.$router.push("/home"); // adapte selon ta route
       } catch (error) {
-        this.loginError = this.getFirebaseError(error.code);
-        console.error("Login error:", error);
+        this.loginError = "Nom d'utilisateur ou mot de passe invalide.";
+        console.error(error);
       } finally {
         this.loading = false;
       }
@@ -168,66 +163,28 @@ export default {
       this.loading = true;
       this.registerError = "";
       this.registerSuccess = "";
-
-      if (
-        !this.registerForm.email ||
-        !this.registerForm.username ||
-        !this.registerForm.password
-      ) {
-        this.registerError = "Veuillez remplir tous les champs";
-        this.loading = false;
-        return;
-      }
-
       try {
-        const auth = getAuth();
-        const db = getDatabase();
-
-        // Create user with email/password
-        const userCredential = await createUserWithEmailAndPassword(
-          auth,
-          this.registerForm.email,
-          this.registerForm.password
+        const response = await axios.post(
+          "http://localhost:3000/register/",
+          this.registerForm
         );
+        const token = response.data.token;
 
-        // Save additional user data to database
-        await set(ref(db, "users/" + userCredential.user.uid), {
-          username: this.registerForm.username,
-          email: this.registerForm.email,
-          createdAt: new Date().toISOString(),
-        });
+        // Stocker le token
+        localStorage.setItem("auth_token", token);
 
-        this.registerSuccess =
-          "Inscription réussie! Vous pouvez maintenant vous connecter.";
-        this.registerForm = { email: "", username: "", password: "" };
-
-        // Auto flip to login after successful registration
+        this.registerSuccess = "Inscription réussie ! Redirection...";
         setTimeout(() => {
-          this.flipTo("login");
-        }, 2000);
+          this.$router.push("/home");
+        }, 1500);
       } catch (error) {
-        this.registerError = this.getFirebaseError(error.code);
-        console.error("Registration error:", error);
+        this.registerError =
+          error.response?.data?.message || "Erreur lors de l'inscription.";
+        console.error(error);
       } finally {
         this.loading = false;
       }
     },
-    /*getFirebaseError(code) {
-      switch (code) {
-        case "auth/email-already-in-use":
-          return "Cet email est déjà utilisé";
-        case "auth/invalid-email":
-          return "Email invalide";
-        case "auth/weak-password":
-          return "Le mot de passe doit contenir au moins 6 caractères";
-        case "auth/user-not-found":
-          return "Utilisateur non trouvé";
-        case "auth/wrong-password":
-          return "Mot de passe incorrect";
-        default:
-          return "Une erreur est survenue";
-      }
-    },*/
   },
 };
 </script>

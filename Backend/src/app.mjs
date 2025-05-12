@@ -2,7 +2,7 @@ import express from "express";
 import config from "./config.mjs";
 const app = express();
 
-//middleWare pour cors policy
+//Middleware pour cors policy
 app.use((req, res, next) => {
   res.append("Access-Control-Allow-Origin", ["*"]);
   res.append("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
@@ -30,9 +30,11 @@ app.use("/admin/", adminRouter);
 import { profileRouter } from "./routes/profile.mjs";
 app.use("/profile/", profileRouter);
 
-app.get("/", (req, res) => {
-  //res.render("accueil");
-});
+import { visitRouter } from "./routes/visit.mjs";
+app.use("/visit/", visitRouter);
+
+import { avisitRouter } from "./routes/avisit.mjs";
+app.use("/avisit/", avisitRouter);
 
 app.use(({ res }) => {
   const message = "ERREUR 404";

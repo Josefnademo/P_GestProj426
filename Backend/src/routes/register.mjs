@@ -20,8 +20,8 @@ registerRouter.post("/", async (req, res) => {
         resolve(key);                                                                         //sha256 is the algorithm
       });
     });
-
-     const hash = derivedKey.toString("hex");
+    const isAdmin = false;                                                                    //Qui a enlevé cette ligne? je vous aime pas - ROMAIN
+    const hash = derivedKey.toString("hex");
     if (regex.test(email)) {
       console.log("Email valide");
     } else {
@@ -35,6 +35,8 @@ registerRouter.post("/", async (req, res) => {
       "INSERT INTO t_compte (username, hashedPassword, salt, isAdmin, email) VALUES (?, ?, ?, ?, ?)";     //
     await connection.execute(query, [username, hash, salt, isAdmin, email]);                    
 
+    /*    const query = "INSERT INTO t_compte (username, hashedPassword, salt, email) VALUES (?, ?, ?, ?)";
+await connection.execute(query, [username, hash, salt, email]); */
     const token = jwt.sign({ username }, config.private_key, {                                //Make a JWT token with the user in the payload
       expiresIn: "1y",                                                                        //
     });                                                                                       //
