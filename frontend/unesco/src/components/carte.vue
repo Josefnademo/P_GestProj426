@@ -147,5 +147,61 @@ onMounted(async () => {
 .cesium-widget canvas {
   width: 1908px;
   height: 745px;
+} /*html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  font-family: "Segoe UI", sans-serif;
 }
+
+#cesiumContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+  display: block;
+}
+
+.cesium-viewer,
+.cesium-viewer-cesiumWidgetContainer,
+.cesium-widget,
+.cesium-widget canvas {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100vw;
+  max-height: 100vh;
+  display: block;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+
+.cesium-viewer-toolbar,
+.cesium-viewer-timelineContainer,
+.cesium-viewer-animationContainer {
+  z-index: 10;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 0.5em;
+}
+
+
+.cesium-infoBox {
+  backdrop-filter: blur(5px);
+  background-color: rgba(10, 10, 10, 0.6);
+  color: white;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+
+.cesium-widget-credits {
+  display: none !important;
+} */
 </style>
