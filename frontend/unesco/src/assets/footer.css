@@ -32,9 +32,12 @@ footer ul li:first-child {
 }
 
 footer img {
-  height: 60px;
+  height: 150px;
+  max-width: 100%;
   width: auto;
   transition: transform 0.3s ease;
+  opacity: 0.9;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
 
 footer a:hover img {

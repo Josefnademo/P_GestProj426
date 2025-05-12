@@ -1,8 +1,11 @@
 <template>
   <header>
     <div class="logo">
-      <a href="HomePage.vue">
-        <img src="./Logos/logo-ACD.png" alt="logo ACD motorsport" />
+      <a href="/">
+        <img
+          src="../../../public/images/logo-ACD.png"
+          alt="logo ACD motorsport"
+        />
       </a>
     </div>
     <nav>

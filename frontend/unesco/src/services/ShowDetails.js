@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const apiClient = axios.create({
-  baseURL: "localhost:3000/api/" /*+fin d'URL*/,
+  baseURL: "http://localhost:3000/",
   withCredentials: false,
   headers: {
     Accept: "application/json",
@@ -11,9 +11,9 @@ const apiClient = axios.create({
 
 export default {
   getDetail(id) {
-    return apiClient.get("/details/" + id);
+    return apiClient.get("lieu/" + id);
   },
   wantToVisit(lieu_id, compte_id) {
-    return apiClient.get("/aimeraitVisiter/" + lieu_id + "/user/" + compte_id);
+    return apiClient.get("avisit/" + lieu_id + "/user/" + compte_id);
   },
 };
