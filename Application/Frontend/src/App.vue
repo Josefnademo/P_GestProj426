@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <Header></Header>
-    <main class="main-content">
-      <router-view />
-    </main>
+    <router-view />
     <Footer></Footer>
   </div>
 </template>
@@ -30,17 +28,6 @@ body {
   font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
   background-color: #f7f9fc;
   color: #222;
-}
-
-#app {
-  display: flex;
-  flex-direction: column;
-}
-
-.main-content {
-  flex: 1;
-  max-width: 4000px;
-  margin: 0 auto;
 }
 
 .erreur {
