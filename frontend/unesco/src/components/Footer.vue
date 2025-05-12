@@ -63,7 +63,6 @@ footer a:hover img {
   opacity: 1;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   footer {
     padding: 1.2rem 2rem;

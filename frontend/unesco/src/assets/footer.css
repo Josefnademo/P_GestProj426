@@ -44,7 +44,6 @@ footer a:hover img {
   transform: scale(1.05);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   footer {
     flex-direction: column;

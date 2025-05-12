@@ -53,6 +53,7 @@ onMounted(async () => {
       <p>{{ detail.histoire }}</p>
 
       <div class="buttons">
+
         <button class="action-button" @click="handleLike">
           <img
             v-if="isLiked"

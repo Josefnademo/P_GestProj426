@@ -6,12 +6,12 @@ import mysql from "mysql2/promise";
 import { isAdmin } from "../middleware/adminCheck.mjs";
 import { dbMiddleware } from "../middleware/dbConnection.mjs";
 
-// GET /:id - Récupérer les coordonnées et nom de tout site
+// GET - Get all sites
 lieuRouter.get("/", async (req, res) => {
   const connection = await mysql.createConnection(config.dbConfig);
   try {
     const [rows] = await connection.execute(                                    //Run query
-      "SELECT nom, latitude, longitude, particularite FROM t_lieu"              //
+      "SELECT nom, latitude, longitude, particularite, categorie FROM t_lieu"              //
     );                                                                          //
     res.json(rows);
   } catch (error) {
@@ -24,7 +24,7 @@ lieuRouter.get("/", async (req, res) => {
   }
 });
 
-// GET /:id - Récupérer les informations d'un site
+// GET /:id - Get a site by ID
 lieuRouter.get("/:id", async (req, res) => {
   const siteId = req.params.id;                                                   //Get the site id from the request
   const connection = await mysql.createConnection(config.dbConfig);
@@ -47,7 +47,7 @@ lieuRouter.get("/:id", async (req, res) => {
   }
 });
 
-// POST /:id/visiter - Ajouter un site à la liste "à visiter"
+// POST /:id/visiter - Add a site to the "to visit" list
 lieuRouter.post("/:id/visiter", async (req, res) => {
   const siteId = req.params.id;                                                     //Get the site id from the request
   const compteId = req.body.compte_id;                                              //Get the compte id from the request body
@@ -69,7 +69,7 @@ lieuRouter.post("/:id/visiter", async (req, res) => {
   }
 });
 
-// POST /:id/visite - Ajouter un site à la liste "visité"
+// POST /:id/visite - Add a site to the "visited" list
 lieuRouter.post("/:id/visite", async (req, res) => {
   const siteId = req.params.id;                                                       //Get the site id from the request
   const compteId = req.body.compte_id;                                                //Get the compte id from the request body
@@ -92,7 +92,7 @@ lieuRouter.post("/:id/visite", async (req, res) => {
   }
 });
 
-// DELETE /:id/visite - Enlever un site de la liste "visité"
+// DELETE /:id/visite - Remove a site from the "visited" list
 lieuRouter.delete("/:id/visite", async (req, res) => {
   const siteId = req.params.id;                                                           //Get the site id from the request
   const compteId = req.body.compte_id;                                                    //Get the compte id from the request body
@@ -114,7 +114,7 @@ lieuRouter.delete("/:id/visite", async (req, res) => {
   }
 });
 
-// DELETE /:id/a-visiter - Enlever un site de la liste "à visiter"
+// DELETE /:id/a-visiter - Remove a site from the "to visit" list
 lieuRouter.delete("/:id/visiter", async (req, res) => {
   const siteId = req.params.id;                                                           //Get the site id from the request
   const compteId = req.body.compte_id;                                                    //Get the compte id from the request body
@@ -136,7 +136,7 @@ lieuRouter.delete("/:id/visiter", async (req, res) => {
   }
 });
 
-// POST / - Ajouter un site (admin seulement)
+// POST / - Add a new site (admin only)
 lieuRouter.post("/", async (req, res) => {
   const { nom, longitude, latitude, particularite } = req.body;                           //Get site parameters from the request body
   const connection = await mysql.createConnection(config.dbConfig);
@@ -155,7 +155,7 @@ lieuRouter.post("/", async (req, res) => {
   }
 });
 
-// PATCH /:id - Modifier des informations d'un site (admin seulement)
+// PATCH /:id - Modify a site (admin only)
 lieuRouter.patch("/:id", async (req, res) => {
   const lieuId = req.params.id;                                                                       //Get the site id from the request
   const { nom, longitude, latitude, particularite } = req.body;                                       //Get the site parameters from the request body
@@ -178,7 +178,7 @@ lieuRouter.patch("/:id", async (req, res) => {
   }
 });
 
-// DELETE /:id - Supprimer un site (admin seulement)
+// DELETE /:id - Delete a site (admin only)
 lieuRouter.delete("/:id", async (req, res) => {
   const lieuId = req.params.id;                                                         //Get the site id from the request
   const connection = await mysql.createConnection(config.dbConfig);
@@ -194,7 +194,7 @@ lieuRouter.delete("/:id", async (req, res) => {
   }
 });
 
-// POST /:id/comment - Poster un commentaire sous un site
+// POST /:id/comment - Post a comment under a site
 lieuRouter.post("/:id/comment", async (req, res) => {
   const lieuId = req.params.id;                                                                   //Get the site id from the request
   const { compte_id, commentaire, rating } = req.body;                                            //Get the compte id, comment and rating from the request body
@@ -212,7 +212,7 @@ lieuRouter.post("/:id/comment", async (req, res) => {
   }
 });
 
-// PATCH /:id/comment/:commentId - Modifier un commentaire (admin seulement)
+// PATCH /:id/comment/:commentId - Modify a comment (admin only)
 lieuRouter.patch(
   "/:id/comment/:avisId",
   /*isAdmin,
@@ -239,7 +239,7 @@ lieuRouter.patch(
   }
 );
 
-// DELETE /:id/comment/:commentId - Supprimer un commentaire (admin seulement)
+// DELETE /:id/comment/:commentId - Delete a comment (admin only)
 lieuRouter.delete(
   "/:id/comment/:commentId",
   /*isAdmin,

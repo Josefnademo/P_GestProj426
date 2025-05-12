@@ -23,7 +23,7 @@ onMounted(async () => {
     timeline: false,
   });
 
-  //Zoom sur l'utilisateur
+  //Zooms on the user
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       const latitude = position.coords.latitude;
@@ -39,14 +39,14 @@ onMounted(async () => {
 
   var imagery = Cesium.createDefaultImageryProviderViewModels();
 
-  // Add Cesium OSM Buildings, a global 3D buildings layer.
+  //Creates OSM buildings
   const buildingTileset = await Cesium.createOsmBuildingsAsync();
   viewer.scene.primitives.add(buildingTileset);
   const point = {
     pixelSize: 10,
-    color: Cesium.Color.RED,
     outlineColor: Cesium.Color.WHITE,
     outlineWidth: 2,
+    color: Cesium.Color.RED,
   };
   for (let place of places) {
     const position = Cesium.Cartesian3.fromDegrees(
@@ -54,31 +54,42 @@ onMounted(async () => {
       Number(place.latitude)
     );
 
-    // Interroge l'altitude du terrain à cet endroit
+    //Returns latitude and longitude
     Cesium.sampleTerrainMostDetailed(viewer.terrainProvider, [
       Cesium.Cartographic.fromDegrees(
         Number(place.longitude),
         Number(place.latitude)
       ),
     ]).then((updatedPositions) => {
-      const height = updatedPositions[0].height || 0; // Hauteur du terrain
-      const adjustedHeight = height + 2000; // On ajoute 2000m pour éviter tout enfouissement
+      const height = updatedPositions[0].height || 0; //Height
+      const adjustedHeight = height + 2000; //Add 2km to the height to acount for odd cases
 
       const adjustedPosition = Cesium.Cartesian3.fromDegrees(
         Number(place.longitude),
         Number(place.latitude),
         adjustedHeight
       );
-
+      console.log(place.categorie);
       const entity = viewer.entities.add({
         name: place.nom,
         description: place.particularite,
         position: adjustedPosition,
         point: {
           pixelSize: 10,
-          color: Cesium.Color.RED,
-          heightReference: Cesium.HeightReference.NONE, // Désactiver le clamp pour qu'il respecte l'altitude fixée
+
+
+          color: (() => {
+            const cat = String(place.categorie).trim().toLowerCase();
+            if (cat === "cultural") return Cesium.Color.GREEN;
+            if (cat === "natural") return Cesium.Color.YELLOW;
+            if (cat === "mixed" || cat === "mixt") return Cesium.Color.ORANGE;
+            return Cesium.Color.GRAY; // Pour null, undefined, ou autre
+          })(),
+
+          heightReference: Cesium.HeightReference.NONE,
+
         },
+
         label: {
           text: place.nom,
           font: "14pt monospace",
@@ -87,7 +98,7 @@ onMounted(async () => {
           verticalOrigin: Cesium.VerticalOrigin.BOTTOM,
           pixelOffset: new Cesium.Cartesian2(0, -20),
           heightReference: Cesium.HeightReference.NONE,
-          show: false, // Masqué par défaut
+          show: false, //This is masked by default
         },
       });
 
@@ -97,12 +108,12 @@ onMounted(async () => {
           mousePosition,
           adjustedPosition
         );
-        entity.label.show = distance < 55000; // Affiche si la distance est < 10 km 99998
+        entity.label.show = distance < 55000; //Shows if distance is less than 10km
       };
     });
   }
 
-  // Suivi de la souris et mise à jour des labels
+  //Update the label when the mouse moves
   const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
   handler.setInputAction(function (movement) {
     const ray = viewer.camera.getPickRay(movement.endPosition);

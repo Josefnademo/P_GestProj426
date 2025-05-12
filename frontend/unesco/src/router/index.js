@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+
 import home from "../components/home.vue";
 import search from "../components/search.vue";
 import about from "../components/about.vue";
@@ -7,27 +8,18 @@ import DetailsPage from "../views/DetailsPage.vue";
 import AccountPage from "../views/AccountPage.vue";
 
 const routes = [
+  // / Route return back the home component
   { path: "/", component: home },
+  // /about returns the about component
   { path: "/about", component: about },
-  {
-    path: "/search",
-    component: search,
-  },
-  {
-    path: "/login",
-    name: "Login",
-    component: LoginPage,
-  },
-  {
-    path: "/details",
-    name: "Details",
-    component: DetailsPage,
-  },
-  {
-    path: "/account",
-    name: "Account",
-    component: AccountPage,
-  },
+  // /search returns the search component
+  { path: "/search", component: search },
+  // /login returns the login component
+  { path: "/login", name: "Login", component: LoginPage },
+  // /details returns the details component
+  { path: "/details", name: "Details", component: DetailsPage },
+  // /account returns the account component
+  { path: "/account", name: "Account", component: AccountPage },
 ];
 
 const router = createRouter({
