@@ -135,7 +135,7 @@ body {
   padding: 0;
   background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,10 +147,9 @@ body {
   height: 75vh;
   border-radius: 1.5rem;
   overflow: hidden;
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
   border: 2px solid rgba(255, 255, 255, 0.2);
   background-color: #1e1e1e;
-  transition: all 0.3s ease;
   position: relative;
 }
 
@@ -168,6 +167,29 @@ body {
 /* Optionnel : cacher les crédits en bas */
 .cesium-viewer-bottom {
   display: none !important;
+}
+
+.cesium-viewer {
+  padding-top: -2em !important;
+  margin-top: -2em !important;
+}
+
+.cesium-viewer-toolbar {
+  position: absolute !important;
+  top: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 1000;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 8px;
+  padding: 4px 12px;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  width: fit-content !important;
+  max-width: 90vw !important;
 }
 
 /* Responsive design pour petits écrans */
