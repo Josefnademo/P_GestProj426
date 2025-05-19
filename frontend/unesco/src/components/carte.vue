@@ -4,6 +4,7 @@
 <script setup>
 import { onMounted } from "vue";
 import * as Cesium from "cesium";
+import service from "../services/ShowDetails.js";
 // import { places } from "../../point.js";
 const url = "http://localhost:3000/lieu";
 
@@ -74,9 +75,9 @@ onMounted(async () => {
         name: place.nom,
         description:
           place.particularite +
-          '<br/><a target="_blank" href="' +
-          GoToDetails(place.id, this.userId) +
-          '">Page de détails</a>',
+          '<br/><a href="' +
+          GoToDetails(place.lieu_id) +
+          '" target="_blank">Page de détails</a>',
         position: adjustedPosition,
         point: {
           pixelSize: 10,
@@ -130,8 +131,8 @@ onMounted(async () => {
   }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 });
 
-function GoToDetails(lieu_id, user_id) {
-  return `/details/lieu=${lieu_id}/user=${user_id}`;
+function GoToDetails(lieu_id) {
+  return `/details/lieu/${lieu_id}`;
 }
 </script>
 <style>

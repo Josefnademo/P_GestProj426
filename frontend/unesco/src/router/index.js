@@ -18,7 +18,7 @@ const routes = [
   { path: "/login", name: "Login", component: LoginPage },
   // /details returns the details component
   {
-    path: "/details/lieu/:lieu_id/user/:user_id",
+    path: "/details/lieu/:lieu_id/",
     name: "Details",
     component: DetailsPage,
   },

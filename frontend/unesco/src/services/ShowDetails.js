@@ -14,6 +14,9 @@ export default {
     return apiClient.get("lieu/" + id);
   },
   wantToVisit(lieu_id, compte_id) {
-    return apiClient.get("avisit/" + lieu_id + "/user/" + compte_id);
+    return apiClient.get("visit/" + lieu_id + "/user/" + compte_id);
+  },
+  getUserId() {
+    return apiClient.get("/getuserid");
   },
 };

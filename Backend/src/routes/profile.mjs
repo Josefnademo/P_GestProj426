@@ -6,6 +6,33 @@ import crypto from "crypto";
 
 const profileRouter = express.Router();
 
+//Return the user id
+profileRouter.get("/getuserid", async (req, res) => {
+  const token = req.headers["authorization"]?.split(" ")[1];          //Get JWT token
+  if (!token) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+  try {
+    const decoded = jwt.verify(token, config.private_key);            //Check token and find user of the token
+    const username = decoded.username;                                //
+    const connection = await mysql.createConnection(config.dbConfig); //
+    const id = await connection.execute(                       //
+      "SELECT compte_id FROM t_compte WHERE username = ?",                    //
+      [username]                                                      //
+    );                                                                
+    if (results.length === 0) {                                       //If user not found or token doesnt correspond 
+      return res.status(400).json({ message: "User id not found" });     //
+    } else {
+      return res.status(200).json({
+        id: id,
+      });
+    }
+  } catch (err) {
+    console.error("Error fetching user id:", err);
+    return res.status(500).json({ message: "Internal server error" });
+  }
+})
+
 //Get the profile of the user with the id in the url 
 profileRouter.get("/:id", async (req, res) => {
   const token = req.headers["authorization"]?.split(" ")[1];          //Get JWT token
