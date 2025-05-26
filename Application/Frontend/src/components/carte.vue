@@ -87,11 +87,7 @@ onMounted(async () => {
       console.log(place.categorie);
       const entity = viewer.entities.add({
         name: place.nom,
-        description:
-          place.particularite +
-          "<br/><button onclick=\"window.location.href='" +
-          GoToDetails(place.lieu_id) +
-          '\'" style="background-color: #4CAF50; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 8px;">Voir les détails</button>',
+        description: "Redirection en cours...",
         position: adjustedPosition,
         point: {
           pixelSize: 10,
