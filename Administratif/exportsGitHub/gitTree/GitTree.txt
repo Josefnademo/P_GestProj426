@@ -1,13 +1,28 @@
-*   	 (origin/main, origin/HEAD, main) Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+*   	 (refs/stash) On main: !!GitHub_Desktop<main>
 |\  
-| * 	 Create(Conclusion(Yosef, Mateo, Alban, Antoine))
-* | 	 feat(nav)
+| * 	 index on main: b8285536 fix(terrain not defined): await
 |/  
-* 	 update(descrition)
-* 	 Update(DetailsPage)
-*   	 Merge pull request #98 from ASETML/PageDetails-V.2
-|\  
-| * 	 (HEAD -> PageDetails-V.2, origin/PageDetails-V.2) feat(DetailsPage.vue)
+| *   	 (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| |/  
+|/|   
+* | 	 fix(terrain not defined): await
+* |   	 Merge pull request #99 from ASETML/PageDetails-V.2
+|\ \  
+| * | 	 (origin/PageDetails-V.2) gitTree re-generated
+| | * 	 Update(README)
+| |/  
+|/|   
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * | 	 Create(Conclusion(Yosef, Mateo, Alban, Antoine))
+* | | 	 feat(nav)
+|/ /  
+* | 	 update(descrition)
+* | 	 Update(DetailsPage)
+* | 	 Merge pull request #98 from ASETML/PageDetails-V.2
+|\| 
+| * 	 feat(DetailsPage.vue)
 * | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\| 
 | * 	 fix(erreur sur les points): L'erreur qui avait lieu lors de la fonction d'affichage des labels a été éliminée
@@ -27,7 +42,7 @@
 |/  
 *   	 Merge pull request #97 from ASETML/brancheDetails
 |\  
-| *   	 Merge branch 'main' into brancheDetails
+| *   	 (brancheDetails) Merge branch 'main' into brancheDetails
 | |\  
 | |/  
 |/|   
@@ -138,7 +153,7 @@
 | * | 	 add(categorie field)
 * | |   	 🔀  La carte zoom sur la position de l'utilisateur
 |\ \ \  
-| * | | 	 La carte zoom sur la position de l'utilisateur
+| * | | 	 (83-zoomer-sur-la-position-de-lutilisateur) La carte zoom sur la position de l'utilisateur
 | |/ /  
 * | | 	 Début de construction de logique pour interaction avec la DB via formlaire d'inscription-connexion + adaptation de header(suppression du button registration)
 * | | 	 Page de login (css, formulaire), darkmode✅ ,  Responsive Design
@@ -152,7 +167,7 @@
 * 	 Add files via upload
 *   	 🔀Merge pull request #80 from ASETML/fusion-vues-Yosef-frontend
 |\  
-| *   	 Merge branch 'fusion-vues-Yosef-frontend' of https://github.com/ASETML/P_GestProj426 into fusion-vues-Yosef-frontend
+| *   	 (fusion-vues-Yosef-frontend) Merge branch 'fusion-vues-Yosef-frontend' of https://github.com/ASETML/P_GestProj426 into fusion-vues-Yosef-frontend
 | |\  
 | | * 	 adaptation de la carte pour le site
 | * | 	 page de login nouveau design(card),addition du formulaire registration dans la fonctionnalité de cette carte ; responsive design (Header, footer ,book(login-register)
@@ -167,7 +182,7 @@
 * | | 	 Export git du 07.04.25
 * | |   	 🔀 Merge pull request #65 from ASETML/image
 |\ \ \  
-| * | | 	 Le backend est près à servir les images de profil
+| * | | 	 (image) Le backend est près à servir les images de profil
 | * | | 	 début des images
 * | | | 	 Update TestRoutes.yaml
 * | | |   	 🔀Merge pull request #64 from ASETML/comments
@@ -304,7 +319,7 @@
 |\| | 
 | * |   	 Merge pull request #56 from ASETML/exportGit
 | |\ \  
-| | * | 	 Export de l'arbre (l'option couleur ne fonctionne pas)
+| | * | 	 (exportGit) Export de l'arbre (l'option couleur ne fonctionne pas)
 | | * | 	 Export du jdt et de l'arbre
 | * | |   	 🔀Merge pull request #55 from ASETML/Vue-home-include-map-point
 | |\ \ \  
@@ -368,7 +383,7 @@
 |\ \ \ \ \ \  
 | | |_|_|_|/  
 | |/| | | |   
-| * | | | |   	 Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
+| * | | | |   	 (frontend-VueJs) Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
 | |\ \ \ \ \  
 | | * \ \ \ \   	 Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
 | | |\ \ \ \ \  
@@ -463,14 +478,14 @@
 * | | | | | | 	 css_global
 * | | | | | |   	 🔀 Merge pull request #39 from ASETML/globe
 |\ \ \ \ \ \ \  
-| * \ \ \ \ \ \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426 into globe
+| * \ \ \ \ \ \   	 (globe) Merge branch 'main' of https://github.com/ASETML/P_GestProj426 into globe
 | |\ \ \ \ \ \ \  
 | | | |_|_|/ / /  
 | | |/| | | | |   
 | * | | | | | | 	 supression du globe de app.mjs
 | * | | | | | |   	 Merge branch 'globe' of https://github.com/ASETML/P_GestProj426 into globe
 | |\ \ \ \ \ \ \  
-| | * | | | | | | 	 Le globe marche
+| | * | | | | | | 	 (config.mjs) Le globe marche
 | * | | | | | | | 	 Le globe marche
 | |/ / / / / / /  
 | * | | | | | | 	 Fin 28.02
@@ -545,7 +560,7 @@
 * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\ \  
 * | | 	 backup fichier Figma 🗃
-| | * 	 recherche(recherche.ejs , route), css_global
+| | * 	 (dev) recherche(recherche.ejs , route), css_global
 | | * 	 Create(InitFiles)
 | |/  
 | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426

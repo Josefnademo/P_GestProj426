@@ -127,7 +127,7 @@ git push -u origin brancheDetailsgit push -u origin brancheDetailsgit push -u or
   J'ai beaucoup aimé ce projet et module. J'ai trouvé que l'ambiance et les manières de fonctionner ressemblait beaucoup à ce que j'ai vu en entreprise. En plus, il n'est maintenant plus exclu pour moi d'être Scrum Master dans une équipe de développement. Je pense que nous avons tous beaucoup appris, sur le plan purement informatique, mais également sur le savoir-vivre en groupe, c'est ce qui m'a beaucoup plu.
 
 - **Alban Segalen** <br>
-  J'ai bien aimé que ce module/projet se soie concentré sur la pratique et non sur la théorie. J'ai trouvé compliqué et intéressant
+  J'ai bien aimé que ce module/projet se soie concentré sur la pratique et non sur la théorie. J'ai trouvé compliqué et intéressant le travail en grande équipes. Ce projet m'a appris beaucoup sur la méthodologie Scrum. Malgré les quelques dissesions dans l'équipe, nous avons quand même réussie à réaliser une application fonctionnelle.
 
 - **Antoine Fabre** <br>
   Ce projet m'a beaucoup apporté en matière de travail en équipe avec [SCRUM](https://agilemanifesto.org/) et [GitHub Project](https://docs.github.com/fr/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects). Cela m'a donné un avant goût du [travail](https://fr.wikipedia.org/wiki/Travail) en [entreprise](https://fr.wikipedia.org/wiki/Entreprise) et en [équipe](https://fr.wikipedia.org/wiki/%C3%89quipe). Ce qui m'a bien plu !
