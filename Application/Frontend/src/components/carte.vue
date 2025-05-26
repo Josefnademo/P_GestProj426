@@ -4,8 +4,6 @@
 <script setup>
 import { onMounted } from "vue";
 import * as Cesium from "cesium";
-import service from "../services/ShowDetails.js";
-// import { places } from "../../point.js";
 const url = "http://localhost:3000/lieu";
 
 const placesJson = await fetch(url, {
@@ -23,6 +21,8 @@ onMounted(async () => {
     animation: false,
     timeline: false,
   });
+
+  await new Promise((r) => setTimeout(r, 2000));
 
   //Zooms on the user
   if (navigator.geolocation) {
@@ -77,7 +77,7 @@ onMounted(async () => {
       ),
     ]).then((updatedPositions) => {
       const height = updatedPositions[0].height || 0; //Height
-      const adjustedHeight = height + 2000; //Add 2km to the height to acount for odd cases
+      const adjustedHeight = height + 3000; //Add 2km to the height to acount for odd cases
 
       const adjustedPosition = Cesium.Cartesian3.fromDegrees(
         Number(place.longitude),
@@ -122,7 +122,7 @@ onMounted(async () => {
           mousePosition,
           adjustedPosition
         );
-        entity.label.show = distance < 55000; //Shows if distance is less than 10km
+        entity.label.show = distance < 55000; //Shows if distance is less than 55000m
       };
     });
   }
