@@ -124,12 +124,17 @@ git push -u origin brancheDetailsgit push -u origin brancheDetailsgit push -u or
   Je pense que ce projet me sera utile pour la suite de ma carrière. Il m'a permis d'acquérir de nombreuses compétences, notamment en communication et en gestion des conflits. Il m'a également donné un aperçu de ce à quoi ressemblera un environnement de travail type pour l'avenir. Malgré de nombreux conflits de branches au début du projet, nous avons beaucoup progressé et notre utilisation globale de GitHub est devenue très fluide. Nous avons également rencontré quelques conflits de conventions, par exemple concernant Sequelize. Nous aurions dû être plus stricts et plus clairs sur les conventions. Cela aurait permis de gagner du temps à long terme. Nous aurions également dû consacrer moins de temps a la maquette de l'application. Nous y étions encore à la fin du deuxième sprint, ce qui nous a ralentis. À part cela, je pense que nous avons bien travaillé sur le projet et que chacun a joué son rôle.
 
 - **Mateo Thode** <br>
+  J'ai beaucoup aimé ce projet et module. J'ai trouvé que l'ambiance et les manières de fonctionner ressemblait beaucoup à ce que j'ai vu en entreprise. En plus, il n'est maintenant plus exclu pour moi d'être Scrum Master dans une équipe de développement. Je pense que nous avons tous beaucoup appris, sur le plan purement informatique, mais également sur le savoir-vivre en groupe, c'est ce qui m'a beaucoup plu.
 
 - **Alban Segalen** <br>
-
+  J'ai bien aimé que ce module/projet se soie concentré sur la pratique et non sur la théorie. J'ai trouvé compliqué et intéressant 
 
 - **Antoine Fabre** <br>
+  Ce projet m'a beaucoup apporté en matière de travail en équipe avec [SCRUM](https://agilemanifesto.org/) et [GitHub Project](https://docs.github.com/fr/issues/planning-and-tracking-with-projects/learning-about-projects/about-projects). Cela m'a donné un avant goût du [travail](https://fr.wikipedia.org/wiki/Travail) en [entreprise](https://fr.wikipedia.org/wiki/Entreprise) et en [équipe](https://fr.wikipedia.org/wiki/%C3%89quipe). Ce qui m'a bien plu !
 
 - **Charles-Henri Moser** <br>
 
 - **Yosef Nademo** <br>
+
+  Ce projet m’a permis de mieux comprendre la gestion d’un dépôt Git collaboratif et les défis liés au suivi des branches et aux fusions. J’ai aussi vu l’importance de maintenir un dépôt propre pour éviter la confusion et les erreurs. L’analyse de l’arbre Git m’a montré combien la coordination entre les membres de l’équipe est essentielle, surtout quand il y a des désaccords techniques comme avec l’utilisation de Sequelize. Ce genre de conflit m’a appris qu’un bon compromis est souvent nécessaire pour avancer efficacement en équipe.
+  J’ai aussi apprécié développer des fonctionnalités techniques en frontend, comme l’intégration de la carte interactive et l’affichage dynamique des sites UNESCO. J’ai trouvé intéressant de réfléchir à l’ergonomie pour rendre la plateforme intuitive et agréable. Travailler en équipe Scrum m’a appris à mieux structurer mon travail et à rester proactif face aux défis techniques.
