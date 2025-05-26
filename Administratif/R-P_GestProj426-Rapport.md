@@ -120,3 +120,16 @@ git push -u origin brancheDetailsgit push -u origin brancheDetailsgit push -u or
   J'ai aimé apprendre ces choses car je sais qu'elles me font cruellement défaut et donc elles me sont utiles même en dehors de l'ETML.
 
 - **Romain Denis** <br>
+
+  Je pense que ce projet me sera utile pour la suite de ma carrière. Il m'a permis d'acquérir de nombreuses compétences, notamment en communication et en gestion des conflits. Il m'a également donné un aperçu de ce à quoi ressemblera un environnement de travail type pour l'avenir. Malgré de nombreux conflits de branches au début du projet, nous avons beaucoup progressé et notre utilisation globale de GitHub est devenue très fluide. Nous avons également rencontré quelques conflits de conventions, par exemple concernant Sequelize. Nous aurions dû être plus stricts et plus clairs sur les conventions. Cela aurait permis de gagner du temps à long terme. Nous aurions également dû consacrer moins de temps a la maquette de l'application. Nous y étions encore à la fin du deuxième sprint, ce qui nous a ralentis. À part cela, je pense que nous avons bien travaillé sur le projet et que chacun a joué son rôle.
+
+- **Mateo Thode** <br>
+
+- **Alban Segalen** <br>
+
+
+- **Antoine Fabre** <br>
+
+- **Charles-Henri Moser** <br>
+
+- **Yosef Nademo** <br>
