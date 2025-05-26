@@ -1,18 +1,15 @@
-*   	 (refs/stash) On main: !!GitHub_Desktop<main>
+* 	 (HEAD -> main, origin/main, origin/HEAD) chore(rapport): Conclusion Alban
+*   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\  
-| * 	 index on main: b8285536 fix(terrain not defined): await
-|/  
-| *   	 (HEAD -> main, origin/main, origin/HEAD) Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-| |\  
+* | 	 Update(README)
+| | * 	 (refs/stash) On main: !!GitHub_Desktop<main>
+| |/| 
+| | * 	 index on main: b8285536 fix(terrain not defined): await
 | |/  
-|/|   
-* | 	 fix(terrain not defined): await
-* |   	 Merge pull request #99 from ASETML/PageDetails-V.2
-|\ \  
-| * | 	 (origin/PageDetails-V.2) gitTree re-generated
-| | * 	 Update(README)
-| |/  
-|/|   
+| * 	 fix(terrain not defined): await
+| * 	 Merge pull request #99 from ASETML/PageDetails-V.2
+|/| 
+| * 	 gitTree re-generated
 * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\ \  
 | * | 	 Create(Conclusion(Yosef, Mateo, Alban, Antoine))

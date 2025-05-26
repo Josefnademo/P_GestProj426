@@ -1,60 +1,66 @@
-354b00ea - C-HM, 2 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-ed4b3ca6 - C-HM, 2 minutes ago : Update(README)
+2eed4d70 - ASETML, 2 minutes ago : chore(rapport): Conclusion Alban
+ Administratif/R-P_GestProj426-Rapport.md           |    2 +-
+ .../fullJDT-tropD_infos/journal_de_travail.txt     | 8245 +++++++++++++++++++-
+ Administratif/exportsGitHub/gitTree/GitTree.txt    |   49 +-
+ 3 files changed, 8000 insertions(+), 296 deletions(-)
+
+354b00ea - C-HM, 4 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+ed4b3ca6 - C-HM, 5 minutes ago : Update(README)
  Administratif/R-P_GestProj426-Rapport.md | 4 +++-
  1 file changed, 3 insertions(+), 1 deletion(-)
 
-b8285536 - ASETML, 5 minutes ago : fix(terrain not defined): await
+b8285536 - ASETML, 8 minutes ago : fix(terrain not defined): await
  Application/Frontend/src/components/carte.vue | 8 ++++----
  1 file changed, 4 insertions(+), 4 deletions(-)
 
-c13114bf - Mateo MID2B, 8 minutes ago : Merge pull request #99 from ASETML/PageDetails-V.2
-242f31b9 - Romain, 10 minutes ago : gitTree re-generated
+c13114bf - Mateo MID2B, 10 minutes ago : Merge pull request #99 from ASETML/PageDetails-V.2
+242f31b9 - Romain, 12 minutes ago : gitTree re-generated
  Administratif/exportsGitHub/gitTree/GitTree.txt | 229 ++++++++++++++----------
  1 file changed, 130 insertions(+), 99 deletions(-)
 
-2115ab42 - C-HM, 13 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-17f4c8cf - C-HM, 13 minutes ago : feat(nav)
+2115ab42 - C-HM, 15 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+17f4c8cf - C-HM, 15 minutes ago : feat(nav)
  Application/Frontend/public/images/heart.png     | Bin 0 -> 17743 bytes
  Application/Frontend/public/images/heartFull.png | Bin 0 -> 9935 bytes
  Application/Frontend/src/components/Header.vue   |  59 +++++++++++++++++++++--
  Application/Frontend/src/views/DetailsPage.vue   |  14 ++----
  4 files changed, 58 insertions(+), 15 deletions(-)
 
-45885037 - Romain Pierre Marie Denis, 14 minutes ago : Create(Conclusion(Yosef, Mateo, Alban, Antoine))
+45885037 - Romain Pierre Marie Denis, 16 minutes ago : Create(Conclusion(Yosef, Mateo, Alban, Antoine))
  Administratif/R-P_GestProj426-Rapport.md | 7 ++++++-
  1 file changed, 6 insertions(+), 1 deletion(-)
 
-b0e9de64 - C-HM, 29 minutes ago : update(descrition)
+b0e9de64 - C-HM, 31 minutes ago : update(descrition)
  Application/Frontend/src/components/carte.vue | 6 +-----
  1 file changed, 1 insertion(+), 5 deletions(-)
 
-2b06d5a1 - C-HM, 30 minutes ago : Update(DetailsPage)
+2b06d5a1 - C-HM, 32 minutes ago : Update(DetailsPage)
  Application/Frontend/src/views/DetailsPage.vue | 48 +++++++++++++++++++++-----
  1 file changed, 40 insertions(+), 8 deletions(-)
 
-00bc14b5 - Charles-Henri Moser, 40 minutes ago : Merge pull request #98 from ASETML/PageDetails-V.2
-1b42e1bc - C-HM, 42 minutes ago : feat(DetailsPage.vue)
+00bc14b5 - Charles-Henri Moser, 43 minutes ago : Merge pull request #98 from ASETML/PageDetails-V.2
+1b42e1bc - C-HM, 44 minutes ago : feat(DetailsPage.vue)
  Application/Frontend/src/components/carte.vue    |  21 +++-
  Application/Frontend/src/services/ShowDetails.js |   3 +
  Application/Frontend/src/views/DetailsPage.vue   | 128 +++++++++++++++++++++--
  3 files changed, 138 insertions(+), 14 deletions(-)
 
-ff4c3061 - Romain Pierre Marie Denis, 58 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-4a900ab4 - ASETML, 64 minutes ago : fix(erreur sur les points): L'erreur qui avait lieu lors de la fonction d'affichage des labels a été éliminée
+ff4c3061 - Romain Pierre Marie Denis, 60 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+4a900ab4 - ASETML, 66 minutes ago : fix(erreur sur les points): L'erreur qui avait lieu lors de la fonction d'affichage des labels a été éliminée
  Application/Frontend/src/components/carte.vue | 47 +++++++++++++++++++--------
  1 file changed, 34 insertions(+), 13 deletions(-)
 
-f88486a4 - Romain Pierre Marie Denis, 73 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-491b1f73 - Romain Pierre Marie Denis, 74 minutes ago : Create(Romain Conclusion): Write conclusion
+f88486a4 - Romain Pierre Marie Denis, 76 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+491b1f73 - Romain Pierre Marie Denis, 77 minutes ago : Create(Romain Conclusion): Write conclusion
  Administratif/R-P_GestProj426-Rapport.md | 13 +++++++++++++
  1 file changed, 13 insertions(+)
 
-7d2a2dd0 - Romain, 77 minutes ago : ReadMe : OK et TESTÉ
+7d2a2dd0 - Romain, 80 minutes ago : ReadMe : OK et TESTÉ
  README.md | 44 +++++++++++++++++++++++++++-----------------
  1 file changed, 27 insertions(+), 17 deletions(-)
 
-4923ebaa - Romain, 88 minutes ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-88d2ad99 - Romain, 89 minutes ago : Script to install and run servers : OK
+4923ebaa - Romain, 2 hours ago : Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+88d2ad99 - Romain, 2 hours ago : Script to install and run servers : OK
  RUN_servers.bat | 19 +++++++++++++++++++
  1 file changed, 19 insertions(+)
 
@@ -81,7 +87,7 @@ ea6b914a - Romain, 2 hours ago : Nom Docker modifié pour fonctionnement avec Do
  TEMPLATE-R_GestProj426.docx | Bin 206592 -> 0 bytes
  2 files changed, 5 deletions(-)
 
-7fcecec4 - Romain, 2 hours ago : chore(clean up repo) : delete un-used repo
+7fcecec4 - Romain, 3 hours ago : chore(clean up repo) : delete un-used repo
  frontend/unesco/node_modules/.bin/browserslist     |     16 -
  frontend/unesco/node_modules/.bin/browserslist.cmd |     17 -
  frontend/unesco/node_modules/.bin/browserslist.ps1 |     28 -
