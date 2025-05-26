@@ -16,6 +16,9 @@ export default {
   wantToVisit(lieu_id, compte_id) {
     return apiClient.get("visit/" + lieu_id + "/user/" + compte_id);
   },
+  markAsVisited(lieu_id, compte_id) {
+    return apiClient.post("visited/" + lieu_id + "/user/" + compte_id);
+  },
   getUserId() {
     return apiClient.get("/getuserid");
   },
