@@ -7,14 +7,21 @@ const route = useRoute();
 const detail = ref(null);
 const isLiked = ref(false);
 const isVisited = ref(false);
-const error = ref(null);
+const notification = ref(null);
 const loading = ref(true);
 const lieuId = ref(route.params.lieu_id);
 const userId = ref(localStorage.getItem("user_id"));
 
+const showNotification = (message) => {
+  notification.value = message;
+  setTimeout(() => {
+    notification.value = null;
+  }, 3000);
+};
+
 const handleLike = async () => {
   if (!userId.value) {
-    error.value = "Please log in to like this site";
+    showNotification("Please log in to like this site");
     return;
   }
   try {
@@ -22,12 +29,13 @@ const handleLike = async () => {
     isLiked.value = !isLiked.value;
   } catch (error) {
     console.error("Error toggling like:", error);
+    showNotification("Error updating like status");
   }
 };
 
 const handleVisited = async () => {
   if (!userId.value) {
-    error.value = "Please log in to mark as visited";
+    showNotification("Please log in to mark as visited");
     return;
   }
   try {
@@ -35,6 +43,7 @@ const handleVisited = async () => {
     isVisited.value = !isVisited.value;
   } catch (error) {
     console.error("Error toggling visited status:", error);
+    showNotification("Error updating visited status");
   }
 };
 
@@ -43,13 +52,12 @@ onMounted(async () => {
     loading.value = true;
     const response = await ShowDetails.getDetail(lieuId.value);
     detail.value = response.data;
-    // Check if user has liked or visited this site
     if (userId.value) {
       // You might want to add API calls here to check the initial state
       // of isLiked and isVisited for the current user
     }
   } catch (err) {
-    error.value = "Failed to load details. Please try again later.";
+    showNotification("Failed to load details. Please try again later.");
     console.error(err);
   } finally {
     loading.value = false;
@@ -61,11 +69,11 @@ onMounted(async () => {
   <div id="app">
     <div v-if="loading" class="loading">Loading...</div>
 
-    <div v-else-if="error" class="error">
-      {{ error }}
+    <div v-if="notification" class="notification">
+      {{ notification }}
     </div>
 
-    <div v-else-if="detail" class="content-container">
+    <div v-if="detail" class="content-container">
       <h1>{{ detail.nom }}</h1>
       <p>{{ detail.particularite }}</p>
       <p>{{ detail.histoire }}</p>
@@ -278,5 +286,29 @@ input:checked + .slider:before {
 .visited-label {
   font-size: 1rem;
   color: #333;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 </style>
