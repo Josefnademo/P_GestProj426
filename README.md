@@ -24,7 +24,7 @@
 
 ## Étape 1 Cloner le projet
 
-Depuis une Invite de Commandes il faut cloner le repo du Projet <br>
+Depuis un `cmd` il faut cloner le repo du Projet <br>
 Avec cette commande :
 
 ```sh
@@ -40,27 +40,27 @@ quelques petites variables.
   le fichier `config.mjs` (le fichier se trouve dans ce dossier `application/` `Backend/` `src/`)
 
 ```properties
-  `const db_name = "";`
-  `const db_user = "";`
-  `const db_password = "";`
-  `const db_host = "";`
-  `const app_port = ;`
-  `const db_port = ;`
+  const db_name = "";
+  const db_user = "";
+  const db_password = "";
+  const db_host = "";
+  const app_port = ;
+  const db_port = ;
 ```
 
 Le serveur et le site web seront maintenant 100 % opérationnels.
 
 ## Étape 3 Création du container Docker qui contiendra la base de données
 
-Dans la racine du projet à : `\P_GestProj426`, ouvrir une console `.bash` puis faire les commandes suivantes :
+Dans la racine du projet à : `\P_GestProj426`, ouvrir une console `cmd` puis faire les commandes suivantes :
 
-1. Se rendre dans le répertoire Docker
+1. Se rendre dans le répertoire Docker (depuis un `cmd`)
 
 ```sh
 cd Docker/
 ```
 
-2. Composer le container Docker
+2. Composer le container Docker (depuis un `cmd`)
 
 ```sh
 docker compose up -d
@@ -82,11 +82,21 @@ Donc copier-coller le script dans la fenêtre de commande MySQL
 
 Voilà, vous avez créé la base de données avec toutes les données dedans !
 
-## Étape 5 Installation des dépendances du `Backend`
+## Étape 5 lancement du script d'installation et de lancement des serveurs.
+
+Aller ensuite à la racine du répertoire et lancer le fichier batch nommé `RUN_servers.bat`.
+
+Les étapes sont maintenant terminées. Vous pouvez accéder au site à cette adresse : [http://localhost:5173](http://localhost:5173)
+
+### **Si vous ne pouvez pas lancer le fichier ou qu'il ne fonctionne pas**
+
+Vous pouvez suivre les étapes 6 et 7. Si vous vous demandez ce que fait le script vous pouvez également lire ces étapes.
+
+## _Étape 6 Installation des dépendances du `Backend`_
 
 En premier il faut se rendre dans le répertoire `application/` `Backend`
 Et dans celui-ci ouvrir une invite de commande.
-Dans laquelle il faut entrer cette commande :
+Dans laquelle il faut entrer cette commande (`cmd`) :
 
 ```sh
 npm install
@@ -94,11 +104,11 @@ npm install
 
 Et pour le `Frontend` il faut faire la même chose mais dans le dossier `application/` `Frontend`
 
-## Étape 6 Lancement des deux serveurs
+## _Étape 7 Lancement des deux serveurs_
 
 En premier on va lancer le serveur du `Backend`<br>
 En allant dans le dossier `application/` `Backend/`,
-Lancer une invite de commande et exécuter cette commande :
+Lancer une invite de commande et exécuter cette commande (`cmd`) :
 
 ```sh
 npm start
@@ -106,12 +116,12 @@ npm start
 
 En deuxième on va lancer le serveur du `Frontend`<br>
 En allant dans le dossier `application/` `Frontend/`,
-Lancer une invite de commande et exécuter cette commande :
+Lancer une invite de commande et exécuter cette commande (`cmd`):
 
 ```sh
-npm run dev
+npm start
 ```
 
 <h1>🎈🎆Bravo vous l'avez fait !!✨ </h1>
 
-Maintenant pour admirer votre travail vous pouvez vous rendre sur ce [site](http://localhost:5173) !
+Maintenant pour admirer votre travail vous pouvez vous rendre sur le site, à cette adresse : [http://localhost:5173](http://localhost:5173) !
