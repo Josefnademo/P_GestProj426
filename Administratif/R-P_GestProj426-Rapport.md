@@ -85,8 +85,38 @@ Finalement, nous avons remédié à la situation en procédant à des suppressio
 
 Ces suppressions majeures ont permis de réduire l’encombrement accumulé par les nombreuses branches fusionnées non supprimées. Bien que l’arbre ne montre pas explicitement la suppression systématique des branches avec des commandes comme `git branch -d`, les actions de nettoyage et de retrait d’éléments superflus ont servi de solution pratique pour remettre de l’ordre dans le dépôt.
 
+### Dispute pour technologies utilisés
+
+Au cours de la phase de développement, il y a eu des désaccords et disputes entre membres de la ScrumTeam au sujet des technologies et des méthodes de développement utilisées durant le projet.
+Notamment: au sujet de l'ORM Sequelize par rapport a JS traditionnel sans ORM
+
+- Toute la scrum team sauf M. Denis était daccord pour utiliser Sequelize avec notamment des modèles etc... pour les datas.
+
+- M. Denis était contre cette idée et préférait tout coder en vanillaJS sans les méthodes, controlleurs et modèles apportés par Sequelize et c'est pourquoi il a codé toutes les routes sans Sequelize.
+
+- Puis M. Piguet à notifié qu'aucune des routes n'utilisaient les beaux modèles sequelize qu'il avait codé avec le plus grand soin. Une joute verbale entre Denis et Piguet pris alors lieu débattant l'utilité des modèles et l'importance d'un ORM.
+
+- La semaine suivante, lors de l'absence de M. Piguet, M. Denis a réussi à endoctriner la suppression de sequelize dans les esprits de la ScrumTeam et ainsi fut la suppression de Sequelize dans le main.
+
+- A son retour, M. Piguet découvrit alors la décision de la ScrumTeam et il confrontat le membre et médiateur de la ScrumTeam (M. Segalen) en lui demandant pourquoi cette décision fut prise. M. Segalen lui répondit que "ça marche sans." et cela suffit amplement comme raison pour M. Piguet.
+
+- Après ceci, M. Piguet tenta de réintroduire discrêtement Sequelize mais M. Denis flaira l'entourloupe et supprima la branche Sequelize, réduisant les efforts de M.Piguet a néant.
+
+### _Conclusion du conflit_
+
+Après une longue discussion entre tous les membres de la ScrumTeam, ils arrivèrent à la conclusion que l'adaptation du code pour y introduire sequelize serait trop long par rapport à l'importance de l'ORM.
+
+Grâce à ce conflit, les membres de la ScrumTeam se rapprochés et ont appris a mieux communiquer pour favoriser un environnement de travail sain et agréable (et sans sequelize)
+
 ## Conclusion
 
 L’arbre Git de `P_GestProj426` met en lumière un projet dynamique avec des avancées significatives dans le frontend (Vue.js), le backend et le design. L’oubli initial de supprimer les branches fusionnées avait conduit à un historique encombré, mais nous avons finalement corrigé cela en procédant à de grandes suppressions, comme le retrait de données fictives et de fonctionnalités inutiles. Ces efforts ont permis de rendre le dépôt plus clair et fonctionnel, bien qu’une suppression systématique des branches aurait pu compléter ce nettoyage. À l’avenir, adopter des pratiques proactives de gestion des branches renforcerait cette amélioration.
+git push -u origin brancheDetailsgit push -u origin brancheDetailsgit push -u origin brancheDetails
 
----
+## Conclusions Personnelles
+
+- **Antoine Piguet** <br>
+  J'ai apprécié travailler avec une "grande" équipe, cela a pu me donner une vraie vison du teamwork en entreprise et des conflits qu'il peut engendrer. c'est pouquoi nous avons beaucoup appris à s'organiser pour éviter le maximum de conflits, travail à double, travail pas en accord avec la DOD etc...
+  J'ai aimé apprendre ces choses car je sais qu'elles me font cruellement défaut et donc elles me sont utiles même en dehors de l'ETML.
+
+- **Romain Denis** <br>
