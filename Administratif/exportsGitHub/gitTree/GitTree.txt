@@ -1,104 +1,134 @@
-* 	 (origin/brancheDetails) update(DetailsPage)
-* 	 WIP(PageDetails)
-| * 	 (HEAD -> main, origin/main, origin/HEAD) Update README.md
+*   	 (origin/main, origin/HEAD, main) Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\  
+| * 	 Create(Conclusion(Yosef, Mateo, Alban, Antoine))
+* | 	 feat(nav)
+|/  
+* 	 update(descrition)
+* 	 Update(DetailsPage)
+*   	 Merge pull request #98 from ASETML/PageDetails-V.2
+|\  
+| * 	 (HEAD -> PageDetails-V.2, origin/PageDetails-V.2) feat(DetailsPage.vue)
+* | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| 
+| * 	 fix(erreur sur les points): L'erreur qui avait lieu lors de la fonction d'affichage des labels a été éliminée
+* | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| 
+| * 	 ReadMe : OK et TESTÉ
 | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | |\  
-| | * 	 Create TEMPLATE-R_GestProj426.docx
-| | * 	 Create Rapport.url
-| * | 	 CSS CesiumToolBar, cesium-viewer
+| * | 	 Script to install and run servers : OK
+| * | 	 Minor change : ignore
+| * | 	 Nom Docker modifié pour fonctionnement avec Docker's last version
+* | | 	 Create(Romain Conclusion): Write conclusion
 | |/  
-| * 	 app.vue correction + header correction[ après structuration des fichiers ]
-| * 	 correction de package.json
-| * 	 CSS pour la carte
-| * 	 chore(repo): Exports git du 12.05.25 14:53
-| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-| |\  
-| | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-| | |\  
-| | * | 	 Update( ReadMe.md pour mettre en place le projet)
-| * | | 	 chore(repo): Exports git du 12.05.25
-| * | | 	 refactor(globe): Suprimmer le JSON de l'unesco du globe
-| | |/  
-| |/|   
-| * | 	 Chore(Cleanup)Remove Exess Layer in Frontend, Put Frontend and Backend in the same dir, Move Globe into Tests
-| * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-| |\ \  
-| | * \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-| | |\ \  
-| | | * | 	 Tweak(Package.json): Both frontend and backend now run from npm start
-| | | * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-| | | |\ \  
-| |_|_|/ /  
-|/| | | |   
-| | | * | 	 Parse(db_unesco.sql): Remove HTML assets in name fields
-| | * | | 	 feat(carte): Le bouton home amène sur la position de l'utilisateur
-| |/ / /  
-|/| | |   
-* | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-|\ \ \ \  
-| | |/ /  
-| |/| |   
-| * | | 	 Update(DetailsPage)
-| | |/  
-| |/|   
-* | | 	 feat(carte): Ajout d'un bouton à l'infoBox d'un site
-| | * 	 CSS pour la carte
-| | * 	 feature(footer, header et App.vue)
-| |/  
-| * 	 fix(footer et header)
-| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|/|   
+* | 	 Create(Piguet Conclusion)
+* | 	 update(rapport): add Codeflict Sequelize
+|/  
+*   	 Merge pull request #97 from ASETML/brancheDetails
+|\  
+| *   	 Merge branch 'main' into brancheDetails
 | |\  
 | |/  
 |/|   
-* |   	 🔀Merge pull request #93 from ASETML/Couleur-Point-
+* | 	 Remove(Old rapport)
+* | 	 chore(clean up repo) : delete un-used repo
+* | 	 chore(repo): Exports git du 19.05.25
+* | 	 Update README.md
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\ \  
-| * \   	 Merge branch 'main' into Couleur-Point-
+| * | 	 Create TEMPLATE-R_GestProj426.docx
+| * | 	 Create Rapport.url
+* | | 	 CSS CesiumToolBar, cesium-viewer
+|/ /  
+* | 	 app.vue correction + header correction[ après structuration des fichiers ]
+* | 	 correction de package.json
+* | 	 CSS pour la carte
+* | 	 chore(repo): Exports git du 12.05.25 14:53
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | |\ \  
+| * | | 	 Update( ReadMe.md pour mettre en place le projet)
+* | | | 	 chore(repo): Exports git du 12.05.25
+* | | | 	 refactor(globe): Suprimmer le JSON de l'unesco du globe
 | |/ /  
 |/| |   
-* | |   	 Merge pull request #92 from ASETML/translate-comments
-|\ \ \  
-| * | | 	 Comment(app.mjs, index.js)
-| * | | 	 Translate(Backend Comments into English)
-| * | | 	 Remove(.vue Comments)
-| * | | 	 Remove(CSS Comments)
-| * | | 	 Delete README.md
-| | * | 	 Fix(Affichage des différents points sur la carte)
-| | * | 	 Change(Requette SQL pour ajouter Categorie)
-| | * | 	 DONE Correction de bug avec le script SQL et des commentaires
-| | * | 	 WIP ajout condition pour la couleur des points
-| | * |   	 Merge pull request #88 from ASETML/main
-| | |\ \  
-| | * | | 	 Create Condition couleur point
-| | | | * 	 ajout des logos, correction des css pour Footer
-| | | | * 	 ajout des logos, correction des css pour Header
-| | | | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-| | | | |\  
-| |_|_|_|/  
-|/| | | |   
-* | | | | 	 Update(DetailsPage.vue)
-| | | | * 	 fix(logique de login et registration)
-| |_|_|/  
-|/| | |   
-* | | | 	 Chore(Details.vue)
-|/ / /  
+* | | 	 Chore(Cleanup)Remove Exess Layer in Frontend, Put Frontend and Backend in the same dir, Move Globe into Tests
 * | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\ \ \  
-| * \ \   	 Merge pull request #89 from ASETML/visiter-avisite-checkroutes
+| * \ \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | |\ \ \  
-| | * | | 	 feat(Check if site wants to be visited)
-| | * | | 	 Fix(Wrong Table Name)
-| | * | | 	 Fix(Old code)
-* | | | | 	 Export(New Test Routes)
-|/ / / /  
-* | | | 	 (tag: 80percent) Export git du 05.05.25
-* | | | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
-|\| | | 
-| * | | 	 Create(visit Router)
+| | * | | 	 Tweak(Package.json): Both frontend and backend now run from npm start
+| | * | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | |\ \ \  
+| | * | | | 	 Parse(db_unesco.sql): Remove HTML assets in name fields
+| * | | | | 	 feat(carte): Le bouton home amène sur la position de l'utilisateur
+| | |/ / /  
+| |/| | |   
+* | | | | 	 CSS pour la carte
+* | | | | 	 feature(footer, header et App.vue)
+| |_|/ /  
+|/| | |   
+| | | * 	 update(DetailsPage)
+| | | * 	 WIP(PageDetails)
 | | |/  
 | |/|   
-* / | 	 logique de registration et connexion en utilisant le backend
+| * | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\| 
+| | * 	 Update(DetailsPage)
+| |/  
+|/|   
+* | 	 fix(footer et header)
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+* | | 	 ajout des logos, correction des css pour Footer
+* | | 	 ajout des logos, correction des css pour Header
+* | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \  
+* | | | 	 fix(logique de login et registration)
+| | | * 	 feat(carte): Ajout d'un bouton à l'infoBox d'un site
+| | |/  
+| | *   	 🔀Merge pull request #93 from ASETML/Couleur-Point-
+| | |\  
+| | | *   	 Merge branch 'main' into Couleur-Point-
+| | | |\  
+| | | |/  
+| | |/|   
+| | * | 	 Merge pull request #92 from ASETML/translate-comments
+| |/| | 
+| | * | 	 Comment(app.mjs, index.js)
+| | * | 	 Translate(Backend Comments into English)
+| | * | 	 Remove(.vue Comments)
+| | * | 	 Remove(CSS Comments)
+| | * | 	 Delete README.md
+| * | | 	 Update(DetailsPage.vue)
+|/ / /  
+* / / 	 Chore(Details.vue)
 |/ /  
+* |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \  
+| * \   	 Merge pull request #89 from ASETML/visiter-avisite-checkroutes
+| |\ \  
+| | * | 	 feat(Check if site wants to be visited)
+| | * | 	 Fix(Wrong Table Name)
+| | * | 	 Fix(Old code)
+* | | | 	 Export(New Test Routes)
+|/ / /  
+* | | 	 (tag: 80percent) Export git du 05.05.25
+* | | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| | 
+| * | 	 Create(visit Router)
+* | | 	 logique de registration et connexion en utilisant le backend
+|/ /  
+| * 	 Fix(Affichage des différents points sur la carte)
+| * 	 Change(Requette SQL pour ajouter Categorie)
+| * 	 DONE Correction de bug avec le script SQL et des commentaires
+| * 	 WIP ajout condition pour la couleur des points
+| *   	 Merge pull request #88 from ASETML/main
+| |\  
+| |/  
+|/|   
 * | 	 Create(ShowDetails),(peer programming feat(C-H)
 * |   	 Merge pull request #87 from ASETML/add-categorie-field
 |\ \  
@@ -106,13 +136,14 @@
 | * | 	 Remove(Histoire Field)
 | * | 	 Delete(Sequelize)
 | * | 	 add(categorie field)
-| |/  
-* |   	 🔀  La carte zoom sur la position de l'utilisateur
-|\ \  
-| * | 	 (83-zoomer-sur-la-position-de-lutilisateur) La carte zoom sur la position de l'utilisateur
-| |/  
-* | 	 Début de construction de logique pour interaction avec la DB via formlaire d'inscription-connexion + adaptation de header(suppression du button registration)
-* | 	 Page de login (css, formulaire), darkmode✅ ,  Responsive Design
+* | |   	 🔀  La carte zoom sur la position de l'utilisateur
+|\ \ \  
+| * | | 	 La carte zoom sur la position de l'utilisateur
+| |/ /  
+* | | 	 Début de construction de logique pour interaction avec la DB via formlaire d'inscription-connexion + adaptation de header(suppression du button registration)
+* | | 	 Page de login (css, formulaire), darkmode✅ ,  Responsive Design
+|/ /  
+| * 	 Create Condition couleur point
 |/  
 * 	 Change(t_lieu, t_region nom)
 * 	 Export git du 28.04.25
@@ -121,7 +152,7 @@
 * 	 Add files via upload
 *   	 🔀Merge pull request #80 from ASETML/fusion-vues-Yosef-frontend
 |\  
-| *   	 (fusion-vues-Yosef-frontend) Merge branch 'fusion-vues-Yosef-frontend' of https://github.com/ASETML/P_GestProj426 into fusion-vues-Yosef-frontend
+| *   	 Merge branch 'fusion-vues-Yosef-frontend' of https://github.com/ASETML/P_GestProj426 into fusion-vues-Yosef-frontend
 | |\  
 | | * 	 adaptation de la carte pour le site
 | * | 	 page de login nouveau design(card),addition du formulaire registration dans la fonctionnalité de cette carte ; responsive design (Header, footer ,book(login-register)
@@ -136,7 +167,7 @@
 * | | 	 Export git du 07.04.25
 * | |   	 🔀 Merge pull request #65 from ASETML/image
 |\ \ \  
-| * | | 	 (image) Le backend est près à servir les images de profil
+| * | | 	 Le backend est près à servir les images de profil
 | * | | 	 début des images
 * | | | 	 Update TestRoutes.yaml
 * | | |   	 🔀Merge pull request #64 from ASETML/comments
@@ -273,7 +304,7 @@
 |\| | 
 | * |   	 Merge pull request #56 from ASETML/exportGit
 | |\ \  
-| | * | 	 (exportGit) Export de l'arbre (l'option couleur ne fonctionne pas)
+| | * | 	 Export de l'arbre (l'option couleur ne fonctionne pas)
 | | * | 	 Export du jdt et de l'arbre
 | * | |   	 🔀Merge pull request #55 from ASETML/Vue-home-include-map-point
 | |\ \ \  
@@ -337,7 +368,7 @@
 |\ \ \ \ \ \  
 | | |_|_|_|/  
 | |/| | | |   
-| * | | | |   	 (frontend-VueJs) Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
+| * | | | |   	 Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
 | |\ \ \ \ \  
 | | * \ \ \ \   	 Merge branch 'frontend-VueJs' of https://github.com/ASETML/P_GestProj426 into frontend-VueJs
 | | |\ \ \ \ \  
@@ -432,14 +463,14 @@
 * | | | | | | 	 css_global
 * | | | | | |   	 🔀 Merge pull request #39 from ASETML/globe
 |\ \ \ \ \ \ \  
-| * \ \ \ \ \ \   	 (globe) Merge branch 'main' of https://github.com/ASETML/P_GestProj426 into globe
+| * \ \ \ \ \ \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426 into globe
 | |\ \ \ \ \ \ \  
 | | | |_|_|/ / /  
 | | |/| | | | |   
 | * | | | | | | 	 supression du globe de app.mjs
 | * | | | | | |   	 Merge branch 'globe' of https://github.com/ASETML/P_GestProj426 into globe
 | |\ \ \ \ \ \ \  
-| | * | | | | | | 	 (config.mjs) Le globe marche
+| | * | | | | | | 	 Le globe marche
 | * | | | | | | | 	 Le globe marche
 | |/ / / / / / /  
 | * | | | | | | 	 Fin 28.02
@@ -514,7 +545,7 @@
 * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 |\ \  
 * | | 	 backup fichier Figma 🗃
-| | * 	 (dev) recherche(recherche.ejs , route), css_global
+| | * 	 recherche(recherche.ejs , route), css_global
 | | * 	 Create(InitFiles)
 | |/  
 | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
