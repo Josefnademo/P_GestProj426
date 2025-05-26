@@ -113,4 +113,10 @@ Grâce à ce conflit, les membres de la ScrumTeam se rapprochés et ont appris a
 L’arbre Git de `P_GestProj426` met en lumière un projet dynamique avec des avancées significatives dans le frontend (Vue.js), le backend et le design. L’oubli initial de supprimer les branches fusionnées avait conduit à un historique encombré, mais nous avons finalement corrigé cela en procédant à de grandes suppressions, comme le retrait de données fictives et de fonctionnalités inutiles. Ces efforts ont permis de rendre le dépôt plus clair et fonctionnel, bien qu’une suppression systématique des branches aurait pu compléter ce nettoyage. À l’avenir, adopter des pratiques proactives de gestion des branches renforcerait cette amélioration.
 git push -u origin brancheDetailsgit push -u origin brancheDetailsgit push -u origin brancheDetails
 
----
+## Conclusions Personnelles
+
+- **Antoine Piguet** <br>
+  J'ai apprécié travailler avec une "grande" équipe, cela a pu me donner une vraie vison du teamwork en entreprise et des conflits qu'il peut engendrer. c'est pouquoi nous avons beaucoup appris à s'organiser pour éviter le maximum de conflits, travail à double, travail pas en accord avec la DOD etc...
+  J'ai aimé apprendre ces choses car je sais qu'elles me font cruellement défaut et donc elles me sont utiles même en dehors de l'ETML.
+
+- **Romain Denis** <br>
