@@ -1,28 +1,53 @@
 <script setup>
 import { ref, onMounted } from "vue";
+import { useRoute } from "vue-router";
 import ShowDetails from "@/services/ShowDetails.js";
 
+const route = useRoute();
 const detail = ref(null);
 const isLiked = ref(false);
+const isVisited = ref(false);
 const error = ref(null);
 const loading = ref(true);
-const userId = ref($route.params.user_id);
-const lieuId = ref($route.params.lieu_id);
+const lieuId = ref(route.params.lieu_id);
+const userId = ref(localStorage.getItem("user_id"));
 
 const handleLike = async () => {
+  if (!userId.value) {
+    error.value = "Please log in to like this site";
+    return;
+  }
   try {
-    await ShowDetails.wantToVisit(props.id, localStorage.getItem("user_id"));
+    await ShowDetails.wantToVisit(lieuId.value, userId.value);
     isLiked.value = !isLiked.value;
   } catch (error) {
     console.error("Error toggling like:", error);
   }
 };
 
+const handleVisited = async () => {
+  if (!userId.value) {
+    error.value = "Please log in to mark as visited";
+    return;
+  }
+  try {
+    await ShowDetails.markAsVisited(lieuId.value, userId.value);
+    isVisited.value = !isVisited.value;
+  } catch (error) {
+    console.error("Error toggling visited status:", error);
+  }
+};
+
 onMounted(async () => {
   try {
     loading.value = true;
-    const response = await ShowDetails.getDetail(props.id);
+    const response = await ShowDetails.getDetail(lieuId.value);
     detail.value = response.data;
+    // Check if user has liked or visited this site
+    if (userId.value) {
+      // You might want to add API calls here to check the initial state
+      // of isLiked and isVisited for the current user
+    }
   } catch (err) {
     error.value = "Failed to load details. Please try again later.";
     console.error(err);
@@ -46,7 +71,11 @@ onMounted(async () => {
       <p>{{ detail.histoire }}</p>
 
       <div class="buttons">
-        <button class="action-button" @click="handleLike">
+        <button
+          class="action-button"
+          @click="handleLike"
+          :class="{ active: isLiked }"
+        >
           <img
             v-if="isLiked"
             src="http://localhost:3000/images/likeRED.jpg"
@@ -58,9 +87,17 @@ onMounted(async () => {
             alt="Not liked"
           />
         </button>
-        <button class="action-button">
-          <img src="http://localhost:3000/images/visited.jpg" alt="Visited" />
-        </button>
+        <div class="visited-container">
+          <label class="switch">
+            <input
+              type="checkbox"
+              v-model="isVisited"
+              @change="handleVisited"
+            />
+            <span class="slider round"></span>
+          </label>
+          <span class="visited-label">Visited</span>
+        </div>
       </div>
 
       <img
@@ -136,7 +173,8 @@ p {
 .buttons {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  align-items: center;
+  gap: 2rem;
   margin: 2rem 0;
 }
 
@@ -151,6 +189,11 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.action-button.active {
+  background-color: #28a745;
 }
 
 .action-button img {
@@ -168,5 +211,72 @@ p {
   height: auto;
   border-radius: 8px;
   margin-top: 1rem;
+}
+
+/* Switch styles */
+.visited-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.visited-label {
+  font-size: 1rem;
+  color: #333;
 }
 </style>

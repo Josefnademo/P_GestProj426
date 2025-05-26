@@ -89,13 +89,12 @@ onMounted(async () => {
         name: place.nom,
         description:
           place.particularite +
-          '<br/><a href="' +
+          "<br/><button onclick=\"window.location.href='" +
           GoToDetails(place.lieu_id) +
-          '" target="_blank">Page de détails</a>',
+          '\'" style="background-color: #4CAF50; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; margin-top: 8px;">Voir les détails</button>',
         position: adjustedPosition,
         point: {
           pixelSize: 10,
-
           color: (() => {
             const cat = String(place.categorie).trim().toLowerCase();
             if (cat === "cultural") return Cesium.Color.YELLOW;
@@ -104,10 +103,8 @@ onMounted(async () => {
             if (cat === "mixed" || cat === "mixt") return Cesium.Color.ORANGE;
             return Cesium.Color.GRAY; // Pour null, undefined, ou autre
           })(),
-
           heightReference: Cesium.HeightReference.NONE,
         },
-
         label: {
           text: place.nom,
           font: "14pt monospace",
@@ -119,6 +116,9 @@ onMounted(async () => {
           show: false, //This is masked by default
         },
       });
+
+      // Store the lieu_id in the entity for later use
+      entity.lieu_id = place.lieu_id;
 
       entity._distanceLabelUpdate = function (mousePosition) {
         if (!mousePosition) return;
@@ -150,6 +150,17 @@ onMounted(async () => {
       }
     }
   }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
+
+  // Add click handler for entities
+  handler.setInputAction(function (click) {
+    const pickedObject = viewer.scene.pick(click.position);
+    if (Cesium.defined(pickedObject) && pickedObject.id) {
+      const entity = pickedObject.id;
+      if (entity && entity.lieu_id) {
+        window.location.href = GoToDetails(entity.lieu_id);
+      }
+    }
+  }, Cesium.ScreenSpaceEventType.LEFT_CLICK);
 });
 
 function GoToDetails(lieu_id) {
