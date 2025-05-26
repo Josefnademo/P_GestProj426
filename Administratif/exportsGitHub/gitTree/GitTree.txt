@@ -1,8 +1,104 @@
-* 	 (HEAD -> main, origin/main, origin/HEAD) Create(visit Router)
-| *   	 (origin/Couleur-Point-) Merge pull request #88 from ASETML/main
+* 	 (origin/brancheDetails) update(DetailsPage)
+* 	 WIP(PageDetails)
+| * 	 (HEAD -> main, origin/main, origin/HEAD) Update README.md
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| | * 	 Create TEMPLATE-R_GestProj426.docx
+| | * 	 Create Rapport.url
+| * | 	 CSS CesiumToolBar, cesium-viewer
+| |/  
+| * 	 app.vue correction + header correction[ après structuration des fichiers ]
+| * 	 correction de package.json
+| * 	 CSS pour la carte
+| * 	 chore(repo): Exports git du 12.05.25 14:53
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\  
+| | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | |\  
+| | * | 	 Update( ReadMe.md pour mettre en place le projet)
+| * | | 	 chore(repo): Exports git du 12.05.25
+| * | | 	 refactor(globe): Suprimmer le JSON de l'unesco du globe
+| | |/  
+| |/|   
+| * | 	 Chore(Cleanup)Remove Exess Layer in Frontend, Put Frontend and Backend in the same dir, Move Globe into Tests
+| * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| |\ \  
+| | * \   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | |\ \  
+| | | * | 	 Tweak(Package.json): Both frontend and backend now run from npm start
+| | | * |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | | |\ \  
+| |_|_|/ /  
+|/| | | |   
+| | | * | 	 Parse(db_unesco.sql): Remove HTML assets in name fields
+| | * | | 	 feat(carte): Le bouton home amène sur la position de l'utilisateur
+| |/ / /  
+|/| | |   
+* | | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \ \  
+| | |/ /  
+| |/| |   
+| * | | 	 Update(DetailsPage)
+| | |/  
+| |/|   
+* | | 	 feat(carte): Ajout d'un bouton à l'infoBox d'un site
+| | * 	 CSS pour la carte
+| | * 	 feature(footer, header et App.vue)
+| |/  
+| * 	 fix(footer et header)
+| *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
 | |\  
 | |/  
 |/|   
+* |   	 🔀Merge pull request #93 from ASETML/Couleur-Point-
+|\ \  
+| * \   	 Merge branch 'main' into Couleur-Point-
+| |\ \  
+| |/ /  
+|/| |   
+* | |   	 Merge pull request #92 from ASETML/translate-comments
+|\ \ \  
+| * | | 	 Comment(app.mjs, index.js)
+| * | | 	 Translate(Backend Comments into English)
+| * | | 	 Remove(.vue Comments)
+| * | | 	 Remove(CSS Comments)
+| * | | 	 Delete README.md
+| | * | 	 Fix(Affichage des différents points sur la carte)
+| | * | 	 Change(Requette SQL pour ajouter Categorie)
+| | * | 	 DONE Correction de bug avec le script SQL et des commentaires
+| | * | 	 WIP ajout condition pour la couleur des points
+| | * |   	 Merge pull request #88 from ASETML/main
+| | |\ \  
+| | * | | 	 Create Condition couleur point
+| | | | * 	 ajout des logos, correction des css pour Footer
+| | | | * 	 ajout des logos, correction des css pour Header
+| | | | *   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+| | | | |\  
+| |_|_|_|/  
+|/| | | |   
+* | | | | 	 Update(DetailsPage.vue)
+| | | | * 	 fix(logique de login et registration)
+| |_|_|/  
+|/| | |   
+* | | | 	 Chore(Details.vue)
+|/ / /  
+* | |   	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\ \ \  
+| * \ \   	 Merge pull request #89 from ASETML/visiter-avisite-checkroutes
+| |\ \ \  
+| | * | | 	 feat(Check if site wants to be visited)
+| | * | | 	 Fix(Wrong Table Name)
+| | * | | 	 Fix(Old code)
+* | | | | 	 Export(New Test Routes)
+|/ / / /  
+* | | | 	 (tag: 80percent) Export git du 05.05.25
+* | | | 	 Merge branch 'main' of https://github.com/ASETML/P_GestProj426
+|\| | | 
+| * | | 	 Create(visit Router)
+| | |/  
+| |/|   
+* / | 	 logique de registration et connexion en utilisant le backend
+|/ /  
 * | 	 Create(ShowDetails),(peer programming feat(C-H)
 * |   	 Merge pull request #87 from ASETML/add-categorie-field
 |\ \  
@@ -10,14 +106,13 @@
 | * | 	 Remove(Histoire Field)
 | * | 	 Delete(Sequelize)
 | * | 	 add(categorie field)
-* | |   	 🔀  La carte zoom sur la position de l'utilisateur
-|\ \ \  
-| * | | 	 (83-zoomer-sur-la-position-de-lutilisateur) La carte zoom sur la position de l'utilisateur
-| |/ /  
-* | | 	 Début de construction de logique pour interaction avec la DB via formlaire d'inscription-connexion + adaptation de header(suppression du button registration)
-* | | 	 Page de login (css, formulaire), darkmode✅ ,  Responsive Design
-|/ /  
-| * 	 Create Condition couleur point
+| |/  
+* |   	 🔀  La carte zoom sur la position de l'utilisateur
+|\ \  
+| * | 	 (83-zoomer-sur-la-position-de-lutilisateur) La carte zoom sur la position de l'utilisateur
+| |/  
+* | 	 Début de construction de logique pour interaction avec la DB via formlaire d'inscription-connexion + adaptation de header(suppression du button registration)
+* | 	 Page de login (css, formulaire), darkmode✅ ,  Responsive Design
 |/  
 * 	 Change(t_lieu, t_region nom)
 * 	 Export git du 28.04.25

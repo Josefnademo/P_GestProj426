@@ -93,7 +93,7 @@ for (let place of places) {
 
             const entity = viewer.entities.add({
                 name: place.site,
-				description: place.short_description,
+				description: place.short_description + '<a target="_blank" href="gogole.com">Page de détails</a>',
                 position: adjustedPosition,
                 point: {
                     pixelSize: 10,
@@ -140,4 +140,6 @@ handler.setInputAction(function (movement) {
 
 </body>
 
+<button onclick="window.location.href='google.com'">AAAAAAAAAAAAAAAAAA</button>
+<a href="gogole.com">BBBBBBBBBBBBBBBBBBBBBBB</a>
 </html>

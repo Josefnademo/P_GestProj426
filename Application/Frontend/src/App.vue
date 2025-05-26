@@ -1,7 +1,9 @@
 <template>
   <div id="app">
     <Header></Header>
-    <router-view />
+    <main class="main-content">
+      <router-view />
+    </main>
     <Footer></Footer>
   </div>
 </template>
@@ -29,7 +31,16 @@ body {
   background-color: #f7f9fc;
   color: #222;
 }
+#app {
+  display: flex;
+  flex-direction: column;
+}
 
+.main-content {
+  flex: 1;
+  max-width: 4000px;
+  margin: 0 auto;
+}
 .erreur {
   color: #e53935;
   font-weight: 600;

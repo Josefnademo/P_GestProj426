@@ -136,25 +136,74 @@ function GoToDetails(lieu_id) {
 }
 </script>
 <style>
-#cesiumContainer {
-  width: 100%;
-  height: 100%;
-
+/* Applique un fond stylé à la page */
+body {
   margin: 0;
   padding: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  font-family: sans-serif;
+/* Conteneur de la carte : fenêtre avec style */
+#cesiumContainer {
+  width: 90vw;
+  height: 75vh;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  background-color: #1e1e1e;
+  position: relative;
 }
-.cesium-viewer-cesiumWidgetContainer {
-  width: 1908px;
-  height: 745px;
-}
-.cesium-viewer {
-  width: 1908px;
-  height: 745px;
-}
+
+/* Rendre tout le canvas de la carte responsive */
+.cesium-viewer,
+.cesium-viewer-cesiumWidgetContainer,
 .cesium-widget canvas {
-  width: 1908px;
-  height: 745px;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+/* Optionnel : cacher les crédits en bas */
+.cesium-viewer-bottom {
+  display: none !important;
+}
+
+.cesium-viewer {
+  padding-top: -2em !important;
+  margin-top: -2em !important;
+}
+
+.cesium-viewer-toolbar {
+  position: absolute !important;
+  top: 10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  z-index: 1000;
+  background: rgba(30, 30, 30, 0.6);
+  border-radius: 8px;
+  padding: 4px 12px;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  width: fit-content !important;
+  max-width: 90vw !important;
+}
+
+/* Responsive design pour petits écrans */
+@media (max-width: 768px) {
+  #cesiumContainer {
+    width: 95vw;
+    height: 65vh;
+  }
 }
 </style>

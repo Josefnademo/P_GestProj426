@@ -6,8 +6,7 @@
   "main": "src/app.mjs",
   "scripts": {
     "start": "nodemon src/app.mjs",
-    "seed": "node src/seed.mjs",
-    "antoine": "node src/seed.mjs"
+    "seed": "node src/seed.mjs"
   },
   "author": "",
   "license": "ISC",
