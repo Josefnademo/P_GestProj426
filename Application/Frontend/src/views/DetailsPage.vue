@@ -3,6 +3,8 @@ import { ref, onMounted } from "vue";
 import { useRoute } from "vue-router";
 import ShowDetails from "@/services/ShowDetails.js";
 
+const heartFull = "../../../public/images/heartFull.png";
+const heartEmpty = "../../../public/images/heart.png";
 const route = useRoute();
 const detail = ref(null);
 const isLiked = ref(false);
@@ -84,16 +86,8 @@ onMounted(async () => {
           @click="handleLike"
           :class="{ active: isLiked }"
         >
-          <img
-            v-if="isLiked"
-            src="http://localhost:3000/images/likeRED.jpg"
-            alt="Liked"
-          />
-          <img
-            v-else
-            src="http://localhost:3000/images/like.jpg"
-            alt="Not liked"
-          />
+          <img v-if="isLiked" :src="heartFull" alt="Liked" />
+          <img v-else :src="heartEmpty" alt="Not liked" />
         </button>
         <div class="visited-container">
           <label class="switch">
