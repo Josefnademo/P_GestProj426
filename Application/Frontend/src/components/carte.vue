@@ -15,7 +15,7 @@ const placesJson = await fetch(url, {
 const places = await placesJson.json();
 
 Cesium.Ion.defaultAccessToken =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJjYzdjMDI0Yy1lNmRjLTRlNGQtODhlNC03MDk2YTFiOTkwZjIiLCJpZCI6Mjg1MDU5LCJpYXQiOjE3NDIyMTU0NTl9.O5SAKSAFH-6ir1VBpZPCduvvTJGKbNWiR6ivpwMBL-o"; // Remplace par ta clé
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJlMzk2OThmNS04YzFiLTRjNGUtOTk0NS0wZTgyY2EwZTQ0M2QiLCJpZCI6Mjc5OTg2LCJpYXQiOjE3NDgyNTc4OTh9.NnPRBqTBguGrFRTM8G07ySuqlsiNxd_kHi2vU-eF61I";
 
 onMounted(async () => {
   const viewer = new Cesium.Viewer("cesiumContainer", {
@@ -30,6 +30,22 @@ onMounted(async () => {
       const latitude = position.coords.latitude;
       const longitude = position.coords.longitude;
       console.log(latitude, longitude);
+
+      //Quand on clique sur le bouton home, on arrive sur la position de l'utilisateur
+      viewer.homeButton.viewModel.command.beforeExecute.addEventListener(
+        function (e) {
+          e.cancel = true;
+          viewer.camera.flyTo({
+            destination: Cesium.Cartesian3.fromDegrees(
+              longitude,
+              latitude,
+              6378137 * 0.05
+            ),
+          });
+        }
+      );
+
+      //Zoomer sur la position de l'utilisateur
       viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(longitude, latitude, 0),
       });
@@ -37,8 +53,6 @@ onMounted(async () => {
   }
 
   viewer.scene.screenSpaceCameraController.minimumZoomDistance = 6378137 * 0.05;
-
-  var imagery = Cesium.createDefaultImageryProviderViewModels();
 
   //Creates OSM buildings
   const buildingTileset = await Cesium.createOsmBuildingsAsync();
@@ -84,8 +98,9 @@ onMounted(async () => {
 
           color: (() => {
             const cat = String(place.categorie).trim().toLowerCase();
-            if (cat === "cultural") return Cesium.Color.GREEN;
-            if (cat === "natural") return Cesium.Color.YELLOW;
+            if (cat === "cultural") return Cesium.Color.YELLOW;
+            if (cat === "natural") return Cesium.Color.LIME;
+            if (cat === "agile") return Cesium.Color.PINK;
             if (cat === "mixed" || cat === "mixt") return Cesium.Color.ORANGE;
             return Cesium.Color.GRAY; // Pour null, undefined, ou autre
           })(),
@@ -115,18 +130,24 @@ onMounted(async () => {
       };
     });
   }
-
   //Update the label when the mouse moves
   const handler = new Cesium.ScreenSpaceEventHandler(viewer.scene.canvas);
   handler.setInputAction(function (movement) {
-    const ray = viewer.camera.getPickRay(movement.endPosition);
-    const cartesian = viewer.scene.globe.pick(ray, viewer.scene);
-    if (cartesian) {
-      viewer.entities.values.forEach((entity) => {
-        if (entity._distanceLabelUpdate) {
-          entity._distanceLabelUpdate(cartesian);
+    if (movement.endPosition) {
+      const ray = viewer.camera.getPickRay(movement.endPosition);
+      if (ray) {
+        const cartesian = viewer.scene.globe.pickWorldCoordinates(
+          ray,
+          viewer.scene
+        );
+        if (cartesian) {
+          viewer.entities.values.forEach((entity) => {
+            if (entity._distanceLabelUpdate) {
+              entity._distanceLabelUpdate(cartesian);
+            }
+          });
         }
-      });
+      }
     }
   }, Cesium.ScreenSpaceEventType.MOUSE_MOVE);
 });
